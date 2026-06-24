@@ -221,27 +221,44 @@
   }
 
   @media (max-width: 768px) {
+    html, body { overflow-x: hidden; }
     .hamburger { display: flex; }
     .nav-links { display: none; }
     .nav-right { display: none; }
-    nav { padding: 0 24px; }
+    nav { padding: 0 16px; }
     .hero { grid-template-columns: 1fr; }
     .hero-visual { display: none; }
-    .hero-content { padding: 48px 24px; }
-    .sec { padding: 60px 24px; }
+    .hero-content { padding: 48px 20px; }
+    .sec { padding: 52px 20px; }
+    .sec-title { font-size: 32px; }
+    .svc-grid { grid-template-columns: 1fr; }
+    .svc-card { padding: 28px 20px 24px; }
     .quote-grid { grid-template-columns: 1fr; }
     .why-grid { grid-template-columns: 1fr; }
-    .serve-grid { grid-template-columns: 1fr 1fr; }
+    .serve-grid { grid-template-columns: 1fr; }
     .stats-row { flex-direction: column; gap: 0; }
     .stat-item { border-right: none; border-bottom: 1px solid rgba(0,174,239,0.15); }
     .content-grid { grid-template-columns: 1fr; }
     .area-grid { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-    .cta-banner { flex-direction: column; text-align: center; padding: 48px 24px; }
-    .page-hero { padding: 60px 24px 50px; }
-    .page-hero-title { font-size: 38px; }
-    .mission-quote { font-size: 20px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-col { padding: 0; }
+    .cta-banner { flex-direction: column; text-align: center; padding: 40px 20px; }
+    .page-hero { padding: 52px 20px 40px; }
+    .page-hero-title { font-size: 32px; }
+    .mission-quote { font-size: 18px; padding: 28px 20px; }
+    .trust-bar { padding: 14px 20px; gap: 12px; }
+    .trust-items { gap: 14px; }
+    .trust-lbl { font-size: 11px; }
+    .trust-item { font-size: 11px; }
+    .util-bar { font-size: 12px; padding: 8px 16px; }
+    .hero-h1 { font-size: 42px; }
+    .hero-sub { font-size: 15px; }
+    .hero-btns { flex-direction: column; gap: 12px; align-items: flex-start; }
+    .btn-primary, .btn-outline-blue { width: 100%; text-align: center; box-sizing: border-box; }
+    .area-map-wrap iframe { height: 280px; }
+    .stat-card { padding: 24px 20px; }
+    .hero-right { display: none; }
   }
 
 </style>
