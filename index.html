@@ -987,7 +987,30 @@
       });
     });
   }
-</script>
+const quoteForm = document.querySelector('.quote-form');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = quoteForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      fetch('https://formspree.io/f/xnjkjown', {
+        method: 'POST',
+        body: new FormData(quoteForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res) {
+        if (res.ok) {
+          quoteForm.innerHTML = '<div style="padding:40px 20px; text-align:center;"><div style="font-size:48px;">✓</div><div style="font-size:22px; font-weight:700; margin:12px 0;">Request Sent!</div><p>We\'ll be in touch within one business day.</p></div>';
+        } else {
+          btn.textContent = 'Submit Request';
+          btn.disabled = false;
+        }
+      }).catch(function() {
+        btn.textContent = 'Submit Request';
+        btn.disabled = false;
+      });
+    });
+  }</script>
 
 </body>
 </html>
