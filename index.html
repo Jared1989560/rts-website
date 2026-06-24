@@ -454,6 +454,64 @@
     position: relative;
   }
 
+  /* ── MISSION STATEMENT ── */
+  .mission-sec {
+    background: var(--deep-steel);
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(0,174,239,0.15);
+    border-bottom: 1px solid rgba(0,174,239,0.15);
+  }
+  .mission-sec::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,174,239,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,174,239,0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+  }
+  .mission-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--blue); margin-bottom: 28px;
+    position: relative;
+  }
+  .mission-quote {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--white);
+    max-width: 860px;
+    margin: 0 auto 32px;
+    position: relative;
+    font-style: italic;
+  }
+  .mission-quote strong {
+    color: var(--blue);
+    font-style: normal;
+    font-weight: 700;
+    text-shadow: var(--glow);
+  }
+  .mission-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--blue);
+    margin: 0 auto 24px;
+    box-shadow: var(--glow);
+    position: relative;
+  }
+  .mission-tagline {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--soft-steel);
+    position: relative;
+  }
+
   /* ── QUOTE FORM ── */
   .quote-sec { background: var(--off-white); }
   .quote-sec .sec-title { color: var(--ink); }
@@ -674,6 +732,24 @@
       <a href="#" class="svc-link" onclick="openModal('modal-reliability'); return false;">Learn More &#8594;</a>
     </div>
   </div>
+</section>
+
+<!-- MISSION STATEMENT -->
+<section class="mission-sec">
+  <div class="mission-eyebrow">Our Mission</div>
+  <div class="mission-quote">
+    "To deliver <strong>field-proven</strong> E&amp;I commissioning, quality assurance, and reliability services that protect our clients' schedules, investments, and reputations — with documentation they can sign off on and a communication standard they can count on from first loop to final handover."
+  </div>
+  <div class="mission-rule"></div>
+  <p style="max-width:760px; margin:0 auto 40px; font-size:17px; line-height:1.8; color:var(--bright-steel); font-weight:300; position:relative;">
+    At Rogue Technical Services, we believe independent doesn't mean unaccountable. Every project we take on is built around your completions standards, your schedule, and your requirements — not the other way around. We show up prepared, we communicate throughout, and we don't hand over a package we wouldn't sign ourselves.
+    <br><br>
+    We exist to serve the pipeline operators, EPC contractors, and industrial facilities that need a specialist — not a crew that figures it out on your dime. Whether we're commissioning a new compression station, running QAQC on a critical installation, or providing ongoing reliability support for an operating facility, the standard never changes: precise work, full documentation, no surprises.
+    <br><br>
+    That's not a slogan. That's how we run every job.
+  </p>
+  <div class="mission-rule"></div>
+  <div class="mission-tagline">Rogue Technical Services LLC &mdash; Reliability Starts With Rogue</div>
 </section>
 
 <!-- WHO WE SERVE -->
