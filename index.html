@@ -166,6 +166,16 @@
     position: relative;
     overflow: hidden;
   }
+  /* Photo background */
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18;
+    z-index: 0;
+  }
   /* Blueprint grid overlay */
   .hero::after {
     content: '';
@@ -646,6 +656,7 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-photo"></div>
   <div class="hero-content">
     <div class="eyebrow">Independent E&amp;I Commissioning Specialists</div>
     <h1 class="hero-h1">Reliability<br>Starts With<br><em>Rogue.</em></h1>
