@@ -33,9 +33,8 @@
 
   /* NAV */
   nav { background: var(--panel); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 70px; position: sticky; top: 0; z-index: 200; border-bottom: 2px solid var(--blue); box-shadow: 0 2px 20px rgba(0,174,239,0.15); }
-  .nav-logo { font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; display: flex; align-items: center; gap: 10px; }
-  .nav-logo .slash { color: var(--blue); font-weight: 400; }
-  .nav-logo .sub { color: var(--soft-steel); font-size: 11px; font-weight: 400; letter-spacing: 0.15em; display: block; margin-top: -4px; }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-logo img { height: 52px; width: auto; display: block; }
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a { color: var(--bright-steel); font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: color .2s; padding-bottom: 4px; border-bottom: 2px solid transparent; }
   .nav-links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
@@ -124,7 +123,7 @@
 
 <nav>
   <a href="index.html" class="nav-logo">
-    <div>ROGUE<span class="slash">/</span>RTS<span class="sub">Technical Services LLC</span></div>
+    <img src="logo.png" alt="Rogue Technical Services LLC">
   </a>
   <ul class="nav-links">
     <li class="nav-item" id="nav-services">
