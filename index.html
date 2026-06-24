@@ -1,163 +1,993 @@
-Field-proven commissioning, start-up, and reliability services — Call today to request a quote
-ROGUE/RTS
-Technical Services LLC
-Services ▼
-Who We Serve
-About
-281-200-7623
-Request a Quote
-Independent E&I Commissioning Specialists
-Reliability
-Starts With
-Rogue.
-From first power to final turnover — precision commissioning, rigorous QAQC, and proven reliability services for natural gas transmission, compression, and industrial projects.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rogue Technical Services LLC — Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* ── Dark Bases ── */
+    --ink:        #0D1117;   /* gunmetal – deep backgrounds, hero panels */
+    --panel:      #111827;   /* panel blue – nav, cards, sections */
+    --deep-steel: #0A1A2F;   /* hero background, darkest sections */
 
-Natural Gas
-Compression
-LNG
-Pipelines
-Refinery
-Get a Quote
-Our Services
-15+
-Years Field Experience
-100%
-Project Completion
-Industries We Serve
-Natural Gas Transmission
-Compression Facilities
-LNG & Biofuels
-Refinery / Turnaround
-EPC Contractors
-Proven With →
-Hexagon Smart Completions
-Yokogawa & Rosemount
-Allen-Bradley PLCs
-Solar Turbines
-Caterpillar / Waukesha
-What We Do
-Our Technical Services
-Rogue Technical Services delivers specialized E&I commissioning, inspection, and reliability services. We're independent, accountable, and built around your project's completions standards — not the other way around.
+    /* ── Electric Blue Accent ── */
+    --blue:       #00AEEF;
+    --blue-h:     #4FD3FF;
+    --blue-dim:   rgba(0,174,239,0.18);
 
-⚡
-Commissioning & Start-up
-Full-scope E&I commissioning from instrument loop checks and functional testing through facility start-up. Systematic, fully documented, and aligned to your completions system and handover requirements.
+    /* ── Light / Text ── */
+    --bright-steel: #D9ECF8;  /* body text on dark */
+    --soft-steel:   #A7C4D6;  /* muted text, sub-labels */
+    --white:        #FFFFFF;
+    --off-white:    #F8FAFC;  /* light section backgrounds */
 
-Learn More →
-🔍
-QAQC / Inspections
-Independent quality assurance and control inspections that verify installation integrity against specifications, codes, and project documentation — before a missed item becomes a restart delay.
+    /* ── Glow / Blueprint ── */
+    --glow:       0 0 14px rgba(0,174,239,1);
+    --grid-line:  rgba(0,174,239,0.08);
+    --diag-tint:  rgba(0,174,239,0.22);
 
-Learn More →
-🔧
-Reliability Services
-Ongoing reliability support for operating assets — troubleshooting, root cause analysis, and targeted preventive strategies that keep compression and transmission facilities running as designed.
+    --display: 'Oswald', sans-serif;
+    --body:    'Source Sans 3', sans-serif;
+  }
 
-Learn More →
-Who We Serve
-Built for Industrial Projects
-We partner with pipeline operators, EPC contractors, and industrial facilities that need a commissioning specialist who shows up prepared — not a crew that figures it out on your dime.
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); color: var(--bright-steel); background: var(--ink); overflow-x: hidden; }
+  a { text-decoration: none; }
 
-01
-Pipeline Operators
-MSA-ready and prequalification-familiar. We integrate with your completions software, documentation standards, and turnover requirements from day one.
+  /* ── MOCKUP NOTICE ── */
+  /* ── UTILITY BAR ── */
+  .util-bar {
+    background: var(--deep-steel);
+    color: var(--soft-steel);
+    text-align: center;
+    padding: 9px 24px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--grid-line);
+  }
+  .util-bar strong { color: var(--blue); }
 
-02
-EPC Contractors
-Subcontract commissioning and QAQC to a specialist who communicates clearly, manages punch lists tightly, and delivers what you need for turnover.
+  /* ── NAV ── */
+  nav {
+    background: var(--panel);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    border-bottom: 2px solid var(--blue);
+    box-shadow: 0 2px 20px rgba(0,174,239,0.15);
+  }
+  .nav-logo {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo .slash { color: var(--blue); font-weight: 400; }
+  .nav-logo .sub { color: var(--soft-steel); font-size: 11px; font-weight: 400; letter-spacing: 0.15em; display: block; margin-top: -4px; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    color: var(--bright-steel);
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color .2s;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+  .nav-links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+  .nav-right { display: flex; align-items: center; gap: 20px; }
+  .nav-phone {
+    font-family: var(--display);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--blue);
+    letter-spacing: 0.04em;
+    text-shadow: var(--glow);
+  }
 
-03
-Compression Facilities
-Caterpillar, Waukesha, Solar Turbines — we've turned these units over and troubleshot them in the field. We know the equipment and the failure modes.
+  /* ── BUTTONS ── */
+  .btn { display: inline-block; cursor: pointer; font-family: var(--display); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; transition: all .2s; }
+  .btn-primary {
+    background: var(--blue);
+    color: var(--ink);
+    padding: 11px 26px;
+    font-size: 14px;
+    border: 2px solid var(--blue);
+    box-shadow: var(--glow);
+  }
+  .btn-primary:hover {
+    background: var(--blue-h);
+    border-color: var(--blue-h);
+    box-shadow: 0 0 22px rgba(0,174,239,1);
+  }
+  .btn-outline-blue {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    padding: 13px 32px;
+    font-size: 15px;
+    box-shadow: var(--glow);
+  }
+  .btn-outline-blue:hover { background: var(--blue); color: var(--ink); }
+  .btn-outline-white { border: 2px solid var(--white); color: var(--white); padding: 13px 32px; font-size: 15px; }
+  .btn-outline-white:hover { background: var(--white); color: var(--ink); }
 
-04
-LNG & Biofuels
-Process-critical startup environments demand zero shortcuts. We bring the discipline and documentation discipline these facilities require.
+  /* ── HERO ── */
+  .hero {
+    background: var(--deep-steel);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 580px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Blueprint grid overlay */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  /* Diagonal blue slash */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 80px;
+    background: linear-gradient(180deg, var(--blue) 0%, rgba(0,174,239,0.4) 100%);
+    transform: translateX(-50%) skewX(-5deg);
+    opacity: 0.22;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .hero-content {
+    padding: 72px 60px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--blue); box-shadow: var(--glow); }
+  .hero-h1 {
+    font-family: var(--display);
+    font-size: 66px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.02;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+  }
+  .hero-h1 em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .hero-sub {
+    color: var(--bright-steel);
+    font-size: 17px;
+    line-height: 1.68;
+    max-width: 400px;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+  .hero-tag {
+    background: var(--blue-dim);
+    border: 1px solid rgba(0,174,239,0.35);
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 13px;
+  }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-right {
+    padding: 60px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .stat-card {
+    background: rgba(0,174,239,0.06);
+    border: 1px solid rgba(0,174,239,0.25);
+    padding: 40px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: inset 0 0 40px rgba(0,174,239,0.04);
+  }
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+  .stat-num {
+    font-family: var(--display);
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 5px;
+    text-shadow: var(--glow);
+  }
+  .stat-lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--soft-steel); }
+  .stat-divider { height: 1px; background: rgba(0,174,239,0.2); margin: 0 0 24px; }
+  .ind-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .ind-list li {
+    color: var(--bright-steel);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,174,239,0.1);
+  }
+  .ind-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .ind-list li::before { content: '▸'; color: var(--blue); font-size: 10px; flex-shrink: 0; }
 
-05
-Refinery & Turnaround
-Scheduled outage windows don't wait. We staff to your timeline, scope, and safety requirements — and we stick to all three.
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--panel);
+    padding: 16px 48px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0,174,239,0.15);
+  }
+  .trust-lbl { font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); white-space: nowrap; }
+  .trust-sep { width: 1px; height: 18px; background: rgba(0,174,239,0.25); flex-shrink: 0; }
+  .trust-items { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+  .trust-item { font-size: 12px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--soft-steel); }
 
-06
-Staffing & Intermediary Firms
-Looking to place a credentialed commissioning specialist? Rogue has a proven track record and full compliance documentation ready to go.
+  /* ── SECTION COMMONS ── */
+  .sec { padding: 88px 60px; }
+  .sec-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+  .sec-title { font-family: var(--display); font-size: 44px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.08; margin-bottom: 18px; }
+  .sec-body { font-size: 17px; line-height: 1.72; max-width: 600px; margin-bottom: 52px; font-weight: 300; }
 
-Why Rogue?
-Independent Doesn't
-Mean Unaccountable
-We are precise. We communicate. And we do not cut corners — no matter how tight the schedule gets. Here's what you're getting when you work with Rogue.
+  /* ── SERVICES ── */
+  .services { background: var(--off-white); }
+  .services .sec-title { color: var(--ink); }
+  .services .sec-body { color: #4A5568; }
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .svc-card {
+    background: var(--white);
+    border-top: 4px solid var(--blue);
+    padding: 40px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 2px 12px rgba(0,174,239,0.06);
+  }
+  .svc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 36px rgba(0,174,239,0.15), 0 0 0 1px rgba(0,174,239,0.12);
+  }
+  .svc-icon {
+    width: 52px; height: 52px;
+    background: var(--panel);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 24px;
+    color: var(--blue);
+    font-size: 24px;
+    box-shadow: inset 0 0 12px rgba(0,174,239,0.1);
+  }
+  .svc-card h3 { font-family: var(--display); font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 14px; }
+  .svc-card p { font-size: 15px; line-height: 1.72; color: #4A5568; flex: 1; margin-bottom: 28px; }
+  .svc-link { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); display: flex; align-items: center; gap: 8px; transition: gap .2s; }
+  .svc-link:hover { gap: 12px; }
 
-📋
-Documentation You Can Sign Off On
-Loop sheets, punch lists, turnover packages — our paperwork is as tight as our installations. Nothing goes undocumented and nothing gets buried.
+  /* ── SERVE ── */
+  .serve { background: var(--ink); position: relative; overflow: hidden; }
+  .serve::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+  .serve .sec-eyebrow { color: var(--blue); position: relative; }
+  .serve .sec-title { color: var(--white); position: relative; }
+  .serve .sec-body { color: var(--soft-steel); position: relative; }
+  .serve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(0,174,239,0.08); position: relative; }
+  .serve-card {
+    background: var(--ink);
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: background .2s;
+  }
+  .serve-card:hover { background: var(--panel); }
+  .serve-num {
+    font-family: var(--display);
+    font-size: 72px;
+    font-weight: 700;
+    color: rgba(0,174,239,0.05);
+    position: absolute;
+    top: 16px; right: 20px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .serve-card h3 { font-family: var(--display); font-size: 19px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue); margin-bottom: 14px; position: relative; }
+  .serve-card p { font-size: 14px; line-height: 1.72; color: var(--soft-steel); position: relative; }
 
-📡
-No Surprises at Turnover
-You'll know where we are, what we found, and what it means — before it becomes your problem at handover. Clear, consistent progress reporting throughout.
+  /* ── WHY ROGUE ── */
+  .why { background: var(--off-white); }
+  .why .sec-title { color: var(--ink); }
+  .why .sec-body { color: #4A5568; }
+  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .why-card {
+    display: flex;
+    gap: 22px;
+    padding: 32px;
+    background: var(--white);
+    border-left: 4px solid rgba(0,174,239,0.3);
+    transition: border-color .2s, box-shadow .2s;
+    box-shadow: 0 2px 8px rgba(0,174,239,0.05);
+  }
+  .why-card:hover { border-left-color: var(--blue); box-shadow: 0 4px 20px rgba(0,174,239,0.12); }
+  .why-icon { color: var(--blue); font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .why-card h3 { font-family: var(--display); font-size: 17px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink); margin-bottom: 10px; }
+  .why-card p { font-size: 15px; line-height: 1.72; color: #4A5568; }
 
-🏗️
-15+ Years of Field Experience
-We've worked LNG, gas transmission, biofuels, and refinery turnarounds. We've seen the failure modes — and how to prevent them from showing up in your project.
+  /* ── CTA BANNER ── */
+  .cta-banner {
+    background: var(--deep-steel);
+    padding: 64px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+    border-top: 3px solid var(--blue);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+  .cta-banner h2 { font-family: var(--display); font-size: 40px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.1; position: relative; }
+  .cta-banner h2 em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .cta-banner p { color: var(--soft-steel); font-size: 16px; margin-top: 8px; position: relative; }
 
-🤝
-We Work Within Your System
-Your completions platform. Your procedures. Your schedule. Rogue adapts to how your project runs — not the other way around. No learning curve at your expense.
+  /* ── MOCK IMAGE BREAK ── */
+  .mock-img {
+    background: linear-gradient(135deg, var(--panel) 0%, var(--deep-steel) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mock-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .mock-img::after {
+    content: '[ Site photo / project imagery ]';
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(0,174,239,0.25);
+    position: relative;
+  }
 
-Get in Touch
-Request a Quote
-Fill out the form and we'll reach out to discuss your project needs, schedule, and scope. Typical response within one business day.
+  /* ── QUOTE FORM ── */
+  .quote-sec { background: var(--off-white); }
+  .quote-sec .sec-title { color: var(--ink); }
+  .quote-sec .sec-body { color: #4A5568; }
+  .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .quote-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--white);
+    border: 1.5px solid rgba(0,0,0,0.12);
+    padding: 12px 16px;
+    font-family: var(--body);
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+    border-radius: 0;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,174,239,0.12); }
+  .form-group textarea { min-height: 120px; resize: vertical; }
+  .quote-info { padding: 40px; background: var(--panel); border-top: 3px solid var(--blue); box-shadow: 0 0 30px rgba(0,174,239,0.08); }
+  .qi-title { font-family: var(--display); font-size: 22px; font-weight: 700; text-transform: uppercase; color: var(--blue); margin-bottom: 20px; text-shadow: var(--glow); }
+  .qi-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+  .qi-list li { display: flex; gap: 14px; align-items: flex-start; color: var(--bright-steel); font-size: 15px; line-height: 1.6; }
+  .qi-dot { width: 8px; height: 8px; background: var(--blue); flex-shrink: 0; margin-top: 6px; box-shadow: var(--glow); }
+  .qi-contact { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(0,174,239,0.2); }
+  .qi-contact p { color: var(--soft-steel); font-size: 13px; margin-bottom: 8px; }
+  .qi-contact .ph { font-family: var(--display); font-size: 24px; color: var(--blue); text-shadow: var(--glow); }
+  .qi-contact .em { color: var(--bright-steel); font-size: 14px; margin-top: 6px; }
 
-First Name
-John
-Last Name
-Smith
-Company / Organization
-Acme Pipeline Co.
-Email Address
-john@company.com
-Phone Number
-(555) 000-0000
-Service Needed
+  /* ── FOOTER ── */
+  footer { background: var(--deep-steel); color: var(--soft-steel); padding: 64px 60px 32px; border-top: 2px solid rgba(0,174,239,0.2); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand-name { font-family: var(--display); font-size: 21px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
+  .footer-brand-name span { color: var(--blue); text-shadow: var(--glow); }
+  .footer-brand p { font-size: 14px; line-height: 1.72; margin-bottom: 22px; }
+  .footer-phone { font-family: var(--display); font-size: 22px; color: var(--blue); letter-spacing: 0.04em; margin-bottom: 6px; text-shadow: var(--glow); }
+  .footer-hours { font-size: 13px; color: rgba(167,196,214,0.5); }
+  .footer-col h4 { font-family: var(--display); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--blue); margin-bottom: 20px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a { font-size: 14px; color: var(--soft-steel); transition: color .2s; }
+  .footer-col ul li a:hover { color: var(--blue); }
+  .footer-bottom { border-top: 1px solid rgba(0,174,239,0.12); padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 0.04em; flex-wrap: wrap; gap: 8px; }
 
-Select a service...
-Project Details
-Describe your project scope, location, and timeline if known...
-Submit Request
-What to Expect
-Response within one business day — usually same day.
-We'll ask about your completions system, site location, and schedule before providing a rate or scope estimate.
-All inquiries are confidential. We do not share client or project information.
-Subcontracting and intermediary firm inquiries welcome — we have W-9, insurance certs, and compliance docs ready.
-MSA discussions available for qualifying pipeline operator clients.
-Prefer to call directly?
+  /* ── MODALS ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,26,47,0.88);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--panel);
+    border-top: 4px solid var(--blue);
+    max-width: 680px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 0 60px rgba(0,174,239,0.2);
+    position: relative;
+    animation: modalIn .2s ease;
+  }
+  @keyframes modalIn { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    background: none;
+    border: none;
+    color: var(--soft-steel);
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color .2s;
+  }
+  .modal-close:hover { color: var(--blue); }
+  .modal-header { padding: 36px 40px 24px; border-bottom: 1px solid rgba(0,174,239,0.15); }
+  .modal-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+  .modal-title { font-family: var(--display); font-size: 28px; font-weight: 700; text-transform: uppercase; color: var(--white); }
+  .modal-body { padding: 32px 40px 40px; }
+  .modal-body p { font-size: 15px; line-height: 1.78; color: var(--bright-steel); margin-bottom: 24px; }
+  .modal-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .modal-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--bright-steel); line-height: 1.6; }
+  .modal-list li::before { content: '▸'; color: var(--blue); flex-shrink: 0; margin-top: 1px; }
+  .modal-sub { font-family: var(--display); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); margin-bottom: 12px; margin-top: 8px; }
+  .modal-cta { margin-top: 8px; }
+</style>
+</head>
+<body>
 
-281-200-7623
-info@rts-hq.com
-Mon – Fri · 7:00am – 6:00pm CDT
+<!-- UTILITY BAR -->
+<div class="util-bar">
+  Field-proven commissioning, start-up, and reliability services &mdash; <strong>Call today to request a quote</strong>
+</div>
 
-Ready to Start Your
-Next Project Right?
-Independent expertise. Field-proven process. Accountability from first loop to final handover.
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div>
+      ROGUE<span class="slash">/</span>RTS
+      <span class="sub">Technical Services LLC</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Services &#9660;</a></li>
+    <li><a href="#">Who We Serve</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-phone">281-200-7623</div>
+    <a href="#quote" class="btn btn-primary">Request a Quote</a>
+  </div>
+</nav>
 
-Request a Quote
-ROGUE Technical Services LLC
-"Reliability Starts With Rogue" — independent E&I commissioning, QAQC, and reliability services for natural gas transmission and industrial projects nationwide.
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Independent E&amp;I Commissioning Specialists</div>
+    <h1 class="hero-h1">Reliability<br>Starts With<br><em>Rogue.</em></h1>
+    <p class="hero-sub">From first power to final turnover — precision commissioning, rigorous QAQC, and proven reliability services for natural gas transmission, compression, and industrial projects.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Natural Gas</span>
+      <span class="hero-tag">Compression</span>
+      <span class="hero-tag">LNG</span>
+      <span class="hero-tag">Pipelines</span>
+      <span class="hero-tag">Refinery</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#quote" class="btn btn-primary">Get a Quote</a>
+      <a href="#services" class="btn btn-outline-blue">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-card">
+      <div class="stat-row">
+        <div>
+          <div class="stat-num">15+</div>
+          <div class="stat-lbl">Years Field Experience</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-lbl">Project Completion</div>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-lbl" style="color:var(--blue); margin-bottom:16px; text-shadow: var(--glow);">Industries We Serve</div>
+      <ul class="ind-list">
+        <li>Natural Gas Transmission</li>
+        <li>Compression Facilities</li>
+        <li>LNG &amp; Biofuels</li>
+        <li>Refinery / Turnaround</li>
+        <li>EPC Contractors</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-281-200-7623
-Monday – Friday: 7:00am – 6:00pm CDT
-Services
-Commissioning / Start-up
-QAQC / Inspections
-Reliability Services
-Who We Serve
-Pipeline Operators
-EPC Contractors
-Compression Facilities
-LNG & Biofuels
-Staffing Firms
-Company
-About Rogue
-rts-hq.com
-Request a Quote
-© 2026 Rogue Technical Services LLC — All Rights Reserved.
-rts-hq.com
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span class="trust-lbl">Proven With &#8594;</span>
+  <div class="trust-sep"></div>
+  <div class="trust-items">
+    <span class="trust-item">Hexagon Smart Completions</span>
+    <span class="trust-item">Yokogawa &amp; Rosemount</span>
+    <span class="trust-item">Allen-Bradley PLCs</span>
+    <span class="trust-item">Solar Turbines</span>
+    <span class="trust-item">Caterpillar / Waukesha</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="sec-eyebrow">What We Do</div>
+  <div class="sec-title">Our Technical Services</div>
+  <p class="sec-body">Rogue Technical Services delivers specialized E&amp;I commissioning, inspection, and reliability services. We're independent, accountable, and built around your project's completions standards — not the other way around.</p>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-icon">&#9889;</div>
+      <h3>Commissioning &amp; Start-up</h3>
+      <p>Full-scope E&amp;I commissioning from instrument loop checks and functional testing through facility start-up. Systematic, fully documented, and aligned to your completions system and handover requirements.</p>
+      <a href="#" class="svc-link" onclick="openModal('modal-commissioning'); return false;">Learn More &#8594;</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">&#128269;</div>
+      <h3>QAQC / Inspections</h3>
+      <p>Independent quality assurance and control inspections that verify installation integrity against specifications, codes, and project documentation — before a missed item becomes a restart delay.</p>
+      <a href="#" class="svc-link" onclick="openModal('modal-qaqc'); return false;">Learn More &#8594;</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">&#128295;</div>
+      <h3>Reliability Services</h3>
+      <p>Ongoing reliability support for operating assets — troubleshooting, root cause analysis, and targeted preventive strategies that keep compression and transmission facilities running as designed.</p>
+      <a href="#" class="svc-link" onclick="openModal('modal-reliability'); return false;">Learn More &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="sec serve" id="serve">
+  <div class="sec-eyebrow">Who We Serve</div>
+  <div class="sec-title">Built for Industrial Projects</div>
+  <p class="sec-body">We partner with pipeline operators, EPC contractors, and industrial facilities that need a commissioning specialist who shows up prepared — not a crew that figures it out on your dime.</p>
+  <div class="serve-grid">
+    <div class="serve-card">
+      <div class="serve-num">01</div>
+      <h3>Pipeline Operators</h3>
+      <p>MSA-ready and prequalification-familiar. We integrate with your completions software, documentation standards, and turnover requirements from day one.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">02</div>
+      <h3>EPC Contractors</h3>
+      <p>Subcontract commissioning and QAQC to a specialist who communicates clearly, manages punch lists tightly, and delivers what you need for turnover.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">03</div>
+      <h3>Compression Facilities</h3>
+      <p>Caterpillar, Waukesha, Solar Turbines — we've turned these units over and troubleshot them in the field. We know the equipment and the failure modes.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">04</div>
+      <h3>LNG &amp; Biofuels</h3>
+      <p>Process-critical startup environments demand zero shortcuts. We bring the discipline and documentation discipline these facilities require.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">05</div>
+      <h3>Refinery &amp; Turnaround</h3>
+      <p>Scheduled outage windows don't wait. We staff to your timeline, scope, and safety requirements — and we stick to all three.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">06</div>
+      <h3>Staffing &amp; Intermediary Firms</h3>
+      <p>Looking to place a credentialed commissioning specialist? Rogue has a proven track record and full compliance documentation ready to go.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ROGUE -->
+<section class="sec why">
+  <div class="sec-eyebrow">Why Rogue?</div>
+  <div class="sec-title">Independent Doesn't<br>Mean Unaccountable</div>
+  <p class="sec-body">We are precise. We communicate. And we do not cut corners — no matter how tight the schedule gets. Here's what you're getting when you work with Rogue.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">&#128203;</div>
+      <div>
+        <h3>Documentation You Can Sign Off On</h3>
+        <p>Loop sheets, punch lists, turnover packages — our paperwork is as tight as our installations. Nothing goes undocumented and nothing gets buried.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">&#128225;</div>
+      <div>
+        <h3>No Surprises at Turnover</h3>
+        <p>You'll know where we are, what we found, and what it means — before it becomes your problem at handover. Clear, consistent progress reporting throughout.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">&#127959;&#65039;</div>
+      <div>
+        <h3>15+ Years of Field Experience</h3>
+        <p>We've worked LNG, gas transmission, biofuels, and refinery turnarounds. We've seen the failure modes — and how to prevent them from showing up in your project.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">&#129309;</div>
+      <div>
+        <h3>We Work Within Your System</h3>
+        <p>Your completions platform. Your procedures. Your schedule. Rogue adapts to how your project runs — not the other way around. No learning curve at your expense.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOCK IMAGE BREAK -->
+<div class="mock-img"></div>
+
+<!-- QUOTE FORM -->
+<section class="sec quote-sec" id="quote">
+  <div class="sec-eyebrow">Get in Touch</div>
+  <div class="sec-title">Request a Quote</div>
+  <div class="quote-grid">
+    <div>
+      <p class="sec-body" style="margin-bottom:32px;">Fill out the form and we'll reach out to discuss your project needs, schedule, and scope. Typical response within one business day.</p>
+      <form class="quote-form" action="https://formspree.io/f/xnjkjown" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Company / Organization</label>
+          <input type="text" name="company" placeholder="Acme Pipeline Co.">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="john@company.com" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="(555) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select name="service">
+            <option value="">Select a service...</option>
+            <option>Commissioning / Start-up</option>
+            <option>QAQC / Inspections</option>
+            <option>Reliability Services</option>
+            <option>Multiple / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Project Details</label>
+          <textarea name="message" placeholder="Describe your project scope, location, and timeline if known..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="text-align:center; padding:14px; border:none; cursor:pointer; width:100%;">Submit Request</button>
+      </form>
+    </div>
+    <div>
+      <div class="quote-info">
+        <div class="qi-title">What to Expect</div>
+        <ul class="qi-list">
+          <li><div class="qi-dot"></div><div>Response within one business day — usually same day.</div></li>
+          <li><div class="qi-dot"></div><div>We'll ask about your completions system, site location, and schedule before providing a rate or scope estimate.</div></li>
+          <li><div class="qi-dot"></div><div>All inquiries are confidential. We do not share client or project information.</div></li>
+          <li><div class="qi-dot"></div><div>Subcontracting and intermediary firm inquiries welcome — we have W-9, insurance certs, and compliance docs ready.</div></li>
+          <li><div class="qi-dot"></div><div>MSA discussions available for qualifying pipeline operator clients.</div></li>
+        </ul>
+        <div class="qi-contact">
+          <p>Prefer to call directly?</p>
+          <div class="ph">281-200-7623</div>
+          <div class="em">info@rts-hq.com</div>
+          <p style="margin-top:14px; font-size:12px; color:rgba(167,196,214,0.4); letter-spacing:0.05em; text-transform:uppercase;">Mon &ndash; Fri &middot; 7:00am &ndash; 6:00pm CDT</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div>
+    <h2>Ready to Start Your<br>Next Project <em>Right?</em></h2>
+    <p>Independent expertise. Field-proven process. Accountability from first loop to final handover.</p>
+  </div>
+  <a href="#quote" class="btn btn-outline-white">Request a Quote</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">ROGUE <span>Technical Services</span> LLC</div>
+      <p>"Reliability Starts With Rogue" — independent E&amp;I commissioning, QAQC, and reliability services for natural gas transmission and industrial projects nationwide.</p>
+      <div class="footer-phone">281-200-7623</div>
+      <div class="footer-hours">Monday &ndash; Friday: 7:00am &ndash; 6:00pm CDT</div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Commissioning / Start-up</a></li>
+        <li><a href="#">QAQC / Inspections</a></li>
+        <li><a href="#">Reliability Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Who We Serve</h4>
+      <ul>
+        <li><a href="#">Pipeline Operators</a></li>
+        <li><a href="#">EPC Contractors</a></li>
+        <li><a href="#">Compression Facilities</a></li>
+        <li><a href="#">LNG &amp; Biofuels</a></li>
+        <li><a href="#">Staffing Firms</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Rogue</a></li>
+        <li><a href="https://rts-hq.com">rts-hq.com</a></li>
+        <li><a href="#quote">Request a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Rogue Technical Services LLC &mdash; All Rights Reserved.</span>
+    <span style="color:rgba(167,196,214,0.3);">rts-hq.com</span>
+  </div>
+</footer>
+
+<!-- MODAL: Commissioning & Start-up -->
+<div class="modal-overlay" id="modal-commissioning">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-commissioning')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Service Detail</div>
+      <div class="modal-title">Commissioning &amp; Start-up</div>
+    </div>
+    <div class="modal-body">
+      <p>Rogue provides full-scope electrical and instrumentation commissioning from pre-energization through final facility handover. Every phase is systematically executed, fully documented, and aligned to your completions management system — whether that's Hexagon Smart Completions, Bentley AssetWise, or your own internal tracking platform.</p>
+      <div class="modal-sub">What's Included</div>
+      <ul class="modal-list">
+        <li>Instrument loop checks and calibration verification</li>
+        <li>MCC, switchgear, and motor control energization</li>
+        <li>Functional logic testing for PLC/DCS/SIS systems</li>
+        <li>Cause &amp; effect testing against approved C&amp;E matrices</li>
+        <li>Valve stroke testing and actuator calibration</li>
+        <li>Field device commissioning — transmitters, analyzers, flow meters</li>
+        <li>Punch list generation, tracking, and closeout</li>
+        <li>Completions package documentation for turnover</li>
+      </ul>
+      <div class="modal-sub">Platforms &amp; Equipment</div>
+      <ul class="modal-list">
+        <li>Yokogawa, Rosemount, Endress+Hauser instrumentation</li>
+        <li>Allen-Bradley / Rockwell PLCs and ControlLogix systems</li>
+        <li>Solar Turbines, Caterpillar &amp; Waukesha compression units</li>
+        <li>Hexagon Smart Completions and similar completions platforms</li>
+      </ul>
+      <div class="modal-cta">
+        <a href="#quote" class="btn btn-primary" onclick="closeModal('modal-commissioning')">Request a Quote &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: QAQC / Inspections -->
+<div class="modal-overlay" id="modal-qaqc">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-qaqc')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Service Detail</div>
+      <div class="modal-title">QAQC / Inspections</div>
+    </div>
+    <div class="modal-body">
+      <p>Independent quality assurance isn't a formality — it's the last line of defense before a missed item becomes a commissioning delay, a safety event, or a restart. Rogue brings an outside set of eyes that has no stake in rushing the punchlist closed.</p>
+      <p>We verify that E&amp;I installations match specifications, P&amp;IDs, and project documentation before loop checks begin — catching issues at the point where they're cheap to fix, not after energization.</p>
+      <div class="modal-sub">Inspection Scope</div>
+      <ul class="modal-list">
+        <li>Instrument installation verification against data sheets and P&amp;IDs</li>
+        <li>Cable tray, conduit, and wiring installation checks</li>
+        <li>Grounding and bonding continuity inspection</li>
+        <li>Junction box and marshalling panel verification</li>
+        <li>Control panel and MCC internal inspection</li>
+        <li>Hazardous area equipment certification review (NEC Class/Division, ATEX)</li>
+        <li>Punch list generation with photo documentation</li>
+        <li>Pre-commissioning readiness assessments</li>
+      </ul>
+      <div class="modal-sub">Documentation Deliverables</div>
+      <ul class="modal-list">
+        <li>Inspection reports tied to tag numbers and line items</li>
+        <li>Photographic punch list packages</li>
+        <li>Pre-commissioning completion certificates</li>
+      </ul>
+      <div class="modal-cta">
+        <a href="#quote" class="btn btn-primary" onclick="closeModal('modal-qaqc')">Request a Quote &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Reliability Services -->
+<div class="modal-overlay" id="modal-reliability">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-reliability')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Service Detail</div>
+      <div class="modal-title">Reliability Services</div>
+    </div>
+    <div class="modal-body">
+      <p>After turnover, the real work begins. Operating assets in natural gas transmission and compression are expected to run — and when they don't, the cost of downtime is immediate and measurable. Rogue provides ongoing reliability support for facilities that need a specialist on call, not a generalist with a manual.</p>
+      <div class="modal-sub">What We Provide</div>
+      <ul class="modal-list">
+        <li>Instrumentation and controls troubleshooting for operating assets</li>
+        <li>Root cause analysis (RCA) for recurring failures and process trips</li>
+        <li>Predictive and preventive maintenance strategy development</li>
+        <li>PLC/DCS program review and logic verification</li>
+        <li>Alarm rationalization and management support</li>
+        <li>Turnaround scope development and execution support</li>
+        <li>Instrument calibration programs and schedules</li>
+        <li>Spare parts review and critical instrument identification</li>
+      </ul>
+      <div class="modal-sub">Who This Is For</div>
+      <ul class="modal-list">
+        <li>Pipeline operators looking to reduce unplanned shutdowns</li>
+        <li>Compression facilities with aging instrumentation infrastructure</li>
+        <li>Facilities with limited in-house E&amp;I staff</li>
+        <li>Sites preparing for a regulatory audit or turnaround event</li>
+      </ul>
+      <div class="modal-cta">
+        <a href="#quote" class="btn btn-primary" onclick="closeModal('modal-reliability')">Request a Quote &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  // Close on overlay click
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === this) closeModal(this.id);
+    });
+  });
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+    }
+  });
+
+  // Quote form — submit via fetch so page never reloads
+  const quoteForm = document.querySelector('.quote-form');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = quoteForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      fetch(quoteForm.action, {
+        method: 'POST',
+        body: new FormData(quoteForm),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function(res) {
+        if (res.ok) {
+          quoteForm.innerHTML = '<div style="padding:40px 20px; text-align:center; color:var(--ink);">' +
+            '<div style="font-size:48px; margin-bottom:16px;">✓</div>' +
+            '<div style="font-family:var(--display); font-size:24px; font-weight:700; text-transform:uppercase; margin-bottom:12px;">Request Sent!</div>' +
+            '<p style="font-size:16px; color:#4A5568;">Thanks for reaching out. We\'ll be in touch within one business day.</p>' +
+            '</div>';
+        } else {
+          btn.textContent = 'Submit Request';
+          btn.disabled = false;
+          alert('Something went wrong. Please try again or call us directly.');
+        }
+      })
+      .catch(function() {
+        btn.textContent = 'Submit Request';
+        btn.disabled = false;
+        alert('Network error. Please try again or call us directly.');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
