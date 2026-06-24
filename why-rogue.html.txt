@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Rogue? — Rogue Technical Services LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #0D1117;
+    --panel:      #111827;
+    --deep-steel: #0A1A2F;
+    --blue:       #00AEEF;
+    --blue-h:     #4FD3FF;
+    --blue-dim:   rgba(0,174,239,0.18);
+    --bright-steel: #D9ECF8;
+    --soft-steel:   #A7C4D6;
+    --white:        #FFFFFF;
+    --off-white:    #F8FAFC;
+    --glow:       0 0 14px rgba(0,174,239,1);
+    --grid-line:  rgba(0,174,239,0.08);
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Sans 3', sans-serif; color: var(--bright-steel); background: var(--ink); overflow-x: hidden; }
+  a { text-decoration: none; }
+
+  /* UTIL BAR */
+  .util-bar { background: var(--deep-steel); color: var(--soft-steel); text-align: center; padding: 9px 24px; font-size: 13px; letter-spacing: 0.06em; border-bottom: 1px solid var(--grid-line); }
+  .util-bar strong { color: var(--blue); }
+
+  /* NAV */
+  nav { background: var(--panel); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 70px; position: sticky; top: 0; z-index: 200; border-bottom: 2px solid var(--blue); box-shadow: 0 2px 20px rgba(0,174,239,0.15); }
+  .nav-logo { font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; display: flex; align-items: center; gap: 10px; }
+  .nav-logo .slash { color: var(--blue); font-weight: 400; }
+  .nav-logo .sub { color: var(--soft-steel); font-size: 11px; font-weight: 400; letter-spacing: 0.15em; display: block; margin-top: -4px; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { color: var(--bright-steel); font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: color .2s; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+  .nav-links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+  .nav-item { position: relative; }
+  .nav-item > a { cursor: pointer; user-select: none; }
+  .dropdown { display: none; position: absolute; top: calc(100% + 18px); left: 50%; transform: translateX(-50%); background: var(--panel); border-top: 2px solid var(--blue); box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 20px rgba(0,174,239,0.08); min-width: 220px; z-index: 999; padding: 8px 0; }
+  .nav-item.open .dropdown { display: block; }
+  .dropdown a { display: block; padding: 11px 22px; color: var(--bright-steel); font-size: 13px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-bottom: none; white-space: nowrap; transition: background .15s, color .15s; }
+  .dropdown a:hover { background: var(--blue-dim); color: var(--blue); border-bottom: none; }
+  .dropdown-divider { height: 1px; background: rgba(0,174,239,0.15); margin: 6px 0; }
+  .nav-right { display: flex; align-items: center; gap: 20px; }
+  .nav-phone { font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 500; color: var(--blue); letter-spacing: 0.04em; }
+  .btn { display: inline-block; cursor: pointer; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; transition: all .2s; }
+  .btn-primary { background: var(--blue); color: var(--ink); padding: 10px 26px; font-size: 14px; }
+  .btn-primary:hover { background: var(--blue-h); box-shadow: var(--glow); }
+  .btn-outline-blue { border: 2px solid var(--blue); color: var(--blue); padding: 10px 26px; font-size: 14px; }
+  .btn-outline-blue:hover { background: var(--blue-dim); }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--deep-steel);
+    padding: 80px 60px 70px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0,174,239,0.2);
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,174,239,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,174,239,0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+  }
+  .page-hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; position: relative; }
+  .page-hero-title { font-family: 'Oswald', sans-serif; font-size: 56px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.05; margin-bottom: 20px; position: relative; }
+  .page-hero-sub { font-size: 19px; line-height: 1.7; color: var(--bright-steel); max-width: 680px; font-weight: 300; position: relative; }
+
+  /* CONTENT */
+  .content-sec { padding: 72px 60px; max-width: 1100px; margin: 0 auto; }
+  .content-sec h2 { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 16px; letter-spacing: 0.04em; }
+  .content-sec h2 span { color: var(--blue); }
+  .content-sec p { font-size: 17px; line-height: 1.75; color: var(--bright-steel); margin-bottom: 20px; font-weight: 300; }
+  .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 48px; }
+  .content-box { background: var(--panel); border-top: 3px solid var(--blue); padding: 36px; box-shadow: 0 0 24px rgba(0,174,239,0.06); }
+  .content-box h3 { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; letter-spacing: 0.08em; text-shadow: var(--glow); }
+  .content-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .content-box li { font-size: 15px; color: var(--bright-steel); padding-left: 18px; position: relative; line-height: 1.55; }
+  .content-box li::before { content: '→'; position: absolute; left: 0; color: var(--blue); font-size: 12px; top: 2px; }
+  .divider { height: 1px; background: linear-gradient(90deg, var(--blue), transparent); margin: 0 60px; opacity: 0.3; }
+
+  /* STAT ROW */
+  .stat-row { display: flex; gap: 0; border-top: 1px solid rgba(0,174,239,0.15); border-bottom: 1px solid rgba(0,174,239,0.15); margin: 0; }
+  .stat-item { flex: 1; padding: 40px 60px; border-right: 1px solid rgba(0,174,239,0.15); }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-family: 'Oswald', sans-serif; font-size: 48px; font-weight: 700; color: var(--blue); text-shadow: var(--glow); margin-bottom: 6px; }
+  .stat-lbl { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--soft-steel); }
+
+  /* CTA BANNER */
+  .cta-banner { background: var(--deep-steel); border-top: 2px solid var(--blue); border-bottom: 2px solid var(--blue); padding: 60px; display: flex; align-items: center; justify-content: space-between; gap: 40px; box-shadow: 0 0 40px rgba(0,174,239,0.1) inset; }
+  .cta-banner h2 { font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.1; }
+  .cta-banner h2 em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .cta-banner p { font-size: 16px; color: var(--soft-steel); margin-top: 10px; }
+  .btn-outline-white { border: 2px solid rgba(255,255,255,0.7); color: var(--white); padding: 14px 32px; font-size: 15px; white-space: nowrap; }
+  .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+
+  /* FOOTER */
+  footer { background: var(--deep-steel); padding: 60px 60px 30px; border-top: 1px solid rgba(0,174,239,0.15); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand-name { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 14px; letter-spacing: 0.06em; }
+  .footer-brand-name span { color: var(--blue); }
+  .footer-brand p { font-size: 14px; line-height: 1.7; color: var(--soft-steel); margin-bottom: 18px; }
+  .footer-phone { font-family: 'Oswald', sans-serif; font-size: 22px; color: var(--blue); font-weight: 500; text-shadow: var(--glow); }
+  .footer-hours { font-size: 12px; color: var(--soft-steel); margin-top: 6px; letter-spacing: 0.06em; }
+  .footer-col h4 { font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--blue); margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col li a { color: var(--soft-steel); font-size: 14px; transition: color .2s; }
+  .footer-col li a:hover { color: var(--blue); }
+  .footer-bottom { border-top: 1px solid rgba(0,174,239,0.1); padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(167,196,214,0.4); letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+
+<div class="util-bar">Field-proven commissioning, start-up, and reliability services &mdash; <strong>Call today to request a quote</strong></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div>ROGUE<span class="slash">/</span>RTS<span class="sub">Technical Services LLC</span></div>
+  </a>
+  <ul class="nav-links">
+    <li class="nav-item" id="nav-services">
+      <a href="#" onclick="toggleDropdown('nav-services'); return false;">Services &#9660;</a>
+      <div class="dropdown">
+        <a href="commissioning.html">Commissioning / Start-up</a>
+        <a href="qaqc.html">QAQC / Inspections</a>
+        <a href="reliability.html">Reliability Services</a>
+      </div>
+    </li>
+    <li><a href="index.html#serve">Who We Serve</a></li>
+    <li class="nav-item" id="nav-about">
+      <a href="#" onclick="toggleDropdown('nav-about'); return false;">About &#9660;</a>
+      <div class="dropdown">
+        <a href="why-rogue.html">Why Rogue?</a>
+        <div class="dropdown-divider"></div>
+        <a href="index.html#quote">Request a Quote</a>
+      </div>
+    </li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-phone">281-200-7623</div>
+    <a href="index.html#quote" class="btn btn-primary">Request a Quote</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-eyebrow">About Rogue</div>
+  <div class="page-hero-title">Independent Doesn't<br>Mean Unaccountable</div>
+  <p class="page-hero-sub">We are precise. We communicate. And we do not cut corners — no matter how tight the schedule gets. Here's what you're getting when you work with Rogue Technical Services.</p>
+</div>
+
+<div class="stat-row">
+  <div class="stat-item"><div class="stat-num">15+</div><div class="stat-lbl">Years Field Experience</div></div>
+  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-lbl">Project Completion Rate</div></div>
+  <div class="stat-item"><div class="stat-num">Zero</div><div class="stat-lbl">Corners Cut</div></div>
+</div>
+
+<div class="content-sec">
+  <h2>Who We <span>Are</span></h2>
+  <p>Rogue Technical Services LLC is an independent E&amp;I commissioning, QAQC, and reliability services firm built around your project's completions standards — not the other way around. We work in natural gas transmission, compression, LNG, and industrial facilities across the country.</p>
+  <p>We're not a staffing agency. We're not a large contractor with a deep bench and a learning curve at your expense. We're a specialist firm that shows up prepared, communicates clearly, and delivers paperwork you can sign off on.</p>
+
+  <div class="content-grid">
+    <div class="content-box">
+      <h3>&#128203; Documentation You Can Sign Off On</h3>
+      <ul>
+        <li>Loop sheets, punch lists, and turnover packages — every one of them</li>
+        <li>Nothing goes undocumented and nothing gets buried</li>
+        <li>Paperwork as tight as our installations</li>
+        <li>Completions packages aligned to your handover requirements</li>
+        <li>Compatible with Hexagon, Bentley AssetWise, and custom platforms</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>&#128225; No Surprises at Turnover</h3>
+      <ul>
+        <li>You'll know where we are before it becomes your problem at handover</li>
+        <li>Clear, consistent progress reporting throughout the project</li>
+        <li>Issues surfaced early — when they're cheap to fix</li>
+        <li>Daily field reports and punch list status updates available</li>
+        <li>Direct line to the specialist doing the work — not a project manager</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>&#127959; 15+ Years of Field Experience</h3>
+      <ul>
+        <li>LNG production and receiving terminal commissioning</li>
+        <li>Natural gas transmission pipeline facilities</li>
+        <li>Compression stations — Caterpillar, Waukesha, Solar Turbines</li>
+        <li>Biofuels and process-critical startup environments</li>
+        <li>Refinery turnarounds and scheduled outage events</li>
+        <li>We've seen the failure modes — and how to prevent them</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>&#129309; We Work Within Your System</h3>
+      <ul>
+        <li>Your completions platform. Your procedures. Your schedule.</li>
+        <li>Rogue adapts to how your project runs — not the other way around</li>
+        <li>No learning curve at your expense</li>
+        <li>MSA-ready and prequalification-familiar</li>
+        <li>W-9, insurance certs, and compliance docs ready on request</li>
+        <li>Subcontracting and intermediary firm inquiries welcome</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <div>
+    <h2>Ready to Start Your Next Project <em>Right?</em></h2>
+    <p>Independent expertise. Field-proven process. Accountability from first loop to final handover.</p>
+  </div>
+  <a href="index.html#quote" class="btn btn-outline-white">Request a Quote</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">ROGUE <span>Technical Services</span> LLC</div>
+      <p>"Reliability Starts With Rogue" — independent E&I commissioning, QAQC, and reliability services for natural gas transmission and industrial projects nationwide.</p>
+      <div class="footer-phone">281-200-7623</div>
+      <div class="footer-hours">Monday &ndash; Friday: 7:00am &ndash; 6:00pm CDT</div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="commissioning.html">Commissioning / Start-up</a></li>
+        <li><a href="qaqc.html">QAQC / Inspections</a></li>
+        <li><a href="reliability.html">Reliability Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Who We Serve</h4>
+      <ul>
+        <li><a href="index.html#serve">Pipeline Operators</a></li>
+        <li><a href="index.html#serve">EPC Contractors</a></li>
+        <li><a href="index.html#serve">Compression Facilities</a></li>
+        <li><a href="index.html#serve">LNG &amp; Biofuels</a></li>
+        <li><a href="index.html#serve">Staffing Firms</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="why-rogue.html">About Rogue</a></li>
+        <li><a href="https://rts-hq.com">rts-hq.com</a></li>
+        <li><a href="index.html#quote">Request a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Rogue Technical Services LLC &mdash; All Rights Reserved.</span>
+    <span style="color:rgba(167,196,214,0.3);">rts-hq.com</span>
+  </div>
+</footer>
+
+<script>
+  function toggleDropdown(id) {
+    var item = document.getElementById(id);
+    var isOpen = item.classList.contains('open');
+    closeAllDropdowns();
+    if (!isOpen) item.classList.add('open');
+  }
+  function closeAllDropdowns() {
+    document.querySelectorAll('.nav-item.open').forEach(function(el) { el.classList.remove('open'); });
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) closeAllDropdowns();
+  });
+</script>
+</body>
+</html>
