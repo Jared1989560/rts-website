@@ -67,18 +67,14 @@
     box-shadow: 0 2px 20px rgba(0,174,239,0.15);
   }
   .nav-logo {
-    font-family: var(--display);
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
     display: flex;
     align-items: center;
-    gap: 10px;
   }
-  .nav-logo .slash { color: var(--blue); font-weight: 400; }
-  .nav-logo .sub { color: var(--soft-steel); font-size: 11px; font-weight: 400; letter-spacing: 0.15em; display: block; margin-top: -4px; }
+  .nav-logo img {
+    height: 52px;
+    width: auto;
+    display: block;
+  }
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a {
     color: var(--bright-steel);
@@ -620,12 +616,9 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">
-    <div>
-      ROGUE<span class="slash">/</span>RTS
-      <span class="sub">Technical Services LLC</span>
-    </div>
-  </div>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Rogue Technical Services LLC">
+  </a>
   <ul class="nav-links">
     <li class="nav-item" id="nav-services">
       <a href="#services" onclick="toggleDropdown('nav-services'); return false;">Services &#9660;</a>
