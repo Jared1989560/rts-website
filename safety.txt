@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safety — Rogue Technical Services LLC</title>
+<meta name="description" content="Safety is not a checklist at Rogue Technical Services — it is how we work. Our safety philosophy, safe work practices, and commitment to every technician on every job.">
+<meta name="keywords" content="Rogue Technical Services safety, E&I commissioning safety, industrial safety practices, OSHA, safe work practices Houston Texas">
+<meta name="geo.region" content="US-TX">
+<meta name="geo.placename" content="Houston, Texas">
+<meta property="og:title" content="Safety | Rogue Technical Services LLC">
+<meta property="og:description" content="Safety is not a checklist at Rogue Technical Services — it is how we work.">
+<meta property="og:url" content="https://rts-hq.com/safety.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #0D1117;
+    --panel:      #111827;
+    --deep-steel: #0A1A2F;
+    --blue:       #00AEEF;
+    --blue-h:     #4FD3FF;
+    --blue-dim:   rgba(0,174,239,0.18);
+    --bright-steel: #D9ECF8;
+    --soft-steel:   #A7C4D6;
+    --white:        #FFFFFF;
+    --off-white:    #F8FAFC;
+    --glow:       0 0 14px rgba(0,174,239,1);
+    --grid-line:  rgba(0,174,239,0.08);
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Sans 3', sans-serif; color: var(--bright-steel); background: var(--ink); overflow-x: hidden; }
+  a { text-decoration: none; }
+
+  /* UTIL BAR */
+  .util-bar { background: var(--deep-steel); color: var(--soft-steel); text-align: center; padding: 9px 24px; font-size: 13px; letter-spacing: 0.06em; border-bottom: 1px solid var(--grid-line); }
+  .util-bar strong { color: var(--blue); }
+
+  /* NAV */
+  nav { background: var(--panel); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 70px; position: sticky; top: 0; z-index: 200; border-bottom: 2px solid var(--blue); box-shadow: 0 2px 20px rgba(0,174,239,0.15); }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-logo img { height: 52px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { color: var(--bright-steel); font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: color .2s; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+  .nav-links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+  .nav-item { position: relative; }
+  .nav-item > a { cursor: pointer; user-select: none; }
+  .dropdown { display: none; position: absolute; top: calc(100% + 18px); left: 50%; transform: translateX(-50%); background: var(--panel); border-top: 2px solid var(--blue); box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 20px rgba(0,174,239,0.08); min-width: 220px; z-index: 999; padding: 8px 0; }
+  .nav-item.open .dropdown { display: block; }
+  .dropdown a { display: block; padding: 11px 22px; color: var(--bright-steel); font-size: 13px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-bottom: none; white-space: nowrap; transition: background .15s, color .15s; }
+  .dropdown a:hover { background: var(--blue-dim); color: var(--blue); border-bottom: none; }
+  .dropdown-divider { height: 1px; background: rgba(0,174,239,0.15); margin: 6px 0; }
+  .nav-right { display: flex; align-items: center; gap: 20px; }
+  .nav-phone { font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 500; color: var(--blue); letter-spacing: 0.04em; }
+  .btn { display: inline-block; cursor: pointer; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; transition: all .2s; }
+  .btn-primary { background: var(--blue); color: var(--ink); padding: 10px 26px; font-size: 14px; }
+  .btn-primary:hover { background: var(--blue-h); box-shadow: var(--glow); }
+  .btn-outline-blue { border: 2px solid var(--blue); color: var(--blue); padding: 10px 26px; font-size: 14px; }
+  .btn-outline-blue:hover { background: var(--blue-dim); }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--deep-steel);
+    padding: 80px 60px 70px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0,174,239,0.2);
+  }
+  .page-hero-bg {
+    position: absolute; inset: 0;
+    animation: imgZoomOut 9s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+    background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.13;
+    z-index: 0;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,174,239,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,174,239,0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .page-hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; position: relative; z-index: 2; }
+  .page-hero-title { font-family: 'Oswald', sans-serif; font-size: 56px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.05; margin-bottom: 20px; position: relative; z-index: 2; }
+  .page-hero-title em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .page-hero-sub { font-size: 19px; line-height: 1.7; color: var(--bright-steel); max-width: 680px; font-weight: 300; position: relative; z-index: 2; }
+
+  /* PHILOSOPHY SECTION */
+  .philosophy-sec {
+    background: var(--ink);
+    padding: 80px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .philosophy-sec::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+  .philosophy-inner { max-width: 1100px; margin: 0 auto; position: relative; }
+  .sec-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+  .sec-title { font-family: 'Oswald', sans-serif; font-size: 44px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.08; margin-bottom: 18px; color: var(--white); }
+  .sec-title em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .sec-body { font-size: 17px; line-height: 1.75; color: var(--bright-steel); max-width: 780px; font-weight: 300; margin-bottom: 24px; }
+
+  /* PHILOSOPHY STATEMENT BLOCK */
+  .philosophy-quote {
+    background: var(--deep-steel);
+    border-left: 4px solid var(--blue);
+    padding: 36px 48px;
+    margin: 48px 0;
+    box-shadow: 0 0 40px rgba(0,174,239,0.08);
+    position: relative;
+  }
+  .philosophy-quote::before {
+    content: '"';
+    font-family: 'Oswald', sans-serif;
+    font-size: 120px;
+    color: rgba(0,174,239,0.1);
+    position: absolute;
+    top: -10px; left: 16px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .philosophy-quote p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--bright-steel);
+    letter-spacing: 0.01em;
+    position: relative;
+  }
+  .philosophy-quote p strong { color: var(--blue); font-weight: 600; text-shadow: var(--glow); }
+
+  /* PILLARS GRID */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 52px;
+  }
+  .pillar-card {
+    background: var(--panel);
+    border-top: 3px solid var(--blue);
+    padding: 36px 28px;
+    box-shadow: 0 0 20px rgba(0,174,239,0.05);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .pillar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,174,239,0.12); }
+  .pillar-icon { font-size: 32px; margin-bottom: 18px; }
+  .pillar-card h3 { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--blue); margin-bottom: 12px; text-shadow: var(--glow); }
+  .pillar-card p { font-size: 15px; line-height: 1.7; color: var(--soft-steel); font-weight: 300; }
+
+  /* PRACTICES SECTION */
+  .practices-sec {
+    background: var(--off-white);
+    padding: 80px 60px;
+  }
+  .practices-inner { max-width: 1100px; margin: 0 auto; }
+  .practices-sec .sec-title { color: var(--ink); }
+  .practices-sec .sec-eyebrow { color: var(--blue); }
+  .practices-sec .sec-body { color: #4A5568; }
+
+  .practices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .practice-card {
+    background: var(--white);
+    border-left: 4px solid var(--blue);
+    padding: 32px 28px;
+    box-shadow: 0 2px 12px rgba(0,174,239,0.07);
+    transition: box-shadow .2s;
+  }
+  .practice-card:hover { box-shadow: 0 8px 28px rgba(0,174,239,0.14); }
+  .practice-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .practice-card h3 span { color: var(--blue); font-size: 22px; }
+  .practice-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .practice-card li {
+    font-size: 15px;
+    color: #4A5568;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .practice-card li::before { content: '▸'; position: absolute; left: 0; color: var(--blue); font-size: 11px; top: 3px; }
+
+  /* COMMITMENT BANNER */
+  .commitment-banner {
+    background: var(--deep-steel);
+    border-top: 2px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
+    padding: 72px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .commitment-banner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+  .commitment-banner h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .commitment-banner h2 em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .commitment-banner p { font-size: 17px; color: var(--soft-steel); max-width: 640px; margin: 0 auto 36px; line-height: 1.7; position: relative; }
+
+  /* CTA BANNER */
+  .cta-banner { background: var(--panel); border-top: 1px solid rgba(0,174,239,0.2); padding: 60px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .cta-banner h2 { font-family: 'Oswald', sans-serif; font-size: 34px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.1; }
+  .cta-banner h2 em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .cta-banner p { font-size: 16px; color: var(--soft-steel); margin-top: 10px; }
+  .btn-outline-white { border: 2px solid rgba(255,255,255,0.7); color: var(--white); padding: 14px 32px; font-size: 15px; white-space: nowrap; }
+  .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+
+  /* FOOTER */
+  footer { background: var(--deep-steel); padding: 60px 60px 30px; border-top: 1px solid rgba(0,174,239,0.15); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand-name { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 14px; letter-spacing: 0.06em; }
+  .footer-brand-name span { color: var(--blue); }
+  .footer-brand p { font-size: 14px; line-height: 1.7; color: var(--soft-steel); margin-bottom: 18px; }
+  .footer-phone { font-family: 'Oswald', sans-serif; font-size: 22px; color: var(--blue); font-weight: 500; text-shadow: var(--glow); }
+  .footer-hours { font-size: 12px; color: var(--soft-steel); margin-top: 6px; letter-spacing: 0.06em; }
+  .footer-col h4 { font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--blue); margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col li a { color: var(--soft-steel); font-size: 14px; transition: color .2s; }
+  .footer-col li a:hover { color: var(--blue); }
+  .footer-bottom { border-top: 1px solid rgba(0,174,239,0.1); padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(167,196,214,0.4); letter-spacing: 0.06em; }
+
+  /* MOBILE NAV */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--blue); transition: all .3s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-nav { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: var(--panel); border-top: 2px solid var(--blue); z-index: 190; overflow-y: auto; padding: 24px 0; }
+  .mobile-nav.open { display: block; }
+  .mobile-nav a { display: block; padding: 16px 32px; color: var(--bright-steel); font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid rgba(0,174,239,0.1); transition: color .2s, background .2s; }
+  .mobile-nav a:hover { color: var(--blue); background: var(--blue-dim); }
+  .mobile-nav .mobile-section { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); padding: 20px 32px 8px; }
+  .mobile-nav .mobile-cta { margin: 24px 32px; display: block; text-align: center; background: var(--blue); color: var(--ink); padding: 16px; font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: none; }
+
+  @media (max-width: 768px) {
+    html, body { overflow-x: hidden; }
+    .hamburger { display: flex; }
+    .nav-links { display: none; }
+    .nav-right { display: none; }
+    nav { padding: 0 16px; }
+    .page-hero { padding: 52px 20px 40px; }
+    .page-hero-title { font-size: 32px; }
+    .page-hero-sub { font-size: 16px; }
+    .philosophy-sec { padding: 52px 20px; }
+    .philosophy-quote { padding: 24px 24px 24px 28px; }
+    .philosophy-quote p { font-size: 17px; }
+    .philosophy-quote::before { font-size: 80px; }
+    .pillars-grid { grid-template-columns: 1fr; gap: 16px; }
+    .practices-sec { padding: 52px 20px; }
+    .practices-grid { grid-template-columns: 1fr; gap: 20px; }
+    .commitment-banner { padding: 52px 20px; }
+    .commitment-banner h2 { font-size: 28px; }
+    .cta-banner { flex-direction: column; text-align: center; padding: 40px 20px; }
+    footer { padding: 48px 20px 28px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .sec-title { font-size: 32px; }
+  }
+
+  @keyframes imgZoomOut {
+    from { transform: scale(1.12); }
+    to   { transform: scale(1.0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="util-bar">Field-proven commissioning, start-up, and reliability services &mdash; <strong><a href="tel:2812007623" style="color:var(--blue);text-decoration:none;">Call 281-200-7623</a> to request a quote</strong></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Rogue Technical Services LLC">
+  </a>
+  <ul class="nav-links">
+    <li class="nav-item" id="nav-services">
+      <a href="#" onclick="toggleDropdown('nav-services'); return false;">Services &#9660;</a>
+      <div class="dropdown">
+        <a href="commissioning.html">Commissioning / Start-up</a>
+        <a href="qaqc.html">QAQC / Inspections</a>
+        <a href="reliability.html">Reliability Services</a>
+      </div>
+    </li>
+    <li><a href="index.html#serve">Who We Serve</a></li>
+    <li class="nav-item" id="nav-about">
+      <a href="#" onclick="toggleDropdown('nav-about'); return false;">About &#9660;</a>
+      <div class="dropdown">
+        <a href="why-rogue.html">Why Rogue?</a>
+        <a href="recent-work.html">Recent Work</a>
+        <a href="safety.html">Safety</a>
+        <div class="dropdown-divider"></div>
+        <a href="index.html#quote">Request a Quote</a>
+      </div>
+    </li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:2812007623" class="nav-phone">281-200-7623</a>
+    <a href="index.html#quote" class="btn btn-primary">Request a Quote</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-section">Services</div>
+  <a href="commissioning.html">Commissioning / Start-up</a>
+  <a href="qaqc.html">QAQC / Inspections</a>
+  <a href="reliability.html">Reliability Services</a>
+  <div class="mobile-section">Company</div>
+  <a href="why-rogue.html">Why Rogue?</a>
+  <a href="recent-work.html">Recent Work</a>
+  <a href="safety.html">Safety</a>
+  <a href="index.html#serve">Who We Serve</a>
+  <a href="index.html#quote" class="mobile-cta">Request a Quote</a>
+  <div style="padding:16px 32px;">
+    <a href="tel:2812007623" style="color:var(--blue);font-family:Oswald,sans-serif;font-size:22px;font-weight:700;letter-spacing:0.04em;">281-200-7623</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-eyebrow">Our Commitment</div>
+  <div class="page-hero-title">Safety Is Not a<br>Checkbox. It's <em>How We Work.</em></div>
+  <p class="page-hero-sub">On every job — regardless of schedule pressure, complexity, or client — Rogue Technical Services maintains the same standard: nobody gets hurt, and nothing gets rushed past safe.</p>
+</div>
+
+<!-- PHILOSOPHY SECTION -->
+<section class="philosophy-sec">
+  <div class="philosophy-inner">
+    <div class="sec-eyebrow">Safety Philosophy</div>
+    <div class="sec-title">The Standard We Hold <em>Ourselves To</em></div>
+    <p class="sec-body">In the E&amp;I commissioning world, safety and quality are inseparable. A rushed loop check is a dangerous loop check. An undocumented hazard today is an incident report tomorrow. We don't treat safety as a separate layer added on top of the work — it's built into how we approach every task from the first site walkdown to final turnover.</p>
+    <p class="sec-body">Every technician working under the Rogue name is expected to stop, speak up, and refuse any task they believe is unsafe — full stop, no debate. A missed deadline is recoverable. An injury or incident is not.</p>
+
+    <div class="philosophy-quote">
+      <p>At Rogue Technical Services, <strong>we do not accept pressure to bypass safe work practices</strong> — from any source, on any project. Our people come home the same way they arrived. That is not a goal. <strong>That is the baseline.</strong></p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">🛑</div>
+        <h3>Stop Work Authority</h3>
+        <p>Every Rogue technician has the unconditional right — and the obligation — to stop any task that presents an unacceptable risk. No supervisor override. No exception.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">📋</div>
+        <h3>Pre-Task Planning</h3>
+        <p>Before any high-risk activity begins, we identify hazards, confirm permits are in place, and verify every person on the task understands their role and the risks involved.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🔍</div>
+        <h3>Zero Tolerance for Shortcuts</h3>
+        <p>Schedule pressure is real. We understand it. We also understand that taking shortcuts on an energized system or in a live gas environment is how people get killed.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">📣</div>
+        <h3>Open Communication</h3>
+        <p>Safety concerns go up the chain immediately — not at end-of-day, not in a report next week. If something isn't right, we say it out loud while there's still time to fix it.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🧠</div>
+        <h3>Situational Awareness</h3>
+        <p>Field environments change fast. We train for and practice constant awareness of our surroundings — equipment states, personnel positions, and changing site conditions.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">🤝</div>
+        <h3>Client Safety Culture</h3>
+        <p>We integrate with your safety program — OSHA 10/30, site-specific orientations, JSAs, hot work permits, LOTO procedures. We show up compliant and ready to work within your system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAFE WORK PRACTICES SECTION -->
+<section class="practices-sec">
+  <div class="practices-inner">
+    <div class="sec-eyebrow">Safe Work Practices</div>
+    <div class="sec-title">What We Do on Every Job</div>
+    <p class="sec-body">These aren't guidelines we follow when convenient. These are the non-negotiable practices that govern every scope Rogue Technical Services executes — whether it's a single loop check or a full-facility commissioning campaign.</p>
+
+    <div class="practices-grid">
+
+      <div class="practice-card">
+        <h3><span>⚡</span> Electrical Safety &amp; LOTO</h3>
+        <ul>
+          <li>Lockout / Tagout (LOTO) strictly followed on all energy isolation tasks</li>
+          <li>Verify zero energy before breaking any electrical connection</li>
+          <li>No assumption of de-energized — always test before touch</li>
+          <li>Proper PPE for shock and arc flash hazard at all times</li>
+          <li>Work within qualified electrical worker boundaries as required</li>
+        </ul>
+      </div>
+
+      <div class="practice-card">
+        <h3><span>🔥</span> Hot Work &amp; Permitting</h3>
+        <ul>
+          <li>Hot work permit obtained and verified before any ignition source activity</li>
+          <li>Gas detection confirmed clear prior to permit activation</li>
+          <li>Fire watch established per client and site requirements</li>
+          <li>All permits reviewed and understood before work begins — not during</li>
+          <li>Permit conditions re-verified after any break in continuity</li>
+        </ul>
+      </div>
+
+      <div class="practice-card">
+        <h3><span>🏭</span> Hazardous Atmosphere &amp; Gas Detection</h3>
+        <ul>
+          <li>Continuous gas monitoring in areas with hydrocarbon or H₂S risk</li>
+          <li>Calibrated detection equipment verified before each shift</li>
+          <li>Evacuation procedures reviewed and communicated at job start</li>
+          <li>No work in confined spaces without proper atmospheric testing</li>
+          <li>H₂S monitor worn as required by site classification</li>
+        </ul>
+      </div>
+
+      <div class="practice-card">
+        <h3><span>🪜</span> Working at Heights &amp; Elevated Work</h3>
+        <ul>
+          <li>Fall protection required for all work at or above 4 feet per OSHA 1926</li>
+          <li>Harness and lanyard inspected before each use</li>
+          <li>Scaffold inspection and tagging verified prior to use</li>
+          <li>No improvised elevated work platforms — ever</li>
+          <li>Tie-off points confirmed rated for fall arrest loads</li>
+        </ul>
+      </div>
+
+      <div class="practice-card">
+        <h3><span>🧰</span> Tool &amp; Equipment Safety</h3>
+        <ul>
+          <li>All tools inspected before use — damaged tools are tagged out immediately</li>
+          <li>Calibrated test instruments with current certification records</li>
+          <li>Intrinsically safe equipment used in classified area locations</li>
+          <li>Proper hand tools for the task — no improvised substitutions</li>
+          <li>Equipment grounding verified before energizing test setups</li>
+        </ul>
+      </div>
+
+      <div class="practice-card">
+        <h3><span>📝</span> Job Safety Analysis (JSA)</h3>
+        <ul>
+          <li>JSA completed and reviewed by all workers before non-routine tasks</li>
+          <li>Hazards identified step-by-step — not generically</li>
+          <li>Controls confirmed in place before work authorization</li>
+          <li>JSA updated if task scope or site conditions change mid-job</li>
+          <li>Client safety representative included in JSA review when required</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMMITMENT BANNER -->
+<div class="commitment-banner">
+  <h2>Every Person. Every Job. <em>Every Time.</em></h2>
+  <p>Our safety record is built one task at a time. We don't have a "good safety culture" on the big jobs and a relaxed one on the small ones. The standard is the same at every site, every day.</p>
+  <a href="index.html#quote" class="btn btn-primary" style="font-size:15px; padding:14px 36px; position:relative;">Request a Quote</a>
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div>
+    <h2>Ready to Work With a Team That Takes <em>Safety Seriously?</em></h2>
+    <p>Reach out to discuss your project scope, schedule, and requirements.</p>
+  </div>
+  <a href="index.html#quote" class="btn btn-outline-white">Get in Touch</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">ROGUE <span>Technical Services</span> LLC</div>
+      <p>"Reliability Starts With Rogue" — independent E&amp;I commissioning, QAQC, and reliability services for natural gas transmission and industrial projects nationwide.</p>
+      <a href="tel:2812007623" class="footer-phone">281-200-7623</a>
+      <div class="footer-hours">Monday &ndash; Friday: 7:00am &ndash; 6:00pm CDT</div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="commissioning.html">Commissioning / Start-up</a></li>
+        <li><a href="qaqc.html">QAQC / Inspections</a></li>
+        <li><a href="reliability.html">Reliability Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="why-rogue.html">Why Rogue?</a></li>
+        <li><a href="recent-work.html">Recent Work</a></li>
+        <li><a href="safety.html">Safety</a></li>
+        <li><a href="index.html#serve">Who We Serve</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="index.html#quote">Request a Quote</a></li>
+        <li><a href="tel:2812007623">281-200-7623</a></li>
+        <li><a href="mailto:info@rts-hq.com">info@rts-hq.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Rogue Technical Services LLC &mdash; All rights reserved</span>
+    <span>rts-hq.com</span>
+  </div>
+</footer>
+
+<script>
+  function toggleDropdown(id) {
+    var item = document.getElementById(id);
+    var isOpen = item.classList.contains('open');
+    closeAllDropdowns();
+    if (!isOpen) item.classList.add('open');
+  }
+  function closeAllDropdowns() {
+    document.querySelectorAll('.nav-item.open').forEach(function(el) { el.classList.remove('open'); });
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) closeAllDropdowns();
+  });
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+</script>
+</body>
+</html>
