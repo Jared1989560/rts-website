@@ -72,6 +72,7 @@
   }
   .page-hero-bg {
     position: absolute; inset: 0;
+    animation: imgZoomOut 9s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
     background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
@@ -247,6 +248,11 @@
     .hero-right { display: none; }
   }
 
+
+  @keyframes imgZoomOut {
+    from { transform: scale(1.12); }
+    to   { transform: scale(1.0); }
+  }
 </style>
 </head>
 <body>
@@ -272,6 +278,7 @@
       <div class="dropdown">
         <a href="why-rogue.html">Why Rogue?</a>
         <a href="recent-work.html">Recent Work</a>
+        <a href="safety.html">Safety</a>
         <div class="dropdown-divider"></div>
         <a href="index.html#quote">Request a Quote</a>
       </div>
@@ -293,6 +300,7 @@
   <div class="mobile-section">Company</div>
   <a href="why-rogue.html">Why Rogue?</a>
   <a href="recent-work.html">Recent Work</a>
+  <a href="safety.html">Safety</a>
   <a href="index.html#serve">Who We Serve</a>
   <a href="index.html#quote" class="mobile-cta">Request a Quote</a>
   <div style="padding:16px 32px;">
