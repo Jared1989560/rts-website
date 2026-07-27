@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="avIXyvaZ7l1q61HVZ4rKBYSlqn1Wv8XDaEe5OumaKXU" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rogue Technical Services LLC | E&I Commissioning &amp; Reliability</title>
+<meta name="description" content="Rogue Technical Services LLC — independent E&I commissioning, QAQC, and reliability services for natural gas transmission, compression, LNG, and industrial projects. Based in Houston, TX. Serving the Gulf Coast, Permian Basin, and nationwide.">
+<meta name="keywords" content="E&I commissioning, instrumentation commissioning, QAQC inspection, reliability services, natural gas commissioning, compression station commissioning, Houston Texas, Gulf Coast, Permian Basin, LNG commissioning, pipeline commissioning, industrial commissioning">
+<meta name="geo.region" content="US-TX">
+<meta name="geo.placename" content="Houston, Texas">
+<meta property="og:title" content="Rogue Technical Services LLC | E&amp;I Commissioning &amp; Reliability">
+<meta property="og:description" content="Rogue Technical Services LLC — independent E&I commissioning, QAQC, and reliability services for natural gas transmission, compression, LNG, and industrial projects. Based in Houston, TX. Serving the Gulf Coast, Permian Basin, and nationwide.">
+<meta property="og:url" content="https://rts-hq.com">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="photo-fix.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* ── Dark Bases ── */
+    --ink:        #0D1117;   /* gunmetal – deep backgrounds, hero panels */
+    --panel:      #111827;   /* panel blue – nav, cards, sections */
+    --deep-steel: #0A1A2F;   /* hero background, darkest sections */
+
+    /* ── Electric Blue Accent ── */
+    --blue:       #00AEEF;
+    --blue-h:     #4FD3FF;
+    --blue-dim:   rgba(0,174,239,0.18);
+
+    /* ── Light / Text ── */
+    --bright-steel: #D9ECF8;  /* body text on dark */
+    --soft-steel:   #A7C4D6;  /* muted text, sub-labels */
+    --white:        #FFFFFF;
+    --off-white:    #F8FAFC;  /* light section backgrounds */
+
+    /* ── Glow / Blueprint ── */
+    --glow:       0 0 14px rgba(0,174,239,1);
+    --grid-line:  rgba(0,174,239,0.08);
+    --diag-tint:  rgba(0,174,239,0.22);
+
+    --display: 'Oswald', sans-serif;
+    --body:    'Source Sans 3', sans-serif;
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); color: var(--bright-steel); background: var(--ink); overflow-x: hidden; }
+  a { text-decoration: none; }
+
+  /* ── MOCKUP NOTICE ── */
+  /* ── UTILITY BAR ── */
+  .util-bar {
+    background: var(--deep-steel);
+    color: var(--soft-steel);
+    text-align: center;
+    padding: 9px 24px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--grid-line);
+  }
+  .util-bar strong { color: var(--blue); }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--panel);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    border-bottom: 2px solid var(--blue);
+    box-shadow: 0 2px 20px rgba(0,174,239,0.15);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo img {
+    height: 52px;
+    width: auto;
+    display: block;
+  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    color: var(--bright-steel);
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color .2s;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+  .nav-links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+
+  /* ── DROPDOWN ── */
+  .nav-item { position: relative; }
+  .nav-item > a { cursor: pointer; user-select: none; }
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--panel);
+    border-top: 2px solid var(--blue);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 20px rgba(0,174,239,0.08);
+    min-width: 220px;
+    z-index: 999;
+    padding: 8px 0;
+  }
+  .nav-item.open .dropdown { display: block; }
+  .dropdown a {
+    display: block;
+    padding: 11px 22px;
+    color: var(--bright-steel);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    border-bottom: none;
+    white-space: nowrap;
+    transition: background .15s, color .15s;
+  }
+  .dropdown a:hover { background: var(--blue-dim); color: var(--blue); border-bottom: none; }
+  .dropdown-divider { height: 1px; background: rgba(0,174,239,0.15); margin: 6px 0; }
+
+  .nav-right { display: flex; align-items: center; gap: 20px; }
+  .nav-phone {
+    font-family: var(--display);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--blue);
+    letter-spacing: 0.04em;
+    text-shadow: var(--glow);
+  }
+
+  /* ── BUTTONS ── */
+  .btn { display: inline-block; cursor: pointer; font-family: var(--display); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; transition: all .2s; }
+  .btn-primary {
+    background: var(--blue);
+    color: var(--ink);
+    padding: 11px 26px;
+    font-size: 14px;
+    border: 2px solid var(--blue);
+    box-shadow: var(--glow);
+  }
+  .btn-primary:hover {
+    background: var(--blue-h);
+    border-color: var(--blue-h);
+    box-shadow: 0 0 22px rgba(0,174,239,1);
+  }
+  .btn-outline-blue {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    padding: 13px 32px;
+    font-size: 15px;
+    box-shadow: var(--glow);
+  }
+  .btn-outline-blue:hover { background: var(--blue); color: var(--ink); }
+  .btn-outline-white { border: 2px solid var(--white); color: var(--white); padding: 13px 32px; font-size: 15px; }
+  .btn-outline-white:hover { background: var(--white); color: var(--ink); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--deep-steel);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 580px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Photo background */
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    animation: imgZoomOut 9s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+    background-image: url('https://images.unsplash.com/photo-1754240418247-16bd71991bad?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18;
+    z-index: 0;
+  }
+  /* Blueprint grid overlay */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  /* Diagonal blue slash */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 80px;
+    background: linear-gradient(180deg, var(--blue) 0%, rgba(0,174,239,0.4) 100%);
+    transform: translateX(-50%) skewX(-5deg);
+    opacity: 0.22;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .hero-content {
+    padding: 72px 60px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--blue); box-shadow: var(--glow); }
+  .hero-h1 {
+    font-family: var(--display);
+    font-size: 66px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.02;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+  }
+  .hero-h1 em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .hero-sub {
+    color: var(--bright-steel);
+    font-size: 17px;
+    line-height: 1.68;
+    max-width: 400px;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+  .hero-tag {
+    background: var(--blue-dim);
+    border: 1px solid rgba(0,174,239,0.35);
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 13px;
+  }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-right {
+    padding: 60px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .stat-card {
+    background: rgba(0,174,239,0.06);
+    border: 1px solid rgba(0,174,239,0.25);
+    padding: 40px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: inset 0 0 40px rgba(0,174,239,0.04);
+  }
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+  .stat-num {
+    font-family: var(--display);
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1;
+    margin-bottom: 5px;
+    text-shadow: var(--glow);
+  }
+  .stat-lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--soft-steel); }
+  .stat-divider { height: 1px; background: rgba(0,174,239,0.2); margin: 0 0 24px; }
+  .ind-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .ind-list li {
+    color: var(--bright-steel);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,174,239,0.1);
+  }
+  .ind-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .ind-list li::before { content: '▸'; color: var(--blue); font-size: 10px; flex-shrink: 0; }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--panel);
+    padding: 16px 48px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0,174,239,0.15);
+  }
+  .trust-lbl { font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); white-space: nowrap; }
+  .trust-sep { width: 1px; height: 18px; background: rgba(0,174,239,0.25); flex-shrink: 0; }
+  .trust-items { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+  .trust-item { font-size: 12px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--soft-steel); }
+
+  /* ── SECTION COMMONS ── */
+  .sec { padding: 88px 60px; }
+  .sec-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+  .sec-title { font-family: var(--display); font-size: 44px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.08; margin-bottom: 18px; }
+  .sec-body { font-size: 17px; line-height: 1.72; max-width: 600px; margin-bottom: 52px; font-weight: 300; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--off-white); }
+  .services .sec-title { color: var(--ink); }
+  .services .sec-body { color: #4A5568; }
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .svc-card {
+    background: var(--white);
+    border-top: 4px solid var(--blue);
+    padding: 40px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 2px 12px rgba(0,174,239,0.06);
+  }
+  .svc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 36px rgba(0,174,239,0.15), 0 0 0 1px rgba(0,174,239,0.12);
+  }
+  .svc-icon {
+    width: 52px; height: 52px;
+    background: var(--panel);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 24px;
+    color: var(--blue);
+    font-size: 24px;
+    box-shadow: inset 0 0 12px rgba(0,174,239,0.1);
+  }
+  .svc-card h3 { font-family: var(--display); font-size: 21px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 14px; }
+  .svc-card p { font-size: 15px; line-height: 1.72; color: #4A5568; flex: 1; margin-bottom: 28px; }
+  .svc-link { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); display: flex; align-items: center; gap: 8px; transition: gap .2s; }
+  .svc-link:hover { gap: 12px; }
+
+  /* ── SERVE ── */
+  .serve { background: var(--ink); position: relative; overflow: hidden; }
+  .serve::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+  .serve .sec-eyebrow { color: var(--blue); position: relative; }
+  .serve .sec-title { color: var(--white); position: relative; }
+  .serve .sec-body { color: var(--soft-steel); position: relative; }
+  .serve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(0,174,239,0.08); position: relative; }
+  .serve-card {
+    background: var(--ink);
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: background .2s;
+  }
+  .serve-card:hover { background: var(--panel); }
+  .serve-num {
+    font-family: var(--display);
+    font-size: 72px;
+    font-weight: 700;
+    color: rgba(0,174,239,0.05);
+    position: absolute;
+    top: 16px; right: 20px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .serve-card h3 { font-family: var(--display); font-size: 19px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue); margin-bottom: 14px; position: relative; }
+  .serve-card p { font-size: 14px; line-height: 1.72; color: var(--soft-steel); position: relative; }
+
+  /* ── WHY ROGUE ── */
+  .why { background: var(--off-white); }
+  .why .sec-title { color: var(--ink); }
+  .why .sec-body { color: #4A5568; }
+  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .why-card {
+    display: flex;
+    gap: 22px;
+    padding: 32px;
+    background: var(--white);
+    border-left: 4px solid rgba(0,174,239,0.3);
+    transition: border-color .2s, box-shadow .2s;
+    box-shadow: 0 2px 8px rgba(0,174,239,0.05);
+  }
+  .why-card:hover { border-left-color: var(--blue); box-shadow: 0 4px 20px rgba(0,174,239,0.12); }
+  .why-icon { color: var(--blue); font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .why-card h3 { font-family: var(--display); font-size: 17px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink); margin-bottom: 10px; }
+  .why-card p { font-size: 15px; line-height: 1.72; color: #4A5568; }
+
+  /* ── CTA BANNER ── */
+  .cta-banner {
+    background: var(--deep-steel);
+    padding: 64px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+    border-top: 3px solid var(--blue);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+  .cta-banner h2 { font-family: var(--display); font-size: 40px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.1; position: relative; }
+  .cta-banner h2 em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .cta-banner p { color: var(--soft-steel); font-size: 16px; margin-top: 8px; position: relative; }
+
+  /* ── MOCK IMAGE BREAK ── */
+  .mock-img {
+    background: linear-gradient(135deg, var(--panel) 0%, var(--deep-steel) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mock-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .mock-img::after {
+    content: '[ Site photo / project imagery ]';
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(0,174,239,0.25);
+    position: relative;
+  }
+
+  /* ── SERVICE AREA ── */
+  .area-sec { background: var(--panel); padding: 88px 60px; }
+  .area-sec .sec-title { color: var(--white); margin-bottom: 48px; }
+  .area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .area-map-wrap {
+    position: relative;
+    border: 2px solid rgba(0,174,239,0.25);
+    box-shadow: 0 0 30px rgba(0,174,239,0.1);
+    overflow: hidden;
+    line-height: 0;
+  }
+  .area-map-wrap iframe { width: 100%; height: 380px; border: 0; filter: invert(0.9) hue-rotate(180deg) saturate(0.5) brightness(0.75); }
+  .area-map-wrap::after {
+    content: '';
+    position: absolute; inset: 0;
+    box-shadow: inset 0 0 0 2px rgba(0,174,239,0.4);
+    pointer-events: none;
+  }
+  .area-regions { display: flex; flex-direction: column; gap: 20px; }
+  .area-region {
+    background: var(--ink);
+    border-left: 3px solid var(--blue);
+    padding: 18px 22px;
+    box-shadow: 0 0 16px rgba(0,174,239,0.05);
+  }
+  .area-region h3 { font-family: var(--display); font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); margin-bottom: 6px; }
+  .area-region p { font-size: 14px; color: var(--soft-steel); line-height: 1.55; }
+  .area-note { margin-top: 24px; font-size: 13px; color: rgba(167,196,214,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* ── MISSION STATEMENT ── */
+  .mission-sec {
+    background: var(--deep-steel);
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(0,174,239,0.15);
+    border-bottom: 1px solid rgba(0,174,239,0.15);
+  }
+  .mission-sec::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,174,239,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,174,239,0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+  }
+  .mission-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--blue); margin-bottom: 28px;
+    position: relative;
+  }
+  .mission-quote {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--white);
+    max-width: 860px;
+    margin: 0 auto 32px;
+    position: relative;
+    font-style: italic;
+  }
+  .mission-quote strong {
+    color: var(--blue);
+    font-style: normal;
+    font-weight: 700;
+    text-shadow: var(--glow);
+  }
+  .mission-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--blue);
+    margin: 0 auto 24px;
+    box-shadow: var(--glow);
+    position: relative;
+  }
+  .mission-tagline {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--soft-steel);
+    position: relative;
+  }
+
+  /* ── PAST PROJECTS ── */
+  .projects-sec { background: var(--ink); padding: 88px 60px; }
+  .projects-sec .sec-title { color: var(--white); margin-bottom: 12px; }
+  .projects-sec .sec-body { margin-bottom: 52px; }
+  .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .project-card {
+    background: var(--panel);
+    border-top: 3px solid var(--blue);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 0 24px rgba(0,174,239,0.05);
+    transition: box-shadow .2s, transform .2s;
+  }
+  .project-card:hover { box-shadow: 0 0 32px rgba(0,174,239,0.15); transform: translateY(-3px); }
+  .project-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--blue);
+    padding: 4px 10px;
+    align-self: flex-start;
+  }
+  .project-title {
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+  .project-detail { display: flex; flex-direction: column; gap: 10px; }
+  .project-row { display: flex; flex-direction: column; gap: 3px; }
+  .project-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .project-text { font-size: 14px; color: var(--bright-steel); line-height: 1.55; }
+  .project-outcome {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0,174,239,0.15);
+    font-size: 13px;
+    color: var(--soft-steel);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .project-outcome strong { color: var(--blue); font-style: normal; }
+
+  /* ── QUOTE FORM ── */
+  .quote-sec { background: var(--off-white); }
+  .quote-sec .sec-title { color: var(--ink); }
+  .quote-sec .sec-body { color: #4A5568; }
+  .quote-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .quote-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--white);
+    border: 1.5px solid rgba(0,0,0,0.12);
+    padding: 12px 16px;
+    font-family: var(--body);
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+    border-radius: 0;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,174,239,0.12); }
+  .form-group textarea { min-height: 120px; resize: vertical; }
+  .quote-info { padding: 40px; background: var(--panel); border-top: 3px solid var(--blue); box-shadow: 0 0 30px rgba(0,174,239,0.08); }
+  .qi-title { font-family: var(--display); font-size: 22px; font-weight: 700; text-transform: uppercase; color: var(--blue); margin-bottom: 20px; text-shadow: var(--glow); }
+  .qi-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+  .qi-list li { display: flex; gap: 14px; align-items: flex-start; color: var(--bright-steel); font-size: 15px; line-height: 1.6; }
+  .qi-dot { width: 8px; height: 8px; background: var(--blue); flex-shrink: 0; margin-top: 6px; box-shadow: var(--glow); }
+  .qi-contact { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(0,174,239,0.2); }
+  .qi-contact p { color: var(--soft-steel); font-size: 13px; margin-bottom: 8px; }
+  .qi-contact .ph { font-family: var(--display); font-size: 24px; color: var(--blue); text-shadow: var(--glow); }
+  .qi-contact .em { color: var(--bright-steel); font-size: 14px; margin-top: 6px; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--deep-steel); color: var(--soft-steel); padding: 64px 60px 32px; border-top: 2px solid rgba(0,174,239,0.2); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand-name { font-family: var(--display); font-size: 21px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
+  .footer-brand-name span { color: var(--blue); text-shadow: var(--glow); }
+  .footer-brand p { font-size: 14px; line-height: 1.72; margin-bottom: 22px; }
+  .footer-phone { font-family: var(--display); font-size: 22px; color: var(--blue); letter-spacing: 0.04em; margin-bottom: 6px; text-shadow: var(--glow); }
+  .footer-hours { font-size: 13px; color: rgba(167,196,214,0.5); }
+  .footer-col h4 { font-family: var(--display); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--blue); margin-bottom: 20px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a { font-size: 14px; color: var(--soft-steel); transition: color .2s; }
+  .footer-col ul li a:hover { color: var(--blue); }
+  .footer-bottom { border-top: 1px solid rgba(0,174,239,0.12); padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; letter-spacing: 0.04em; flex-wrap: wrap; gap: 8px; }
+
+  /* ── MODALS ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,26,47,0.88);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--panel);
+    border-top: 4px solid var(--blue);
+    max-width: 680px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 0 60px rgba(0,174,239,0.2);
+    position: relative;
+    animation: modalIn .2s ease;
+  }
+  @keyframes modalIn { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 20px;
+    background: none;
+    border: none;
+    color: var(--soft-steel);
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color .2s;
+  }
+  .modal-close:hover { color: var(--blue); }
+  .modal-header { padding: 36px 40px 24px; border-bottom: 1px solid rgba(0,174,239,0.15); }
+  .modal-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+  .modal-title { font-family: var(--display); font-size: 28px; font-weight: 700; text-transform: uppercase; color: var(--white); }
+  .modal-body { padding: 32px 40px 40px; }
+  .modal-body p { font-size: 15px; line-height: 1.78; color: var(--bright-steel); margin-bottom: 24px; }
+  .modal-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .modal-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--bright-steel); line-height: 1.6; }
+  .modal-list li::before { content: '▸'; color: var(--blue); flex-shrink: 0; margin-top: 1px; }
+  .modal-sub { font-family: var(--display); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue); margin-bottom: 12px; margin-top: 8px; }
+  .modal-cta { margin-top: 8px; }
+
+  /* ── MOBILE NAV ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+    z-index: 300;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--blue);
+    transition: all .3s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0; right: 0; bottom: 0;
+    background: var(--panel);
+    border-top: 2px solid var(--blue);
+    z-index: 190;
+    overflow-y: auto;
+    padding: 24px 0;
+  }
+  .mobile-nav.open { display: block; }
+  .mobile-nav a {
+    display: block;
+    padding: 16px 32px;
+    color: var(--bright-steel);
+    font-family: var(--display, "Oswald", sans-serif);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid rgba(0,174,239,0.1);
+    transition: color .2s, background .2s;
+  }
+  .mobile-nav a:hover { color: var(--blue); background: var(--blue-dim); }
+  .mobile-nav .mobile-section {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blue);
+    padding: 20px 32px 8px;
+  }
+  .mobile-nav .mobile-cta {
+    margin: 24px 32px;
+    display: block;
+    text-align: center;
+    background: var(--blue);
+    color: var(--ink);
+    padding: 16px;
+    font-family: var(--display, "Oswald", sans-serif);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: 768px) {
+    html, body { overflow-x: hidden; }
+    .hamburger { display: flex; }
+    .nav-links { display: none; }
+    .nav-right { display: none; }
+    nav { padding: 0 16px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .hero-content { padding: 48px 20px; }
+    .sec { padding: 52px 20px; }
+    .sec-title { font-size: 32px; }
+    .svc-grid { grid-template-columns: 1fr; }
+    .svc-card { padding: 28px 20px 24px; }
+    .quote-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .quote-info { padding: 24px 20px; }
+    footer { padding: 48px 20px 28px; }
+    .why-grid { grid-template-columns: 1fr; }
+    .serve-grid { grid-template-columns: 1fr; }
+    .stats-row { flex-direction: column; gap: 0; }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(0,174,239,0.15); }
+    .content-grid { grid-template-columns: 1fr; }
+    .area-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-col { padding: 0; }
+    .cta-banner { flex-direction: column; text-align: center; padding: 40px 20px; }
+    .page-hero { padding: 52px 20px 40px; }
+    .page-hero-title { font-size: 32px; }
+    .mission-quote { font-size: 18px; padding: 28px 20px; }
+    .trust-bar { padding: 14px 20px; gap: 12px; }
+    .trust-items { gap: 14px; }
+    .trust-lbl { font-size: 11px; }
+    .trust-item { font-size: 11px; }
+    .util-bar { font-size: 12px; padding: 8px 16px; }
+    .hero-h1 { font-size: 42px; }
+    .hero-sub { font-size: 15px; }
+    .hero-btns { flex-direction: column; gap: 12px; align-items: flex-start; }
+    .btn-primary, .btn-outline-blue { width: 100%; text-align: center; box-sizing: border-box; }
+    .area-map-wrap iframe { height: 280px; }
+    .stat-card { padding: 24px 20px; }
+    .hero-right { display: none; }
+  }
+
+
+  @keyframes imgZoomOut {
+    from { transform: scale(1.12); }
+    to   { transform: scale(1.0); }
+  }
+</style>
+
+<link rel="canonical" href="https://rts-hq.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://rts-hq.com/#business",
+      "name": "Rogue Technical Services LLC",
+      "alternateName": "RTS",
+      "description": "Independent E&I commissioning, QAQC, and reliability services for natural gas transmission, compression, LNG, and industrial facilities.",
+      "url": "https://rts-hq.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rts-hq.com/favicon.svg"
+      },
+      "image": "https://rts-hq.com/favicon.svg",
+      "email": "info@rts-hq.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.7604,
+        "longitude": -95.3698
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Houston"
+        },
+        {
+          "@type": "State",
+          "name": "Texas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Gulf Coast"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Permian Basin"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "E&I Technical Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E&I Commissioning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "QAQC Inspection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reliability Engineering"
+            }
+          }
+        ]
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rts-hq.com/#website",
+      "url": "https://rts-hq.com",
+      "name": "Rogue Technical Services LLC",
+      "description": "Independent E&I commissioning, QAQC, and reliability services",
+      "publisher": {
+        "@id": "https://rts-hq.com/#business"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div class="util-bar">
+  Field-proven commissioning, start-up, and reliability services &mdash; <strong>Call today to request a quote</strong>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Rogue Technical Services LLC">
+  </a>
+  <ul class="nav-links">
+    <li class="nav-item" id="nav-services">
+      <a href="#services" onclick="toggleDropdown('nav-services'); return false;">Services &#9660;</a>
+      <div class="dropdown">
+        <a href="commissioning.html">Commissioning / Start-up</a>
+        <a href="qaqc.html">QAQC / Inspections</a>
+        <a href="reliability.html">Reliability Services</a>
+      </div>
+    </li>
+    <li><a href="#serve">Who We Serve</a></li>
+    <li class="nav-item" id="nav-about">
+      <a href="why-rogue.html" onclick="toggleDropdown('nav-about'); return false;">About &#9660;</a>
+      <div class="dropdown">
+        <a href="why-rogue.html">Why Rogue?</a>
+        <a href="recent-work.html">Recent Work</a>
+        <a href="safety.html">Safety</a>
+        <div class="dropdown-divider"></div>
+        <a href="#quote">Request a Quote</a>
+      </div>
+    </li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:2812007623" class="nav-phone">281-200-7623</a>
+    <a href="#quote" class="btn btn-primary">Request a Quote</a>
+  </div>
+<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-section">Services</div>
+  <a href="commissioning.html">Commissioning / Start-up</a>
+  <a href="qaqc.html">QAQC / Inspections</a>
+  <a href="reliability.html">Reliability Services</a>
+  <div class="mobile-section">Company</div>
+  <a href="why-rogue.html">Why Rogue?</a>
+  <a href="recent-work.html">Recent Work</a>
+  <a href="safety.html">Safety</a>
+  <a href="index.html#serve">Who We Serve</a>
+  <a href="index.html#quote" class="mobile-cta">Request a Quote</a>
+  <div style="padding:16px 32px;">
+    <a href="tel:2812007623" style="color:var(--blue);font-family:Oswald,sans-serif;font-size:22px;font-weight:700;letter-spacing:0.04em;">281-200-7623</a>
+  </div>
+</div>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-photo"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Independent E&amp;I Commissioning Specialists</div>
+    <h1 class="hero-h1">Reliability<br>Starts With<br><em>Rogue.</em></h1>
+    <p class="hero-sub">From first power to final turnover — precision commissioning, rigorous QAQC, and proven reliability services for natural gas transmission, compression, and industrial projects.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Natural Gas</span>
+      <span class="hero-tag">Compression</span>
+      <span class="hero-tag">LNG</span>
+      <span class="hero-tag">Pipelines</span>
+      <span class="hero-tag">Refinery</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#quote" class="btn btn-primary">Get a Quote</a>
+      <a href="#services" class="btn btn-outline-blue">Our Services</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-card">
+      <div class="stat-row">
+        <div>
+          <div class="stat-num">15+</div>
+          <div class="stat-lbl">Years Field Experience</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-lbl">Project Completion</div>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-lbl" style="color:var(--blue); margin-bottom:16px; text-shadow: var(--glow);">Industries We Serve</div>
+      <ul class="ind-list">
+        <li>Natural Gas Transmission</li>
+        <li>Compression Facilities</li>
+        <li>LNG &amp; Biofuels</li>
+        <li>Refinery / Turnaround</li>
+        <li>EPC Contractors</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span class="trust-lbl">Proven With &#8594;</span>
+  <div class="trust-sep"></div>
+  <div class="trust-items">
+    <span class="trust-item">Hexagon Smart Completions</span>
+    <span class="trust-item">Yokogawa &amp; Rosemount</span>
+    <span class="trust-item">Allen-Bradley PLCs</span>
+    <span class="trust-item">Solar Turbines</span>
+    <span class="trust-item">Caterpillar / Waukesha</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="sec-eyebrow">What We Do</div>
+  <div class="sec-title">Our Technical Services</div>
+  <p class="sec-body">Rogue Technical Services delivers specialized E&amp;I commissioning, inspection, and reliability services. We're independent, accountable, and built around your project's completions standards — not the other way around.</p>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-icon">&#9889;</div>
+      <h3>Commissioning &amp; Start-up</h3>
+      <p>Full-scope E&amp;I commissioning from instrument loop checks and functional testing through facility start-up. Systematic, fully documented, and aligned to your completions system and handover requirements.</p>
+      <a href="commissioning.html" class="svc-link" onclick="openModal('modal-commissioning'); return false;">Learn About E&amp;I Commissioning &#8594;</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">&#128269;</div>
+      <h3>QAQC / Inspections</h3>
+      <p>Independent quality assurance and control inspections that verify installation integrity against specifications, codes, and project documentation — before a missed item becomes a restart delay.</p>
+      <a href="qaqc.html" class="svc-link" onclick="openModal('modal-qaqc'); return false;">Learn About QAQC Inspection &#8594;</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">&#128295;</div>
+      <h3>Reliability Services</h3>
+      <p>Ongoing reliability support for operating assets — troubleshooting, root cause analysis, and targeted preventive strategies that keep compression and transmission facilities running as designed.</p>
+      <a href="reliability.html" class="svc-link" onclick="openModal('modal-reliability'); return false;">Learn About Reliability Services &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="sec area-sec" id="area">
+  <div class="sec-eyebrow">Where We Work</div>
+  <div class="sec-title">Service Area</div>
+  <div class="area-grid">
+    <div class="area-map-wrap">
+      <iframe
+        src="https://maps.google.com/maps?q=Houston,Texas&t=&z=4&ie=UTF8&iwloc=&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <div>
+      <div class="area-regions">
+        <div class="area-region">
+          <h3>&#9733; Gulf Coast &amp; Texas (Primary)</h3>
+          <p>Houston, Corpus Christi, Beaumont, Eagle Ford, Permian Basin — our home market and primary area of operations.</p>
+        </div>
+        <div class="area-region">
+          <h3>South Central &amp; Mid-Continent</h3>
+          <p>Louisiana, Oklahoma, Arkansas, New Mexico — natural gas transmission corridors and midstream compression facilities.</p>
+        </div>
+        <div class="area-region">
+          <h3>Rocky Mountain &amp; Plains</h3>
+          <p>Colorado, Wyoming, Kansas — pipeline infrastructure and compression stations across the interior basin.</p>
+        </div>
+        <div class="area-region">
+          <h3>Nationwide &amp; Remote Mobilization</h3>
+          <p>Distance is no obstacle — Rogue is ready to deploy anywhere in the country and we hit the ground running. LNG terminals, refinery turnarounds, large-scale commissioning events — wherever your project is, we'll be there prepared, documented, and on schedule. Call us and let's get to work.</p>
+        </div>
+      </div>
+      <div class="area-note">&#9679; Headquartered in Houston, TX &mdash; available nationwide</div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION STATEMENT -->
+<section class="mission-sec">
+  <div class="mission-eyebrow">Our Mission</div>
+  <div class="mission-quote">
+    "To deliver <strong>field-proven</strong> E&amp;I commissioning, quality assurance, and reliability services that protect our clients' schedules, investments, and reputations — with documentation they can sign off on and a communication standard they can count on from first loop to final handover."
+  </div>
+  <div class="mission-rule"></div>
+  <p style="max-width:760px; margin:0 auto 40px; font-size:17px; line-height:1.8; color:var(--bright-steel); font-weight:300; position:relative;">
+    At Rogue Technical Services, we believe independent doesn't mean unaccountable. Every project we take on is built around your completions standards, your schedule, and your requirements — not the other way around. We show up prepared, we communicate throughout, and we don't hand over a package we wouldn't sign ourselves.
+    <br><br>
+    We exist to serve the pipeline operators, EPC contractors, and industrial facilities that need a specialist — not a crew that figures it out on your dime. Whether we're commissioning a new compression station, running QAQC on a critical installation, or providing ongoing reliability support for an operating facility, the standard never changes: precise work, full documentation, no surprises.
+    <br><br>
+    That's not a slogan. That's how we run every job.
+  </p>
+  <div class="mission-rule"></div>
+  <div class="mission-tagline">Rogue Technical Services LLC &mdash; Reliability Starts With Rogue</div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="sec serve" id="serve">
+  <div class="sec-eyebrow">Who We Serve</div>
+  <div class="sec-title">Built for Industrial Projects</div>
+  <p class="sec-body">We partner with pipeline operators, EPC contractors, and industrial facilities that need a commissioning specialist who shows up prepared — not a crew that figures it out on your dime.</p>
+  <div class="serve-grid">
+    <div class="serve-card">
+      <div class="serve-num">01</div>
+      <h3>Pipeline Operators</h3>
+      <p>MSA-ready and prequalification-familiar. We integrate with your completions software, documentation standards, and turnover requirements from day one.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">02</div>
+      <h3>EPC Contractors</h3>
+      <p>Subcontract commissioning and QAQC to a specialist who communicates clearly, manages punch lists tightly, and delivers what you need for turnover.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">03</div>
+      <h3>Compression Facilities</h3>
+      <p>Caterpillar, Waukesha, Solar Turbines — we've turned these units over and troubleshot them in the field. We know the equipment and the failure modes.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">04</div>
+      <h3>LNG &amp; Biofuels</h3>
+      <p>Process-critical startup environments demand zero shortcuts. We bring the discipline and documentation discipline these facilities require.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">05</div>
+      <h3>Refinery &amp; Turnaround</h3>
+      <p>Scheduled outage windows don't wait. We staff to your timeline, scope, and safety requirements — and we stick to all three.</p>
+    </div>
+    <div class="serve-card">
+      <div class="serve-num">06</div>
+      <h3>Staffing &amp; Intermediary Firms</h3>
+      <p>Looking to place a credentialed commissioning specialist? Rogue has a proven track record and full compliance documentation ready to go.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ROGUE -->
+<section class="sec why" id="why">
+  <div class="sec-eyebrow">Why Rogue?</div>
+  <div class="sec-title">Independent Doesn't<br>Mean Unaccountable</div>
+  <p class="sec-body">We are precise. We communicate. And we do not cut corners — no matter how tight the schedule gets. Here's what you're getting when you work with Rogue.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">&#128203;</div>
+      <div>
+        <h3>Documentation You Can Sign Off On</h3>
+        <p>Loop sheets, punch lists, turnover packages — our paperwork is as tight as our installations. Nothing goes undocumented and nothing gets buried.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">&#128225;</div>
+      <div>
+        <h3>No Surprises at Turnover</h3>
+        <p>You'll know where we are, what we found, and what it means — before it becomes your problem at handover. Clear, consistent progress reporting throughout.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">&#127959;&#65039;</div>
+      <div>
+        <h3>15+ Years of Field Experience</h3>
+        <p>We've worked LNG, gas transmission, biofuels, and refinery turnarounds. We've seen the failure modes — and how to prevent them from showing up in your project.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">&#129309;</div>
+      <div>
+        <h3>We Work Within Your System</h3>
+        <p>Your completions platform. Your procedures. Your schedule. Rogue adapts to how your project runs — not the other way around. No learning curve at your expense.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOCK IMAGE BREAK -->
+<div class="mock-img"></div>
+
+<!-- QUOTE FORM -->
+<section class="sec quote-sec" id="quote">
+  <div class="sec-eyebrow">Get in Touch</div>
+  <div class="sec-title">Request a Quote</div>
+  <div class="quote-grid">
+    <div>
+      <p class="sec-body" style="margin-bottom:32px;">Fill out the form and we'll reach out to discuss your project needs, schedule, and scope. Typical response within one business day.</p>
+      <form class="quote-form" action="https://formspree.io/f/xnjkjown" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Company / Organization</label>
+          <input type="text" name="company" placeholder="Acme Pipeline Co.">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="john@company.com" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="(555) 000-0000">
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select name="service">
+            <option value="">Select a service...</option>
+            <option>Commissioning / Start-up</option>
+            <option>QAQC / Inspections</option>
+            <option>Reliability Services</option>
+            <option>Multiple / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Project Details</label>
+          <textarea name="message" placeholder="Describe your project scope, location, and timeline if known..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="text-align:center; padding:14px; border:none; cursor:pointer; width:100%;">Submit Request</button>
+      </form>
+    </div>
+    <div>
+      <div class="quote-info">
+        <div class="qi-title">What to Expect</div>
+        <ul class="qi-list">
+          <li><div class="qi-dot"></div><div>Response within one business day — usually same day.</div></li>
+          <li><div class="qi-dot"></div><div>We'll ask about your completions system, site location, and schedule before providing a rate or scope estimate.</div></li>
+          <li><div class="qi-dot"></div><div>All inquiries are confidential. We do not share client or project information.</div></li>
+          <li><div class="qi-dot"></div><div>Subcontracting and intermediary firm inquiries welcome — we have W-9, insurance certs, and compliance docs ready.</div></li>
+          <li><div class="qi-dot"></div><div>MSA discussions available for qualifying pipeline operator clients.</div></li>
+        </ul>
+        <div class="qi-contact">
+          <p>Prefer to call directly?</p>
+          <a href="tel:2812007623" class="ph">281-200-7623</a>
+          <div class="em">info@rts-hq.com</div>
+          <p style="margin-top:14px; font-size:12px; color:rgba(167,196,214,0.4); letter-spacing:0.05em; text-transform:uppercase;">Mon &ndash; Fri &middot; 7:00am &ndash; 6:00pm CDT</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div>
+    <h2>Ready to Start Your<br>Next Project <em>Right?</em></h2>
+    <p>Independent expertise. Field-proven process. Accountability from first loop to final handover.</p>
+  </div>
+  <a href="#quote" class="btn btn-outline-white">Request a Quote</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">ROGUE <span>Technical Services</span> LLC</div>
+      <p>"Reliability Starts With Rogue" — independent E&amp;I commissioning, QAQC, and reliability services for natural gas transmission and industrial projects nationwide.</p>
+      <a href="tel:2812007623" class="footer-phone">281-200-7623</a>
+      <div class="footer-hours">Monday &ndash; Friday: 7:00am &ndash; 6:00pm CDT</div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="commissioning.html">Commissioning / Start-up</a></li>
+        <li><a href="qaqc.html">QAQC / Inspections</a></li>
+        <li><a href="reliability.html">Reliability Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Who We Serve</h4>
+      <ul>
+        <li><a href="index.html#serve">Pipeline Operators</a></li>
+        <li><a href="index.html#serve">EPC Contractors</a></li>
+        <li><a href="index.html#serve">Compression Facilities</a></li>
+        <li><a href="index.html#serve">LNG &amp; Biofuels</a></li>
+        <li><a href="index.html#serve">Staffing Firms</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="why-rogue.html">About Rogue</a></li>
+        <li><a href="https://rts-hq.com">rts-hq.com</a></li>
+        <li><a href="#quote">Request a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Rogue Technical Services LLC &mdash; All Rights Reserved.</span>
+    <span style="color:rgba(167,196,214,0.3);">rts-hq.com</span>
+  </div>
+</footer>
+
+<!-- MODAL: Commissioning & Start-up -->
+<div class="modal-overlay" id="modal-commissioning">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-commissioning')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Service Detail</div>
+      <div class="modal-title">Commissioning &amp; Start-up</div>
+    </div>
+    <div class="modal-body">
+      <p>Rogue provides full-scope electrical and instrumentation commissioning from pre-energization through final facility handover. Every phase is systematically executed, fully documented, and aligned to your completions management system — whether that's Hexagon Smart Completions, Bentley AssetWise, or your own internal tracking platform.</p>
+      <div class="modal-sub">What's Included</div>
+      <ul class="modal-list">
+        <li>Instrument loop checks and calibration verification</li>
+        <li>MCC, switchgear, and motor control energization</li>
+        <li>Functional logic testing for PLC/DCS/SIS systems</li>
+        <li>Cause &amp; effect testing against approved C&amp;E matrices</li>
+        <li>Valve stroke testing and actuator calibration</li>
+        <li>Field device commissioning — transmitters, analyzers, flow meters</li>
+        <li>Punch list generation, tracking, and closeout</li>
+        <li>Completions package documentation for turnover</li>
+      </ul>
+      <div class="modal-sub">Platforms &amp; Equipment</div>
+      <ul class="modal-list">
+        <li>Yokogawa, Rosemount, Endress+Hauser instrumentation</li>
+        <li>Allen-Bradley / Rockwell PLCs and ControlLogix systems</li>
+        <li>Solar Turbines, Caterpillar &amp; Waukesha compression units</li>
+        <li>Hexagon Smart Completions and similar completions platforms</li>
+      </ul>
+      <div class="modal-cta">
+        <a href="#quote" class="btn btn-primary" onclick="closeModal('modal-commissioning')">Request a Quote &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: QAQC / Inspections -->
+<div class="modal-overlay" id="modal-qaqc">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-qaqc')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Service Detail</div>
+      <div class="modal-title">QAQC / Inspections</div>
+    </div>
+    <div class="modal-body">
+      <p>Independent quality assurance isn't a formality — it's the last line of defense before a missed item becomes a commissioning delay, a safety event, or a restart. Rogue brings an outside set of eyes that has no stake in rushing the punchlist closed.</p>
+      <p>We verify that E&amp;I installations match specifications, P&amp;IDs, and project documentation before loop checks begin — catching issues at the point where they're cheap to fix, not after energization.</p>
+      <div class="modal-sub">Inspection Scope</div>
+      <ul class="modal-list">
+        <li>Instrument installation verification against data sheets and P&amp;IDs</li>
+        <li>Cable tray, conduit, and wiring installation checks</li>
+        <li>Grounding and bonding continuity inspection</li>
+        <li>Junction box and marshalling panel verification</li>
+        <li>Control panel and MCC internal inspection</li>
+        <li>Hazardous area equipment certification review (NEC Class/Division, ATEX)</li>
+        <li>Punch list generation with photo documentation</li>
+        <li>Pre-commissioning readiness assessments</li>
+      </ul>
+      <div class="modal-sub">Documentation Deliverables</div>
+      <ul class="modal-list">
+        <li>Inspection reports tied to tag numbers and line items</li>
+        <li>Photographic punch list packages</li>
+        <li>Pre-commissioning completion certificates</li>
+      </ul>
+      <div class="modal-cta">
+        <a href="#quote" class="btn btn-primary" onclick="closeModal('modal-qaqc')">Request a Quote &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Reliability Services -->
+<div class="modal-overlay" id="modal-reliability">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-reliability')">&times;</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Service Detail</div>
+      <div class="modal-title">Reliability Services</div>
+    </div>
+    <div class="modal-body">
+      <p>After turnover, the real work begins. Operating assets in natural gas transmission and compression are expected to run — and when they don't, the cost of downtime is immediate and measurable. Rogue provides ongoing reliability support for facilities that need a specialist on call, not a generalist with a manual.</p>
+      <div class="modal-sub">What We Provide</div>
+      <ul class="modal-list">
+        <li>Instrumentation and controls troubleshooting for operating assets</li>
+        <li>Root cause analysis (RCA) for recurring failures and process trips</li>
+        <li>Predictive and preventive maintenance strategy development</li>
+        <li>PLC/DCS program review and logic verification</li>
+        <li>Alarm rationalization and management support</li>
+        <li>Turnaround scope development and execution support</li>
+        <li>Instrument calibration programs and schedules</li>
+        <li>Spare parts review and critical instrument identification</li>
+      </ul>
+      <div class="modal-sub">Who This Is For</div>
+      <ul class="modal-list">
+        <li>Pipeline operators looking to reduce unplanned shutdowns</li>
+        <li>Compression facilities with aging instrumentation infrastructure</li>
+        <li>Facilities with limited in-house E&amp;I staff</li>
+        <li>Sites preparing for a regulatory audit or turnaround event</li>
+      </ul>
+      <div class="modal-cta">
+        <a href="#quote" class="btn btn-primary" onclick="closeModal('modal-reliability')">Request a Quote &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  // Close on overlay click
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === this) closeModal(this.id);
+    });
+  });
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+    }
+  });
+
+  // Dropdown menus
+  function toggleDropdown(id) {
+    const item = document.getElementById(id);
+    const isOpen = item.classList.contains('open');
+    closeAllDropdowns();
+    if (!isOpen) item.classList.add('open');
+  }
+  function closeAllDropdowns() {
+    document.querySelectorAll('.nav-item.open').forEach(function(el) {
+      el.classList.remove('open');
+    });
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) closeAllDropdowns();
+  });
+
+  // Quote form — submit via fetch so page never reloads
+  const quoteForm = document.querySelector('.quote-form');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = quoteForm.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      fetch(quoteForm.action, {
+        method: 'POST',
+        body: new FormData(quoteForm),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function(res) {
+        if (res.ok) {
+          quoteForm.innerHTML = '<div style="padding:40px 20px; text-align:center; color:var(--ink);">' +
+            '<div style="font-size:48px; margin-bottom:16px;">✓</div>' +
+            '<div style="font-family:var(--display); font-size:24px; font-weight:700; text-transform:uppercase; margin-bottom:12px;">Request Sent!</div>' +
+            '<p style="font-size:16px; color:#4A5568;">Thanks for reaching out. We\'ll be in touch within one business day.</p>' +
+            '</div>';
+        } else {
+          btn.textContent = 'Submit Request';
+          btn.disabled = false;
+          alert('Something went wrong. Please try again or call us directly.');
+        }
+      })
+      .catch(function() {
+        btn.textContent = 'Submit Request';
+        btn.disabled = false;
+        alert('Network error. Please try again or call us directly.');
+      });
+    });
+  }
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+</script>
+
+</body>
+</html>
