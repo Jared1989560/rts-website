@@ -768,8 +768,17 @@
     letter-spacing: 0.1em;
   }
 
+  body { overflow-x: hidden; }
+
+  /* ── Tablets & landscape phones: show hamburger ── */
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; }
+    .nav-right { display: none; }
+    nav { padding: 0 16px; }
+  }
+
   @media (max-width: 768px) {
-    html, body { overflow-x: hidden; }
     .hamburger { display: flex; }
     .nav-links { display: none; }
     .nav-right { display: none; }
