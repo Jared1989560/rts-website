@@ -72,12 +72,20 @@
   }
   .page-hero-bg {
     position: absolute; inset: 0;
-    animation: imgZoomOut 9s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
-    background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80');
+    animation: imgPanOut 16s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
-    background-position: center 40%;
-    opacity: 0.15;
+    background-position: center 55%;
+    opacity: 0;
     z-index: 0;
+  }
+  /* Edge vignette — frames the conduit and hides corners */
+  .page-hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 90% 80% at 50% 50%, transparent 40%, rgba(10,26,47,0.72) 100%);
+    pointer-events: none;
   }
   .page-hero::before {
     content: '';
@@ -188,9 +196,11 @@
     .divider { margin: 0 20px; }
   }
 
-  @keyframes imgZoomOut {
-    from { transform: scale(1.12); }
-    to   { transform: scale(1.0); }
+  /* Ken Burns — start deep inside the conduit bundle, slowly pull back & pan right */
+  @keyframes imgPanOut {
+    0%   { transform: scale(1.35) translate(-5%, 3%);  opacity: 0;    }
+    5%   { transform: scale(1.32) translate(-4.5%, 2.5%); opacity: 0.22; }
+    100% { transform: scale(1.0)  translate(2%, -1%);  opacity: 0.22;    }
   }
 </style>
 
