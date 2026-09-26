@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="avIXyvaZ7l1q61HVZ4rKBYSlqn1Wv8XDaEe5OumaKXU" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E&I Installation &amp; Construction | Rogue Technical Services LLC</title>
+<meta name="description" content="Full-scope electrical and instrumentation installation and construction — conduit, cable tray, device mounting, panel wiring, and termination. Rogue Technical Services LLC, Houston TX. Serving the Gulf Coast, Permian Basin, and nationwide.">
+<meta name="keywords" content="E&I installation, electrical installation contractor, instrumentation installation, electrical construction, conduit installation, cable tray, instrument mounting, panel wiring, hazardous area electrical, Class I Div II, Houston Texas, Gulf Coast, Permian Basin, natural gas, compression">
+<meta property="og:title" content="E&amp;I Installation &amp; Construction | Rogue Technical Services LLC">
+<meta property="og:description" content="Full-scope E&I installation and construction — built to commission cleanly, documented to turn over right. Houston, TX.">
+<meta property="og:url" content="https://rts-hq.com/installation.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #0D1117;
+    --panel:      #111827;
+    --deep-steel: #0A1A2F;
+    --blue:       #00AEEF;
+    --blue-h:     #4FD3FF;
+    --blue-dim:   rgba(0,174,239,0.18);
+    --bright-steel: #D9ECF8;
+    --soft-steel:   #A7C4D6;
+    --white:        #FFFFFF;
+    --off-white:    #F8FAFC;
+    --glow:       0 0 14px rgba(0,174,239,1);
+    --grid-line:  rgba(0,174,239,0.08);
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Sans 3', sans-serif; color: var(--bright-steel); background: var(--ink); overflow-x: hidden; }
+  a { text-decoration: none; }
+
+  /* UTIL BAR */
+  .util-bar { background: var(--deep-steel); color: var(--soft-steel); text-align: center; padding: 9px 24px; font-size: 13px; letter-spacing: 0.06em; border-bottom: 1px solid var(--grid-line); }
+  .util-bar strong { color: var(--blue); }
+
+  /* NAV */
+  nav { background: var(--panel); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 70px; position: sticky; top: 0; z-index: 200; border-bottom: 2px solid var(--blue); box-shadow: 0 2px 20px rgba(0,174,239,0.15); }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-logo img { height: 52px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { color: var(--bright-steel); font-family: 'Source Sans 3', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: color .2s; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+  .nav-links a:hover { color: var(--blue); border-bottom-color: var(--blue); }
+  .nav-item { position: relative; }
+  .nav-item > a { cursor: pointer; user-select: none; }
+  .dropdown { display: none; position: absolute; top: calc(100% + 18px); left: 50%; transform: translateX(-50%); background: var(--panel); border-top: 2px solid var(--blue); box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 20px rgba(0,174,239,0.08); min-width: 220px; z-index: 999; padding: 8px 0; }
+  .nav-item.open .dropdown { display: block; }
+  .dropdown a { display: block; padding: 11px 22px; color: var(--bright-steel); font-size: 13px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-bottom: none; white-space: nowrap; transition: background .15s, color .15s; }
+  .dropdown a:hover { background: var(--blue-dim); color: var(--blue); border-bottom: none; }
+  .dropdown a.active { color: var(--blue); }
+  .dropdown-divider { height: 1px; background: rgba(0,174,239,0.15); margin: 6px 0; }
+  .nav-right { display: flex; align-items: center; gap: 20px; }
+  .nav-phone { font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 500; color: var(--blue); letter-spacing: 0.04em; }
+  .btn { display: inline-block; cursor: pointer; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; transition: all .2s; }
+  .btn-primary { background: var(--blue); color: var(--ink); padding: 10px 26px; font-size: 14px; }
+  .btn-primary:hover { background: var(--blue-h); box-shadow: var(--glow); }
+  .btn-outline-blue { border: 2px solid var(--blue); color: var(--blue); padding: 10px 26px; font-size: 14px; }
+  .btn-outline-blue:hover { background: var(--blue-dim); }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--deep-steel);
+    padding: 80px 60px 70px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0,174,239,0.2);
+  }
+  .page-hero-bg {
+    position: absolute; inset: 0;
+    animation: imgZoomOut 9s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+    background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center 40%;
+    opacity: 0.15;
+    z-index: 0;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,174,239,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,174,239,0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .page-hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; position: relative; z-index: 2; }
+  .page-hero-title { font-family: 'Oswald', sans-serif; font-size: 56px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.05; margin-bottom: 20px; position: relative; z-index: 2; }
+  .page-hero-sub { font-size: 19px; line-height: 1.7; color: var(--bright-steel); max-width: 680px; font-weight: 300; position: relative; z-index: 2; }
+
+  /* CONTENT */
+  .content-sec { padding: 72px 60px; max-width: 1100px; margin: 0 auto; }
+  .content-sec h2 { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 16px; letter-spacing: 0.04em; }
+  .content-sec h2 span { color: var(--blue); }
+  .content-sec p { font-size: 17px; line-height: 1.75; color: var(--bright-steel); margin-bottom: 20px; font-weight: 300; }
+  .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 48px; }
+  .content-box { background: var(--panel); border-top: 3px solid var(--blue); padding: 36px; box-shadow: 0 0 24px rgba(0,174,239,0.06); }
+  .content-box h3 { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; letter-spacing: 0.08em; text-shadow: var(--glow); }
+  .content-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .content-box li { font-size: 15px; color: var(--bright-steel); padding-left: 18px; position: relative; line-height: 1.55; }
+  .content-box li::before { content: '→'; position: absolute; left: 0; color: var(--blue); font-size: 12px; top: 2px; }
+  .divider { height: 1px; background: linear-gradient(90deg, var(--blue), transparent); margin: 0 60px; opacity: 0.3; }
+
+  /* LIGHT SECTION */
+  .light-sec { background: var(--off-white); padding: 72px 60px; }
+  .light-sec h2 { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; text-transform: uppercase; color: var(--ink); margin-bottom: 16px; letter-spacing: 0.04em; }
+  .light-sec h2 span { color: var(--blue); }
+  .light-sec p { font-size: 17px; line-height: 1.75; color: #4A5568; margin-bottom: 20px; font-weight: 300; max-width: 900px; }
+  .light-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 40px; }
+  .light-card { background: var(--white); border-left: 4px solid var(--blue); padding: 32px; box-shadow: 0 2px 12px rgba(0,174,239,0.06); }
+  .light-card h3 { font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 700; text-transform: uppercase; color: var(--ink); margin-bottom: 12px; letter-spacing: 0.06em; }
+  .light-card p { font-size: 15px; line-height: 1.7; color: #4A5568; margin-bottom: 0; }
+
+  /* STAT ROW */
+  .stat-row { display: flex; gap: 0; border-top: 1px solid rgba(0,174,239,0.15); border-bottom: 1px solid rgba(0,174,239,0.15); margin: 0; }
+  .stat-item { flex: 1; padding: 40px 60px; border-right: 1px solid rgba(0,174,239,0.15); }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-family: 'Oswald', sans-serif; font-size: 48px; font-weight: 700; color: var(--blue); text-shadow: var(--glow); margin-bottom: 6px; }
+  .stat-lbl { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--soft-steel); }
+
+  /* CTA BANNER */
+  .cta-banner { background: var(--deep-steel); border-top: 2px solid var(--blue); border-bottom: 2px solid var(--blue); padding: 60px; display: flex; align-items: center; justify-content: space-between; gap: 40px; position: relative; overflow: hidden; }
+  .cta-banner::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; }
+  .cta-banner h2 { font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.1; position: relative; }
+  .cta-banner h2 em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
+  .cta-banner p { font-size: 16px; color: var(--soft-steel); margin-top: 10px; position: relative; }
+  .btn-outline-white { border: 2px solid rgba(255,255,255,0.7); color: var(--white); padding: 14px 32px; font-size: 15px; white-space: nowrap; position: relative; }
+  .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+
+  /* FOOTER */
+  footer { background: var(--deep-steel); padding: 60px 60px 30px; border-top: 1px solid rgba(0,174,239,0.15); }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand-name { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 14px; letter-spacing: 0.06em; }
+  .footer-brand-name span { color: var(--blue); }
+  .footer-brand p { font-size: 14px; line-height: 1.7; color: var(--soft-steel); margin-bottom: 18px; }
+  .footer-phone { font-family: 'Oswald', sans-serif; font-size: 22px; color: var(--blue); font-weight: 500; text-shadow: var(--glow); }
+  .footer-hours { font-size: 12px; color: var(--soft-steel); margin-top: 6px; letter-spacing: 0.06em; }
+  .footer-col h4 { font-family: 'Oswald', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--blue); margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col li a { color: var(--soft-steel); font-size: 14px; transition: color .2s; }
+  .footer-col li a:hover { color: var(--blue); }
+  .footer-bottom { border-top: 1px solid rgba(0,174,239,0.1); padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(167,196,214,0.4); letter-spacing: 0.06em; }
+
+  /* MOBILE NAV */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--blue); transition: all .3s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mobile-nav { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: var(--panel); border-top: 2px solid var(--blue); z-index: 190; overflow-y: auto; padding: 24px 0; }
+  .mobile-nav.open { display: block; }
+  .mobile-nav a { display: block; padding: 16px 32px; color: var(--bright-steel); font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid rgba(0,174,239,0.1); transition: color .2s, background .2s; }
+  .mobile-nav a:hover { color: var(--blue); background: var(--blue-dim); }
+  .mobile-nav .mobile-section { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); padding: 20px 32px 8px; }
+  .mobile-nav .mobile-cta { margin: 24px 32px; display: block; text-align: center; background: var(--blue); color: var(--ink); padding: 16px; font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none; }
+    .nav-right { display: none; }
+    nav { padding: 0 16px; }
+  }
+
+  @media (max-width: 768px) {
+    body { overflow-x: hidden; }
+    .hamburger { display: flex; }
+    .nav-links { display: none; }
+    .nav-right { display: none; }
+    nav { padding: 0 16px; }
+    .page-hero { padding: 52px 20px 40px; }
+    .page-hero-title { font-size: 32px; }
+    .page-hero-sub { font-size: 16px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(0,174,239,0.15); padding: 28px 20px; }
+    .content-sec { padding: 48px 20px; }
+    .content-grid { grid-template-columns: 1fr; gap: 24px; }
+    .light-sec { padding: 48px 20px; }
+    .light-grid { grid-template-columns: 1fr; gap: 16px; }
+    .cta-banner { flex-direction: column; text-align: center; padding: 40px 20px; }
+    footer { padding: 48px 20px 28px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; gap: 6px; }
+    .divider { margin: 0 20px; }
+  }
+
+  @keyframes imgZoomOut {
+    from { transform: scale(1.12); }
+    to   { transform: scale(1.0); }
+  }
+</style>
+
+<link rel="canonical" href="https://rts-hq.com/installation.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://rts-hq.com/installation.html#service",
+      "name": "E&I Installation & Construction",
+      "provider": { "@id": "https://rts-hq.com/#business" },
+      "description": "Full electrical and instrumentation installation and construction — conduit, cable tray, cable pulling and termination, device mounting, panel wiring, and grounding for natural gas, compression, LNG, and industrial facilities.",
+      "areaServed": "United States",
+      "serviceType": "Electrical and Instrumentation Installation"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rts-hq.com/installation.html",
+      "url": "https://rts-hq.com/installation.html",
+      "name": "E&I Installation & Construction | Rogue Technical Services LLC",
+      "description": "Full-scope E&I installation and construction — built to commission cleanly, documented to turn over right.",
+      "isPartOf": { "@id": "https://rts-hq.com/#website" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rts-hq.com" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://rts-hq.com/#services" },
+          { "@type": "ListItem", "position": 3, "name": "E&I Installation", "item": "https://rts-hq.com/installation.html" }
+        ]
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div class="util-bar">
+  Full-service E&amp;I electrical contractor — installation, commissioning &amp; reliability &mdash; <strong>Call today to request a quote</strong>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Rogue Technical Services LLC">
+  </a>
+  <ul class="nav-links">
+    <li class="nav-item" id="nav-services">
+      <a href="index.html#services" onclick="toggleDropdown('nav-services'); return false;">Services &#9660;</a>
+      <div class="dropdown">
+        <a href="commissioning.html">Commissioning / Start-up</a>
+        <a href="qaqc.html">QAQC / Inspections</a>
+        <a href="reliability.html">Reliability Services</a>
+        <div class="dropdown-divider"></div>
+        <a href="installation.html" class="active">E&amp;I Installation</a>
+      </div>
+    </li>
+    <li><a href="index.html#serve">Who We Serve</a></li>
+    <li class="nav-item" id="nav-about">
+      <a href="why-rogue.html" onclick="toggleDropdown('nav-about'); return false;">About &#9660;</a>
+      <div class="dropdown">
+        <a href="why-rogue.html">Why Rogue?</a>
+        <a href="recent-work.html">Recent Work</a>
+        <a href="safety.html">Safety</a>
+        <div class="dropdown-divider"></div>
+        <a href="index.html#quote">Request a Quote</a>
+      </div>
+    </li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:2812007623" class="nav-phone">281-200-7623</a>
+    <a href="index.html#quote" class="btn btn-primary">Request a Quote</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-section">Services</div>
+  <a href="commissioning.html">Commissioning / Start-up</a>
+  <a href="qaqc.html">QAQC / Inspections</a>
+  <a href="reliability.html">Reliability Services</a>
+  <a href="installation.html" style="color:var(--blue);">E&amp;I Installation</a>
+  <div class="mobile-section">Company</div>
+  <a href="why-rogue.html">Why Rogue?</a>
+  <a href="recent-work.html">Recent Work</a>
+  <a href="safety.html">Safety</a>
+  <a href="index.html#serve">Who We Serve</a>
+  <a href="index.html#quote" class="mobile-cta">Request a Quote</a>
+  <div style="padding:16px 32px;">
+    <a href="tel:2812007623" style="color:var(--blue);font-family:Oswald,sans-serif;font-size:22px;font-weight:700;letter-spacing:0.04em;">281-200-7623</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-eyebrow" style="position:relative;z-index:2;">Services</div>
+  <div class="page-hero-title" style="position:relative;z-index:2;">E&amp;I Installation &amp;<br>Construction</div>
+  <p class="page-hero-sub" style="position:relative;z-index:2;">Full electrical and instrumentation installation for new construction, plant expansions, and capital projects. Whether you need installation only, commissioning only, or the complete scope from conduit to turnover — Rogue delivers.</p>
+</div>
+
+<!-- STAT ROW -->
+<div class="stat-row">
+  <div class="stat-item">
+    <div class="stat-num">15+</div>
+    <div class="stat-lbl">Years Field Experience</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-lbl">Project Completion Rate</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">24hr</div>
+    <div class="stat-lbl">Typical Quote Response</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content-sec">
+  <h2>What We <span>Install</span></h2>
+  <p>Rogue Technical Services performs full electrical and instrumentation installation for new construction, plant expansions, and capital projects. We operate as a standalone E&amp;I installation contractor — bringing the field experience, technical discipline, and documentation standards that industrial projects demand.</p>
+  <p>Correct installations. Tight terminations. Complete documentation. No surprises when the next phase starts.</p>
+
+  <div class="content-grid">
+    <div class="content-box">
+      <h3>Electrical Installation</h3>
+      <ul>
+        <li>Conduit systems — rigid, EMT, HDPE, and fiberglass</li>
+        <li>Cable tray, ladder rack, and wireway installation</li>
+        <li>Power and control cable pulling</li>
+        <li>Cable termination and lug installation</li>
+        <li>Motor and equipment connections</li>
+        <li>Lighting, receptacles, and panel feeders</li>
+        <li>Grounding and bonding systems</li>
+        <li>Electrical equipment installation and setting</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>Instrumentation Installation</h3>
+      <ul>
+        <li>Transmitter, switch, and analyzer installation</li>
+        <li>Flow meter and primary element setting</li>
+        <li>Control valve and actuator mounting</li>
+        <li>Junction box and marshalling enclosure installation</li>
+        <li>Instrument tubing and impulse piping</li>
+        <li>Field instrument cable pulling and termination</li>
+        <li>Instrument support and bracket fabrication</li>
+        <li>DCS/PLC I/O termination and field wiring</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>Hazardous Area &amp; NEC Work</h3>
+      <ul>
+        <li>Class I Division 1 &amp; 2 electrical installation</li>
+        <li>Explosion-proof conduit sealing and fittings</li>
+        <li>Intrinsically safe wiring system installation</li>
+        <li>Purged and pressurized enclosure installation</li>
+        <li>Area classification verification against drawings</li>
+        <li>Ex-rated instrument and device installation</li>
+        <li>NEC Article 501/502 compliance verification</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>Panels, MCC &amp; Switchgear</h3>
+      <ul>
+        <li>MCC and motor control center setting and termination</li>
+        <li>Switchgear and distribution panel installation</li>
+        <li>Control panel wiring and internal termination</li>
+        <li>PLC/DCS cabinet installation and power-up</li>
+        <li>UPS and battery backup systems</li>
+        <li>Instrumentation panel internal wiring</li>
+        <li>Pre-energization inspection and point-to-point verification</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- DOCUMENTATION SECTION -->
+<div class="content-sec">
+  <h2>Documentation &amp; <span>As-Builts</span></h2>
+  <p>Every installation Rogue performs is documented to turnover standards from day one. We don't retrofit paperwork at the end of the job — we build the documentation package alongside the installation so it's complete, accurate, and ready when the next phase of your project begins.</p>
+
+  <div class="content-grid">
+    <div class="content-box">
+      <h3>Installation Records</h3>
+      <ul>
+        <li>Completed installation inspection checklists per tag/circuit</li>
+        <li>Material traceability records and equipment serial numbers</li>
+        <li>Cable schedule updates — routing, termination, test results</li>
+        <li>Torque records for electrical terminations and bolted connections</li>
+        <li>Conduit seal installation records (hazardous area)</li>
+        <li>Grounding resistance test records</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>As-Built Drawings &amp; Turnover</h3>
+      <ul>
+        <li>Red-line as-built markup on electrical and instrumentation drawings</li>
+        <li>Updated cable schedules reflecting final routing and cuts</li>
+        <li>Instrument index updates for installed devices</li>
+        <li>Pre-commissioning readiness certificates per discipline</li>
+        <li>Photo documentation of installation milestones</li>
+        <li>Punch list package for commissioning handoff</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WHY ROGUE FOR INSTALLATION -->
+<div class="light-sec">
+  <h2>What Sets Our <span>Installation Apart</span></h2>
+  <p>E&amp;I installation is a craft. The difference between a clean install and a problem install shows up in the details — a termination that's one lug short, a conduit seal that wasn't filled, a ground that was jumped over. Rogue brings the field experience and discipline to get those details right every time, on every project.</p>
+
+  <div class="light-grid">
+    <div class="light-card">
+      <h3>Built to Spec — Every Time</h3>
+      <p>We install against the drawings, data sheets, and applicable codes — NEC, ISA, client specs. We don't improvise. If something conflicts with the design, we flag it before we build it wrong.</p>
+    </div>
+    <div class="light-card">
+      <h3>Hazardous Area Experience</h3>
+      <p>Class I Division 1 and 2 work requires getting it right — conduit seals, fitting selection, certified equipment. We've done it in natural gas, compression, and refining environments where the stakes are real.</p>
+    </div>
+    <div class="light-card">
+      <h3>Documentation Built Alongside the Work</h3>
+      <p>Installation records, cable schedules, as-built markups, and inspection checklists are completed as the job progresses — not assembled at the end from memory. The package is ready when you need it.</p>
+    </div>
+    <div class="light-card">
+      <h3>Field-Experienced Crew</h3>
+      <p>Our people have worked industrial E&amp;I across natural gas, compression, LNG, and refinery environments. They know the equipment, the failure modes, and how to install correctly the first time.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:40px; font-size:15px; color:#4A5568;">Need commissioning or reliability services on the same project? Rogue offers those as separate services — <a href="index.html#quote" style="color:var(--blue); font-weight:600;">ask us about full-scope options</a> when you reach out.</p>
+</div>
+
+<!-- INDUSTRIES -->
+<div class="content-sec">
+  <h2>Industries &amp; <span>Project Types</span></h2>
+  <p>Rogue performs E&amp;I installation work across natural gas, midstream, refining, and industrial sectors. Our field crews are experienced in the specific codes, equipment, and documentation requirements that apply to each environment.</p>
+
+  <div class="content-grid">
+    <div class="content-box">
+      <h3>Natural Gas &amp; Compression</h3>
+      <ul>
+        <li>Compression station E&amp;I installation — new builds and expansions</li>
+        <li>Gas transmission pipeline station instrumentation</li>
+        <li>Metering and regulation station electrical work</li>
+        <li>Caterpillar, Waukesha, and Solar Turbines unit wiring</li>
+        <li>SCADA and ESD system field wiring and termination</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>Midstream &amp; Processing</h3>
+      <ul>
+        <li>Gas processing plant E&amp;I new construction</li>
+        <li>LNG facility electrical and instrumentation installation</li>
+        <li>Biofuels and renewable fuels plant E&amp;I work</li>
+        <li>Fractionation and treating unit instrumentation</li>
+        <li>Midstream expansion and debottleneck projects</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>Refinery &amp; Petrochemical</h3>
+      <ul>
+        <li>Turnaround E&amp;I installation and replacement work</li>
+        <li>Unit expansion and capital project E&amp;I scope</li>
+        <li>Safety system (SIS/SIL) field wiring</li>
+        <li>Analyzer system installation and utility connections</li>
+        <li>Flare system instrumentation and electrical</li>
+      </ul>
+    </div>
+    <div class="content-box">
+      <h3>EPC &amp; Construction Projects</h3>
+      <ul>
+        <li>E&amp;I subcontract scope under EPC or general contractor</li>
+        <li>Design-build E&amp;I packages for owner-operators</li>
+        <li>Greenfield and brownfield project installation</li>
+        <li>Modular skid electrical and instrumentation pre-assembly</li>
+        <li>Tie-in and interconnect E&amp;I work on operating facilities</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div>
+    <h2>Ready to Build It <em>Right?</em></h2>
+    <p>Full E&amp;I installation scope. Correct work, complete documentation, on your schedule.</p>
+  </div>
+  <a href="index.html#quote" class="btn btn-outline-white">Request a Quote</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">ROGUE <span>Technical Services</span> LLC</div>
+      <p>Full-service E&amp;I electrical contractor — installation, commissioning, QAQC, and reliability services for natural gas transmission and industrial projects nationwide.</p>
+      <a href="tel:2812007623" class="footer-phone">281-200-7623</a>
+      <div class="footer-hours">Monday &ndash; Friday: 7:00am &ndash; 6:00pm CDT</div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="installation.html">E&amp;I Installation</a></li>
+        <li><a href="commissioning.html">Commissioning / Start-up</a></li>
+        <li><a href="qaqc.html">QAQC / Inspections</a></li>
+        <li><a href="reliability.html">Reliability Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Who We Serve</h4>
+      <ul>
+        <li><a href="index.html#serve">Pipeline Operators</a></li>
+        <li><a href="index.html#serve">EPC Contractors</a></li>
+        <li><a href="index.html#serve">Compression Facilities</a></li>
+        <li><a href="index.html#serve">LNG &amp; Biofuels</a></li>
+        <li><a href="index.html#serve">Staffing Firms</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="why-rogue.html">About Rogue</a></li>
+        <li><a href="recent-work.html">Recent Work</a></li>
+        <li><a href="index.html#quote">Request a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Rogue Technical Services LLC &mdash; All Rights Reserved.</span>
+    <span>rts-hq.com</span>
+  </div>
+</footer>
+
+<script>
+  function toggleDropdown(id) {
+    const item = document.getElementById(id);
+    const isOpen = item.classList.contains('open');
+    closeAllDropdowns();
+    if (!isOpen) item.classList.add('open');
+  }
+  function closeAllDropdowns() {
+    document.querySelectorAll('.nav-item.open').forEach(function(el) {
+      el.classList.remove('open');
+    });
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) closeAllDropdowns();
+  });
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
