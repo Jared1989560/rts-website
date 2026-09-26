@@ -36,12 +36,8 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Source Sans 3', sans-serif; color: var(--bright-steel); background: var(--ink); overflow-x: hidden; }
   a { text-decoration: none; }
-
-  /* UTIL BAR */
   .util-bar { background: var(--deep-steel); color: var(--soft-steel); text-align: center; padding: 9px 24px; font-size: 13px; letter-spacing: 0.06em; border-bottom: 1px solid var(--grid-line); }
   .util-bar strong { color: var(--blue); }
-
-  /* NAV */
   nav { background: var(--panel); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 70px; position: sticky; top: 0; z-index: 200; border-bottom: 2px solid var(--blue); box-shadow: 0 2px 20px rgba(0,174,239,0.15); }
   .nav-logo { display: flex; align-items: center; }
   .nav-logo img { height: 52px; width: auto; display: block; }
@@ -60,41 +56,12 @@
   .btn { display: inline-block; cursor: pointer; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; transition: all .2s; }
   .btn-primary { background: var(--blue); color: var(--ink); padding: 10px 26px; font-size: 14px; }
   .btn-primary:hover { background: var(--blue-h); box-shadow: var(--glow); }
-  .btn-outline-blue { border: 2px solid var(--blue); color: var(--blue); padding: 10px 26px; font-size: 14px; }
-  .btn-outline-blue:hover { background: var(--blue-dim); }
-
-  /* PAGE HERO */
-  .page-hero {
-    background: var(--deep-steel);
-    padding: 80px 60px 70px;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(0,174,239,0.2);
-  }
-  .page-hero-bg {
-    position: absolute; inset: 0;
-    animation: imgZoomOut 9s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
-    background-image: url('https://images.unsplash.com/photo-1565688534245-05d6b5be184a?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
-    z-index: 0;
-  }
-  .page-hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(0,174,239,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,174,239,0.06) 1px, transparent 1px);
-    background-size: 44px 44px;
-    pointer-events: none;
-    z-index: 1;
-  }
+  .page-hero { background: var(--deep-steel); padding: 80px 60px 70px; position: relative; overflow: hidden; border-bottom: 1px solid rgba(0,174,239,0.2); }
+  .page-hero-bg { position: absolute; inset: 0; animation: imgZoomOut 9s cubic-bezier(0.25,0.46,0.45,0.94) forwards; background-image: url('https://images.unsplash.com/photo-1565688534245-05d6b5be184a?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; opacity: 0.15; z-index: 0; }
+  .page-hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(0,174,239,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,174,239,0.06) 1px, transparent 1px); background-size: 44px 44px; pointer-events: none; z-index: 1; }
   .page-hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; position: relative; }
   .page-hero-title { font-family: 'Oswald', sans-serif; font-size: 56px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.05; margin-bottom: 20px; position: relative; }
   .page-hero-sub { font-size: 19px; line-height: 1.7; color: var(--bright-steel); max-width: 680px; font-weight: 300; position: relative; }
-
-  /* CONTENT */
   .content-sec { padding: 72px 60px; max-width: 1100px; margin: 0 auto; }
   .content-sec h2 { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 16px; letter-spacing: 0.04em; }
   .content-sec h2 span { color: var(--blue); }
@@ -105,24 +72,17 @@
   .content-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .content-box li { font-size: 15px; color: var(--bright-steel); padding-left: 18px; position: relative; line-height: 1.55; }
   .content-box li::before { content: '→'; position: absolute; left: 0; color: var(--blue); font-size: 12px; top: 2px; }
-  .divider { height: 1px; background: linear-gradient(90deg, var(--blue), transparent); margin: 0 60px; opacity: 0.3; }
-
-  /* STAT ROW */
   .stat-row { display: flex; gap: 0; border-top: 1px solid rgba(0,174,239,0.15); border-bottom: 1px solid rgba(0,174,239,0.15); margin: 0; }
   .stat-item { flex: 1; padding: 40px 60px; border-right: 1px solid rgba(0,174,239,0.15); }
   .stat-item:last-child { border-right: none; }
   .stat-num { font-family: 'Oswald', sans-serif; font-size: 48px; font-weight: 700; color: var(--blue); text-shadow: var(--glow); margin-bottom: 6px; }
   .stat-lbl { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--soft-steel); }
-
-  /* CTA BANNER */
   .cta-banner { background: var(--deep-steel); border-top: 2px solid var(--blue); border-bottom: 2px solid var(--blue); padding: 60px; display: flex; align-items: center; justify-content: space-between; gap: 40px; box-shadow: 0 0 40px rgba(0,174,239,0.1) inset; }
   .cta-banner h2 { font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1.1; }
   .cta-banner h2 em { color: var(--blue); font-style: normal; text-shadow: var(--glow); }
   .cta-banner p { font-size: 16px; color: var(--soft-steel); margin-top: 10px; }
   .btn-outline-white { border: 2px solid rgba(255,255,255,0.7); color: var(--white); padding: 14px 32px; font-size: 15px; white-space: nowrap; }
   .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
-
-  /* FOOTER */
   footer { background: var(--deep-steel); padding: 60px 60px 30px; border-top: 1px solid rgba(0,174,239,0.15); }
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
   .footer-brand-name { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 14px; letter-spacing: 0.06em; }
@@ -135,125 +95,35 @@
   .footer-col li a { color: var(--soft-steel); font-size: 14px; transition: color .2s; }
   .footer-col li a:hover { color: var(--blue); }
   .footer-bottom { border-top: 1px solid rgba(0,174,239,0.1); padding-top: 24px; display: flex; justify-content: space-between; font-size: 12px; color: rgba(167,196,214,0.4); letter-spacing: 0.06em; }
-
-  /* ── MOBILE NAV ── */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 8px;
-    background: none;
-    border: none;
-    z-index: 300;
-  }
-  .hamburger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--blue);
-    transition: all .3s;
-  }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 300; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--blue); transition: all .3s; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  .mobile-nav {
-    display: none;
-    position: fixed;
-    top: 70px;
-    left: 0; right: 0; bottom: 0;
-    background: var(--panel);
-    border-top: 2px solid var(--blue);
-    z-index: 190;
-    overflow-y: auto;
-    padding: 24px 0;
-  }
+  .mobile-nav { display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0; background: var(--panel); border-top: 2px solid var(--blue); z-index: 190; overflow-y: auto; padding: 24px 0; }
   .mobile-nav.open { display: block; }
-  .mobile-nav a {
-    display: block;
-    padding: 16px 32px;
-    color: var(--bright-steel);
-    font-family: var(--display, "Oswald", sans-serif);
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    border-bottom: 1px solid rgba(0,174,239,0.1);
-    transition: color .2s, background .2s;
-  }
+  .mobile-nav a { display: block; padding: 16px 32px; color: var(--bright-steel); font-family: var(--display, "Oswald", sans-serif); font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid rgba(0,174,239,0.1); transition: color .2s, background .2s; }
   .mobile-nav a:hover { color: var(--blue); background: var(--blue-dim); }
-  .mobile-nav .mobile-section {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--blue);
-    padding: 20px 32px 8px;
-  }
-  .mobile-nav .mobile-cta {
-    margin: 24px 32px;
-    display: block;
-    text-align: center;
-    background: var(--blue);
-    color: var(--ink);
-    padding: 16px;
-    font-family: var(--display, "Oswald", sans-serif);
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
+  .mobile-nav .mobile-section { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); padding: 20px 32px 8px; }
+  .mobile-nav .mobile-cta { margin: 24px 32px; display: block; text-align: center; background: var(--blue); color: var(--ink); padding: 16px; font-family: var(--display, "Oswald", sans-serif); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
   @media (max-width: 768px) {
     html, body { overflow-x: hidden; }
     .hamburger { display: flex; }
     .nav-links { display: none; }
     .nav-right { display: none; }
     nav { padding: 0 16px; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-visual { display: none; }
-    .hero-content { padding: 48px 20px; }
-    .sec { padding: 52px 20px; }
-    .sec-title { font-size: 32px; }
-    .svc-grid { grid-template-columns: 1fr; }
-    .svc-card { padding: 28px 20px 24px; }
-    .quote-grid { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    .quote-info { padding: 24px 20px; }
-    footer { padding: 48px 20px 28px; }
-    .why-grid { grid-template-columns: 1fr; }
-    .serve-grid { grid-template-columns: 1fr; }
-    .stats-row { flex-direction: column; gap: 0; }
-    .stat-item { border-right: none; border-bottom: 1px solid rgba(0,174,239,0.15); }
     .content-grid { grid-template-columns: 1fr; }
-    .area-grid { grid-template-columns: 1fr; }
-    .projects-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; gap: 28px; }
     .footer-col { padding: 0; }
     .cta-banner { flex-direction: column; text-align: center; padding: 40px 20px; }
     .page-hero { padding: 52px 20px 40px; }
     .page-hero-title { font-size: 32px; }
-    .mission-quote { font-size: 18px; padding: 28px 20px; }
-    .trust-bar { padding: 14px 20px; gap: 12px; }
-    .trust-items { gap: 14px; }
-    .trust-lbl { font-size: 11px; }
-    .trust-item { font-size: 11px; }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(0,174,239,0.15); }
+    .stat-row { flex-direction: column; }
+    footer { padding: 48px 20px 28px; }
     .util-bar { font-size: 12px; padding: 8px 16px; }
-    .hero-h1 { font-size: 42px; }
-    .hero-sub { font-size: 15px; }
-    .hero-btns { flex-direction: column; gap: 12px; align-items: flex-start; }
-    .btn-primary, .btn-outline-blue { width: 100%; text-align: center; box-sizing: border-box; }
-    .area-map-wrap iframe { height: 280px; }
-    .stat-card { padding: 24px 20px; }
-    .hero-right { display: none; }
   }
-
-
-  @keyframes imgZoomOut {
-    from { transform: scale(1.12); }
-    to   { transform: scale(1.0); }
-  }
+  @keyframes imgZoomOut { from { transform: scale(1.12); } to { transform: scale(1.0); } }
 </style>
 
 <link rel="canonical" href="https://rts-hq.com/reliability.html">
@@ -279,72 +149,16 @@
       "@type": "WebPage",
       "@id": "https://rts-hq.com/reliability.html#webpage",
       "url": "https://rts-hq.com/reliability.html",
-      "name": "Reliability Engineering \u2013 Rogue Technical Services LLC",
+      "name": "Reliability Engineering – Rogue Technical Services LLC",
       "description": "Root cause analysis, predictive maintenance, and reliability programs for oil & gas facilities.",
-      "isPartOf": {
-        "@id": "https://rts-hq.com/#website"
-      },
-      "about": {
-        "@id": "https://rts-hq.com/reliability.html#service"
-      },
+      "isPartOf": { "@id": "https://rts-hq.com/#website" },
+      "about": { "@id": "https://rts-hq.com/reliability.html#service" },
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://rts-hq.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Reliability",
-            "item": "https://rts-hq.com/reliability.html"
-          }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rts-hq.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Reliability", "item": "https://rts-hq.com/reliability.html" }
         ]
-      }
-    }
-  ]
-}
-</script>
-
-<!-- FAQ Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is reliability engineering for oil and gas facilities?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Reliability engineering for oil and gas facilities focuses on identifying failure modes, improving equipment uptime, and developing maintenance strategies that prevent unplanned shutdowns. This includes root cause analysis (RCA), predictive maintenance planning, and reliability improvement programs for compression, transmission, and processing facilities."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Rogue Technical Services perform root cause analysis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Root cause analysis (RCA) is a core part of our reliability services. We investigate equipment failures to identify the underlying cause \u2014 not just the symptom \u2014 and provide actionable recommendations to prevent recurrence."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What industries do you provide reliability services for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We provide reliability engineering services for natural gas transmission, compression stations, LNG facilities, gas processing plants, and industrial facilities across the Gulf Coast, Permian Basin, and nationwide."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is Rogue Technical Services different from a large reliability firm?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We are an independent, specialized firm \u2014 not a large contractor with divided priorities. Every engagement receives focused, hands-on technical expertise with no upsells and no agenda other than improving your facility's reliability."
       }
     }
   ]
@@ -353,7 +167,7 @@
 </head>
 <body>
 
-<div class="util-bar">Field-proven commissioning, start-up, and reliability services &mdash; <strong><a href="tel:2812007623" style="color:var(--blue);text-decoration:none;">Call 281-200-7623</a> to request a quote</strong></div>
+<div class="util-bar">Full-service E&amp;I electrical contractor &mdash; installation, commissioning &amp; reliability &mdash; <strong><a href="tel:2812007623" style="color:var(--blue);text-decoration:none;">Call 281-200-7623</a> to request a quote</strong></div>
 
 <nav>
   <a href="index.html" class="nav-logo">
@@ -366,6 +180,8 @@
         <a href="commissioning.html">Commissioning / Start-up</a>
         <a href="qaqc.html">QAQC / Inspections</a>
         <a href="reliability.html">Reliability Services</a>
+        <div class="dropdown-divider"></div>
+        <a href="installation.html">E&amp;I Installation</a>
       </div>
     </li>
     <li><a href="index.html#serve">Who We Serve</a></li>
@@ -384,7 +200,7 @@
     <a href="tel:2812007623" class="nav-phone">281-200-7623</a>
     <a href="index.html#quote" class="btn btn-primary">Request a Quote</a>
   </div>
-<button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- MOBILE NAV -->
@@ -393,6 +209,7 @@
   <a href="commissioning.html">Commissioning / Start-up</a>
   <a href="qaqc.html">QAQC / Inspections</a>
   <a href="reliability.html">Reliability Services</a>
+  <a href="installation.html">E&amp;I Installation</a>
   <div class="mobile-section">Company</div>
   <a href="why-rogue.html">Why Rogue?</a>
   <a href="recent-work.html">Recent Work</a>
@@ -485,13 +302,14 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-brand-name">ROGUE <span>Technical Services</span> LLC</div>
-      <p>"Reliability Starts With Rogue" — independent E&I commissioning, QAQC, and reliability services for natural gas transmission and industrial projects nationwide.</p>
+      <p>Full-service E&amp;I electrical contractor — installation, commissioning, QAQC, and reliability services for industrial and energy projects nationwide.</p>
       <a href="tel:2812007623" class="footer-phone">281-200-7623</a>
       <div class="footer-hours">Monday &ndash; Friday: 7:00am &ndash; 6:00pm CDT</div>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
+        <li><a href="installation.html">E&amp;I Installation</a></li>
         <li><a href="commissioning.html">Commissioning / Start-up</a></li>
         <li><a href="qaqc.html">QAQC / Inspections</a></li>
         <li><a href="reliability.html">Reliability Services</a></li>
@@ -501,7 +319,7 @@
       <h4>Who We Serve</h4>
       <ul>
         <li><a href="index.html#serve">Pipeline Operators</a></li>
-        <li><a href="index.html#serve">EPC Contractors</a></li>
+        <li><a href="index.html#serve">EPC &amp; General Contractors</a></li>
         <li><a href="index.html#serve">Compression Facilities</a></li>
         <li><a href="index.html#serve">LNG &amp; Biofuels</a></li>
         <li><a href="index.html#serve">Staffing Firms</a></li>
@@ -535,8 +353,6 @@
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.nav-item')) closeAllDropdowns();
   });
-
-  // Hamburger menu
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobile-nav');
   if (hamburger && mobileNav) {
@@ -553,7 +369,6 @@
       });
     });
   }
-
 </script>
 </body>
 </html>
