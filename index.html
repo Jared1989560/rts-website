@@ -409,7 +409,7 @@
     box-shadow: 0 2px 8px rgba(0,174,239,0.05);
   }
   .why-card:hover { border-left-color: var(--blue); box-shadow: 0 4px 20px rgba(0,174,239,0.12); }
-  .why-icon { color: var(--blue); font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .why-icon { color: var(--blue); flex-shrink: 0; margin-top: 2px; line-height: 0; }
   .why-card h3 { font-family: var(--display); font-size: 17px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink); margin-bottom: 10px; }
   .why-card p { font-size: 15px; line-height: 1.72; color: #4A5568; }
 
@@ -441,23 +441,22 @@
   .cta-banner p { color: var(--soft-steel); font-size: 16px; margin-top: 8px; position: relative; }
 
   /* ── MOCK IMAGE BREAK ── */
-  .mock-img {
-    background: linear-gradient(135deg, var(--panel) 0%, var(--deep-steel) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 280px;
+.mock-img {
+    background: var(--deep-steel) url('hardhat.jpg') center / cover no-repeat;
+    min-height: 380px;
     position: relative;
     overflow: hidden;
+    border-top: 2px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
   }
   .mock-img::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image:
-      linear-gradient(var(--grid-line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-    background-size: 48px 48px;
+    background:
+      linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0 / 48px 48px,
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 48px 48px,
+      linear-gradient(180deg, rgba(10,26,47,0.35) 0%, rgba(10,26,47,0.15) 50%, rgba(10,26,47,0.45) 100%);
   }
   .mock-img::after {
     content: '[ Site photo / project imagery ]';
