@@ -98,9 +98,7 @@
   .mobile-nav a:hover { color: var(--blue); background: var(--blue-dim); }
   .mobile-nav .mobile-section { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); padding: 20px 32px 8px; }
   .mobile-nav .mobile-cta { margin: 24px 32px; display: block; text-align: center; background: var(--blue); color: var(--ink); padding: 16px; font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
-  .safety-hero-video { position: relative; background: var(--deep-steel); border-bottom: 2px solid var(--blue); line-height: 0; overflow: hidden; }
-  .safety-hero-video video { display: block; width: 100%; aspect-ratio: 16 / 9; max-height: calc(100vh - 110px); object-fit: cover; background: var(--deep-steel); }
-  @media (prefers-reduced-motion: reduce) { .safety-hero-video { display: none; } }
+  .safety-hero-video { position: relative; background: var(--deep-steel); border-bottom: 2px solid var(--blue); overflow: hidden; aspect-ratio: 16 / 9; }
   @media (max-width: 768px) {
     html, body { overflow-x: hidden; }
     .hamburger { display: flex; }
@@ -174,9 +172,7 @@
   </div>
 </div>
 
-<section class="safety-hero-video" aria-label="Rogue safety introduction">
-  <video src="safety-intro.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
-</section>
+<section class="safety-hero-video" id="rts-safety-anim" aria-label="Rogue safety introduction"></section>
 
 <div class="page-hero">
   <div class="page-hero-eyebrow">Company</div>
@@ -377,6 +373,113 @@
       });
     });
   }
+</script>
+<script>
+(function(){
+  var host=document.getElementById('rts-safety-anim'); if(!host) return;
+  var A='#00AEEF',INK='#0D1117',PAPER='#FFFFFF',GREY='#A7C4D6',D="'Oswald','Arial Narrow',sans-serif",M="'Source Sans 3',sans-serif";
+  var C={Repeat:3.5,Record:7,Practices:12,Baseline:19,Signoff:23.5},TOTAL=28;
+  function cl(v){return v<0?0:v>1?1:v}
+  function P(T,s,d){return cl((T-s)/d)}
+  function enter(T,s,d){var t=P(T,s,d==null?0.8:d);return 1-Math.pow(1-t,3)}
+  function draw(T,s,d){var t=P(T,s,d==null?0.7:d);return t<0.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+  function pop(T,s,d){var t=P(T,s,d==null?0.45:d),a=1.70158;return 1+(a+1)*Math.pow(t-1,3)+a*Math.pow(t-1,2)}
+  function el(tag,css,parent,html){var e=document.createElement(tag);e.style.cssText=css||'';if(html!=null)e.innerHTML=html;if(parent)parent.appendChild(e);return e}
+  var rises=[];
+  function rise(parent,at,out,css,html){var o=el('div','overflow:hidden;padding-bottom:0.08em;'+(css||''),parent);var i=el('div','',o,html);var r={o:o,i:i,at:at,out:out};rises.push(r);return r}
+
+  var stage=el('div','position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background:#0A1A2F;font-family:'+D+';line-height:normal;',host);
+  stage.setAttribute('aria-hidden','true');
+  var grid=el('div','position:absolute;inset:-200px;opacity:0.5;background-image:linear-gradient(rgba(0,174,239,0.09) 1px,transparent 1px),linear-gradient(90deg,rgba(0,174,239,0.09) 1px,transparent 1px);background-size:80px 80px;',stage);
+  el('div','position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,transparent 30%,rgba(0,0,0,0.55) 100%);',stage);
+  var cam=el('div','position:absolute;inset:0;',stage);
+
+  // Mantra
+  var mOut=C.Record-0.5,line='font:700 190px/0.92 '+D+';color:'+PAPER+';letter-spacing:-0.01em;';
+  var mw=el('div','position:absolute;left:160px;top:230px;',cam);
+  rise(mw,0.6,mOut,line,'Every person.');
+  rise(mw,C.Repeat+0.15,mOut+0.08,line,'Every job.');
+  rise(mw,C.Repeat+1.3,mOut+0.16,line+'color:'+A+';','Every time.');
+
+  // Record
+  var rs=C.Record,rOut=C.Practices-0.55;
+  var rw=el('div','position:absolute;left:140px;top:170px;',cam);
+  var num=rise(rw,rs+0.05,rOut,'font:700 600px/0.85 '+D+';color:'+PAPER+';font-variant-numeric:tabular-nums;','4.2');
+  var rBar=el('div','height:16px;width:620px;margin-left:20px;background:'+A+';transform-origin:left;',rw);
+  var rc=el('div','position:absolute;left:1080px;top:330px;width:680px;display:flex;flex-direction:column;gap:28px;',cam);
+  rise(rc,rs+0.7,rOut,'font:700 24px '+M+';letter-spacing:0.2em;color:'+A+';','TRIR &mdash; LAST 3 YEARS');
+  rise(rc,rs+0.9,rOut+0.05,'font:600 76px/1 '+D+';color:'+PAPER+';','Total recordable');
+  rise(rc,rs+1.0,rOut+0.1,'font:600 76px/1 '+D+';color:'+PAPER+';margin-top:-28px;','incident rate.');
+  rise(rc,rs+3.0,rOut+0.15,'font:500 40px/1.25 '+D+';color:'+GREY+';margin-top:20px;','185K+ field hours without a recordable.');
+
+  // Practices
+  var ps=C.Practices,pOut=C.Baseline-0.6;
+  var pl=el('div','position:absolute;left:160px;top:360px;width:700px;',cam);
+  rise(pl,ps+0.4,pOut,'font:700 130px/0.95 '+D+';color:'+PAPER+';','Non-');
+  rise(pl,ps+0.5,pOut+0.05,'font:700 130px/0.95 '+D+';color:'+PAPER+';','negotiable.');
+  rise(pl,ps+0.9,pOut+0.1,'font:500 40px/1.3 '+D+';color:'+GREY+';margin-top:24px;','What governs every scope we run.');
+  var card=el('div','position:absolute;left:900px;top:150px;width:880px;transform-origin:30% 50%;background:#D9ECF8;color:'+INK+';padding:48px 56px 40px;box-shadow:0 40px 80px rgba(0,0,0,0.5);box-sizing:border-box;',cam);
+  el('div','display:flex;justify-content:space-between;font:700 20px '+M+';letter-spacing:0.16em;color:#3d5468;border-bottom:3px solid '+INK+';padding-bottom:20px;',card,'<span>JSA / PRE-TASK</span><span>RTS-SAFE-001</span>');
+  var ROWS=[['Stop Work Authority','Any technician. Any task. No override.'],['Lockout / Tagout','Verify zero energy. Test before touch.'],['Gas detection','Confirmed clear before any permit.'],['Fall protection','Required at 4 ft and above.'],['Job Safety Analysis','Reviewed by every worker, every task.']];
+  var rows=ROWS.map(function(r,i){
+    var row=el('div','display:flex;align-items:center;gap:32px;padding:26px 0;border-bottom:1px solid rgba(14,16,18,0.18);',card);
+    var box=el('div','width:56px;height:56px;flex:none;border:3px solid '+INK+';position:relative;box-sizing:border-box;',row);
+    var fill=el('div','position:absolute;inset:5px;background:'+A+';',box);
+    box.insertAdjacentHTML('beforeend','<svg viewBox="0 0 24 24" style="position:absolute;inset:8px;width:34px;height:34px;"><polyline points="5,12.5 10,17.5 19,7" fill="none" stroke="'+INK+'" stroke-width="3.2" stroke-dasharray="22"></polyline></svg>');
+    var txt=el('div','',row,'<div style="font:700 48px/1 '+D+';text-transform:uppercase;">'+r[0]+'</div><div style="font:500 30px/1.2 '+D+';color:#3d5468;margin-top:6px;">'+r[1]+'</div>');
+    return {at:ps+1.4+i*0.85,fill:fill,svg:box.querySelector('svg'),pl:box.querySelector('polyline'),txt:txt};
+  });
+
+  // Baseline
+  var bs=C.Baseline,bOut=C.Signoff-0.5;
+  var bw=el('div','position:absolute;left:160px;top:330px;',cam);
+  rise(bw,bs+0.3,bOut,'font:600 104px/1 '+D+';color:'+GREY+';','A missed deadline is recoverable.');
+  rise(bw,bs+1.6,bOut+0.08,'font:700 190px/0.95 '+D+';color:'+PAPER+';margin-top:24px;','An injury is not.');
+  var bBar=el('div','height:16px;width:1180px;background:'+A+';transform-origin:left;margin-top:8px;',bw);
+
+  // Signoff
+  var ss=C.Signoff;
+  var sw=el('div','position:absolute;left:0;right:0;top:290px;display:flex;flex-direction:column;align-items:center;',cam);
+  var logo=el('img','width:720px;height:480px;object-fit:contain;mix-blend-mode:screen;margin-top:-110px;',sw);
+  logo.src='logo.png'; logo.alt='';
+  var sRule=el('div','width:160px;height:6px;background:'+A+';margin:0 0 40px;box-shadow:0 0 14px '+A+';',sw);
+  rise(sw,ss+1.5,null,'font:500 50px/1.2 '+D+';color:#D9ECF8;','Our people come home the same way they arrived.');
+
+  // Chrome
+  var hd=el('div','position:absolute;left:160px;top:72px;right:160px;display:flex;justify-content:space-between;font:700 22px '+M+';letter-spacing:0.22em;color:'+GREY+';',stage,'<span>ROGUE TECHNICAL SERVICES</span><span style="display:flex;gap:18px;"><span style="color:'+A+';">&#9679;</span><span class="rsa-idx">SAFETY / 01</span></span>');
+  var idxEl=hd.querySelector('.rsa-idx');
+  var stripe=el('div','position:absolute;left:0;right:0;bottom:0;height:18px;background-image:repeating-linear-gradient(-45deg,'+A+' 0 28px,'+INK+' 28px 56px);',stage);
+  var fadeEl=el('div','position:absolute;inset:0;background:#000;pointer-events:none;',stage);
+
+  function render(T){
+    grid.style.transform='translate('+(-(T*9)%80)+'px,'+(-(T*4)%80)+'px)';
+    cam.style.transform='scale('+(1+0.012*Math.sin(T/TOTAL*Math.PI))+')';
+    for(var k=0;k<rises.length;k++){var r=rises[k],i=enter(T,r.at),o=r.out==null?0:draw(T,r.out,0.55);
+      r.o.style.visibility=(o>=1||i<=0)?'hidden':'visible';r.i.style.transform='translateY('+((1-i)*140-o*140)+'%)';}
+    num.i.textContent=(4.2*(1-draw(T,rs+0.4,2.4))).toFixed(1);
+    rBar.style.transform='scaleX('+(draw(T,rs+2.7,0.6)*(1-draw(T,rOut,0.5)))+')';
+    var cIn=enter(T,ps+0.1,1.0),cOut=draw(T,pOut,0.6),push=1+0.06*P(T,ps,C.Baseline-ps);
+    card.style.opacity=1-cOut;
+    card.style.visibility=(cIn<=0||cOut>=1)?'hidden':'visible';
+    card.style.transform='translate('+((1-cIn)*1150)+'px,'+(-cOut*80)+'px) rotate('+((1-cIn)*4-1.2)+'deg) scale('+push+')';
+    rows.forEach(function(r){r.fill.style.transform='scale('+pop(T,r.at)+')';r.svg.style.opacity=P(T,r.at+0.1,0.15);
+      r.pl.setAttribute('stroke-dashoffset',22*(1-draw(T,r.at+0.1,0.3)));r.txt.style.opacity=0.35+0.65*enter(T,r.at-0.2,0.4);});
+    bBar.style.transform='scaleX('+(draw(T,bs+2.3,0.6)*(1-draw(T,bOut,0.4)))+')';
+    logo.style.opacity=enter(T,ss+0.2,1.0);
+    logo.style.transform='scale('+(0.9+0.1*pop(T,ss+0.2,0.9)+0.03*P(T,ss+1,3.5))+')';
+    sRule.style.transform='scaleX('+draw(T,ss+1.0,0.8)+')';
+    var idx=T>=C.Signoff?6:T>=C.Baseline?5:T>=C.Practices?4:T>=C.Record?3:T>=C.Repeat?2:1;
+    idxEl.textContent='SAFETY / 0'+idx;
+    stripe.style.backgroundPosition=(T*60)+'px 0';
+    fadeEl.style.opacity=Math.max(1-enter(T,0,0.8),draw(T,TOTAL-0.9,0.9));
+  }
+  function fit(){stage.style.transform='scale('+(host.clientWidth/1920)+')';}
+  fit(); window.addEventListener('resize',fit);
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){render(C.Signoff+3.5);return;}
+  var start=performance.now();
+  function tick(now){render(((now-start)/1000)%TOTAL);requestAnimationFrame(tick);}
+  requestAnimationFrame(tick);
+})();
 </script>
 </body>
 </html>
