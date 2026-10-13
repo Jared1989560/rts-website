@@ -390,7 +390,7 @@
 
   var stage=el('div','position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background:#0A1A2F;font-family:'+D+';line-height:normal;',host);
   stage.setAttribute('aria-hidden','true');
-  var grid=el('div','position:absolute;inset:-200px;opacity:0.5;background-image:linear-gradient(rgba(0,174,239,0.09) 1px,transparent 1px),linear-gradient(90deg,rgba(0,174,239,0.09) 1px,transparent 1px);background-size:80px 80px;',stage);
+  var grid=el('div','position:absolute;inset:-200px;opacity:0.5;background-image:linear-gradient(rgba(0,174,239,0.09) 2px,transparent 2px),linear-gradient(90deg,rgba(0,174,239,0.09) 2px,transparent 2px);background-size:80px 80px;',stage);
   el('div','position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,transparent 30%,rgba(0,0,0,0.55) 100%);',stage);
   var cam=el('div','position:absolute;inset:0;',stage);
 
@@ -452,7 +452,7 @@
   var fadeEl=el('div','position:absolute;inset:0;background:#000;pointer-events:none;',stage);
 
   function render(T){
-    grid.style.transform='translate('+(-(T*9)%80)+'px,'+(-(T*4)%80)+'px)';
+    grid.style.transform='translate('+Math.round(-(T*9)%80)+'px,'+Math.round(-(T*4)%80)+'px)';
     cam.style.transform='scale('+(1+0.012*Math.sin(T/TOTAL*Math.PI))+')';
     for(var k=0;k<rises.length;k++){var r=rises[k],i=enter(T,r.at),o=r.out==null?0:draw(T,r.out,0.55);
       r.o.style.visibility=(o>=1||i<=0)?'hidden':'visible';r.i.style.transform='translateY('+((1-i)*140-o*140)+'%)';}
@@ -473,7 +473,7 @@
     stripe.style.backgroundPosition=(T*60)+'px 0';
     fadeEl.style.opacity=Math.max(1-enter(T,0,0.8),draw(T,TOTAL-0.9,0.9));
   }
-  function fit(){stage.style.transform='scale('+(host.clientWidth/1920)+')';}
+  function fit(){var s=host.clientWidth/1920;if('zoom' in stage.style){stage.style.zoom=s;}else{stage.style.transform='scale('+s+')';}}
   fit(); window.addEventListener('resize',fit);
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){render(C.Signoff+3.5);return;}
   var start=performance.now();
