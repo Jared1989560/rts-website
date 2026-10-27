@@ -947,7 +947,7 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
     <p>Commission it right. Install it clean. We'll respond within one business day.</p>
   </div>
   <div class="cta-btns">
-    <button class="btn btn-primary" onclick="show('contact')">Request a Quote</button>
+    <button class="btn btn-primary" onclick="show('contact')">Request More Info</button>
     <button class="btn btn-ghost" onclick="show('comm')">Our Services</button>
   </div>
 </div>
@@ -985,7 +985,7 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
 const pages={home:'page-home',comm:'page-comm',install:'page-install',design:'page-design',bluebeam:'page-bluebeam',fe:'page-fe',reliability:'page-reliability',work:'page-work',whyrogue:'page-whyrogue',safety:'page-safety',contact:'page-contact'};
 const actives={comm:'ni-svc',install:'ni-install',design:'ni-svc',bluebeam:'ni-svc',fe:'ni-svc',reliability:'ni-svc',work:'ni-about',whyrogue:'ni-about',safety:'ni-about',contact:''};
 const slugs={home:'',comm:'commissioning',install:'installation',design:'design-review',bluebeam:'bluebeam',fe:'field-engineering',reliability:'reliability',work:'recent-work',whyrogue:'why-rogue',safety:'safety',contact:'contact'};
-const titles={"home": "Rogue Technical Services LLC | Licensed E&I Electrical Contractor — Houston, TX", "install": "E&I Installation & Wire Termination in Texas | Rogue Technical Services", "comm": "E&I Commissioning, Start-up & Loop Checks | Rogue Technical Services", "design": "E&I Design Review & P&ID Review | Rogue Technical Services", "bluebeam": "Bluebeam Revu Services for E&I Projects | Rogue Technical Services", "fe": "E&I Field Engineering Support | Rogue Technical Services", "reliability": "E&I Reliability & Preventive Maintenance | Rogue Technical Services", "work": "Recent E&I Projects | Rogue Technical Services", "whyrogue": "Why Rogue? Field-First E&I Contractor in Houston | Rogue Technical Services", "safety": "Safety Program | Rogue Technical Services", "contact": "Request a Quote | Rogue Technical Services, Houston, TX"};
+const titles={"home": "Rogue Technical Services LLC | Licensed E&I Electrical Contractor — Houston, TX", "install": "E&I Installation & Wire Termination in Texas | Rogue Technical Services", "comm": "E&I Commissioning, Start-up & Loop Checks | Rogue Technical Services", "design": "E&I Design Review & P&ID Review | Rogue Technical Services", "bluebeam": "Bluebeam Revu Services for E&I Projects | Rogue Technical Services", "fe": "E&I Field Engineering Support | Rogue Technical Services", "reliability": "E&I Reliability & Preventive Maintenance | Rogue Technical Services", "work": "Recent E&I Projects | Rogue Technical Services", "whyrogue": "Why Rogue? Field-First E&I Contractor in Houston | Rogue Technical Services", "safety": "Safety Program | Rogue Technical Services", "contact": "Request More Info | Rogue Technical Services, Houston, TX"};
 let current=((document.querySelector('.page.active')||{}).id||'page-home').slice(5);
 function pathFor(k){return '/'+(slugs[k]?slugs[k]+'/':'')}
 function goServe(){if(!document.getElementById('who-we-serve')){location.href='/#who-we-serve';return}show('home');setTimeout(()=>document.getElementById('who-we-serve').scrollIntoView({behavior:'smooth'}),50)}
