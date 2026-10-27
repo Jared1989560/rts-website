@@ -43,7 +43,7 @@
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--top-h:133px;
+:root{--top-h:133px;--tick-h:41px;
   /* RTS Brand Book v2 palette */
   --ink:#080E18;--panel:#0D1B2A;--deep:#0D1B2A;--night:#020A18;
   --blue:#4AABF5;--blue-h:#7DC2F8;--blue-dim:rgba(74,171,245,.13);
@@ -137,13 +137,11 @@ nav.main-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:300;backgr
 /* ══════════════════
    CAROUSEL HERO
 ══════════════════ */
-.carousel-wrap{position:relative;height:calc(100vh - var(--top-h));height:calc(100svh - var(--top-h));min-height:480px;overflow:hidden;background:var(--night)}
+.carousel-wrap{position:relative;height:calc(100vh - var(--top-h) - var(--tick-h));height:calc(100svh - var(--top-h) - var(--tick-h));min-height:440px;overflow:hidden;background:var(--night)}
 .carousel-track{display:flex;height:100%;transition:transform .65s cubic-bezier(.77,0,.175,1)}
 .c-slide{flex:0 0 100%;height:100%;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:88px;padding-left:max(60px,env(safe-area-inset-left,0px));padding-right:max(60px,env(safe-area-inset-right,0px))}
 .c-slide-bg{position:absolute;inset:0;pointer-events:none}
 .c-slide-grid{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 47px,var(--grid) 47px,var(--grid) 48px),repeating-linear-gradient(90deg,transparent,transparent 47px,var(--grid) 47px,var(--grid) 48px)}
-.c-slide-scan{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),rgba(125,194,248,.8),var(--blue),transparent);top:0;animation:scan 6s linear infinite}
-@keyframes scan{0%{top:0;opacity:.4}100%{top:100%;opacity:0}}
 .c-slide-inner{position:relative;z-index:2;max-width:620px}
 .c-num{font-family:'Oswald',sans-serif;font-size:160px;font-weight:700;position:absolute;right:max(60px,env(safe-area-inset-right,0px));bottom:60px;line-height:1;opacity:.04;color:#fff;pointer-events:none;user-select:none;z-index:1;letter-spacing:-.05em}
 .c-eye{font-family:'Oswald',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;display:flex;align-items:center;gap:10px}
@@ -161,7 +159,7 @@ nav.main-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:300;backgr
 .c-dot{width:28px;height:3px;background:rgba(255,255,255,.2);cursor:pointer;transition:background .2s,width .25s;position:relative;overflow:hidden}
 .c-dot.active{background:rgba(74,171,245,.4);width:44px}
 .c-dot-fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue);width:0%}
-.c-dot.active .c-dot-fill{animation:dotFill 5s linear}
+.c-dot.active .c-dot-fill{animation:dotFill 9s linear}
 @keyframes dotFill{from{width:0%}to{width:100%}}
 
 /* slide glow accents per service */
@@ -552,7 +550,7 @@ footer{background:var(--night);border-top:1px solid var(--grid);padding:56px max
   </div>
 </nav>
 <script>
-(function(){function topH(){var u=document.querySelector('.util-bar'),n=document.querySelector('.main-nav');var h=(u?u.offsetHeight:0)+(n?n.offsetHeight:0);if(h)document.documentElement.style.setProperty('--top-h',h+'px');}
+(function(){function topH(){var u=document.querySelector('.util-bar'),n=document.querySelector('.main-nav');var h=(u?u.offsetHeight:0)+(n?n.offsetHeight:0);if(h)document.documentElement.style.setProperty('--top-h',h+'px');var t=document.querySelector('.brand-ticker');if(t&&t.offsetHeight)document.documentElement.style.setProperty('--tick-h',t.offsetHeight+'px');}
 topH();window.addEventListener('resize',topH);window.addEventListener('load',topH);})();
 </script>
 
@@ -588,7 +586,6 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
       <div class="hero-photo hero-photo-side" style="background-image:url('field-energize.jpg');background-position:center 35%"></div>
       <div class="c-slide-bg"></div>
       <div class="c-slide-grid"></div>
-      <div class="c-slide-scan"></div>
       <div class="c-num">01</div>
       <div class="c-slide-inner">
         <div class="c-eye">Field Services</div>
@@ -606,7 +603,6 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
       <div class="hero-photo" style="background-image:url('field-compressor-interior.jpg');background-position:center 40%"></div>
       <div class="c-slide-bg"></div>
       <div class="c-slide-grid"></div>
-      <div class="c-slide-scan"></div>
       <div class="c-num">02</div>
       <div class="c-slide-inner">
         <div class="c-eye">Commissioning &amp; Start-up</div>
@@ -624,7 +620,6 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
       <div class="hero-photo" style="background-image:url('field-drawings.jpg');opacity:.3"></div>
       <div class="c-slide-bg"></div>
       <div class="c-slide-grid"></div>
-      <div class="c-slide-scan"></div>
       <div class="c-num">03</div>
       <div class="c-slide-inner">
         <div class="c-eye">Engineering Review</div>
@@ -642,7 +637,6 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
       <div class="hero-photo hero-photo-redline" style="background-image:url('redline-sample.png')"></div>
       <div class="c-slide-bg"></div>
       <div class="c-slide-grid"></div>
-      <div class="c-slide-scan"></div>
       <div class="c-num">04</div>
       <div class="c-slide-inner">
         <div class="c-eye">Document Control</div>
@@ -660,7 +654,6 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
       <div class="hero-photo" style="background-image:url('field-compressor-units.jpg');background-position:center 45%"></div>
       <div class="c-slide-bg"></div>
       <div class="c-slide-grid"></div>
-      <div class="c-slide-scan"></div>
       <div class="c-num">05</div>
       <div class="c-slide-inner">
         <div class="c-eye">On-Site Engineering</div>
@@ -678,7 +671,6 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
       <div class="hero-photo" style="background-image:url('field-compressor-station.jpg');background-position:center 55%"></div>
       <div class="c-slide-bg"></div>
       <div class="c-slide-grid"></div>
-      <div class="c-slide-scan"></div>
       <div class="c-num">06</div>
       <div class="c-slide-inner">
         <div class="c-eye">Asset Support</div>
@@ -2210,7 +2202,7 @@ function renderCarousel(reset){
       const fill=d.querySelector('.c-dot-fill');
       fill.style.animation='none';
       fill.offsetWidth;/* reflow */
-      fill.style.animation='dotFill 5s linear';
+      fill.style.animation='dotFill 9s linear';
     }
   });
 }
@@ -2225,7 +2217,7 @@ document.getElementById('cn').addEventListener('click',next);
 document.getElementById('cp').addEventListener('click',prev);
 
 function startTimer(){
-  carouselTimer=setInterval(next,5000);
+  carouselTimer=setInterval(next,9000);
 }
 function restartTimer(){
   clearInterval(carouselTimer);
