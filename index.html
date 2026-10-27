@@ -59,7 +59,7 @@ html{scroll-behavior:smooth}
 body{font-family:'Source Sans 3',sans-serif;background:var(--ink);color:var(--hi);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 button{cursor:pointer;border:none;background:none;font:inherit}
-body{cursor:default}a,[onclick],label,select{cursor:pointer}input,textarea{cursor:text}
+body{cursor:default;caret-color:transparent}a,[onclick],label,select{cursor:pointer}input,textarea,[contenteditable]{cursor:text;caret-color:auto}
 .page{display:none}.page.active{display:block}
 
 /* ── UTIL BAR ── */
