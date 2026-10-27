@@ -239,6 +239,7 @@ nav.main-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:300;backgr
 .cta-text h3 em{color:var(--blue);font-style:normal;text-shadow:var(--glow)}
 .cta-text p{font-size:15.5px;color:var(--mid);margin-top:9px;font-weight:300}
 .cta-btns{display:flex;gap:12px;position:relative;flex-shrink:0;flex-wrap:wrap}
+@media(max-width:640px){.cta-btns{flex-shrink:1;min-width:0;max-width:100%}.cta-btns .btn{max-width:100%;white-space:normal;text-align:center;justify-content:center}}
 
 /* ── FOOTER ── */
 footer{background:var(--night);border-top:1px solid var(--grid);padding:56px max(52px,env(safe-area-inset-left,0px))}
@@ -1516,7 +1517,7 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
     <h1 class="ph-hed">Find It<br><em>In the</em><br>Drawing.</h1>
     <p class="ph-body">P&amp;ID review, loop drawing verification, instrument index audit — catching design errors before they become field problems. Cheaper to fix on paper than on site.</p>
     <div class="ph-btns">
-      <button class="btn btn-primary">Request a Review</button>
+      <button class="btn btn-primary" onclick="show('contact')">Request a Review</button>
       <button class="btn btn-ghost" onclick="show('comm')">All Comm Services</button>
     </div>
   </div>
@@ -1629,7 +1630,7 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
     <h1 class="ph-hed">Bluebeam<br><em>Workflows</em><br>Built.</h1>
     <p class="ph-body">Markup, redline management, Studio Sessions, and digital punchlist workflows in Bluebeam Revu. Completions documents that pass client document control — first submission.</p>
     <div class="ph-btns">
-      <button class="btn btn-primary">Request Bluebeam Support</button>
+      <button class="btn btn-primary" onclick="show('contact')">Request Bluebeam Support</button>
       <button class="btn btn-ghost" onclick="show('comm')">All Comm Services</button>
     </div>
   </div>
@@ -1742,7 +1743,7 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
     <h1 class="ph-hed">On-Site.<br><em>In Real</em><br>Time.</h1>
     <p class="ph-body">Resolving fit issues, issuing field change notices, RFI technical responses, and as-built documentation — on site, in real time, not from an office three time zones away.</p>
     <div class="ph-btns">
-      <button class="btn btn-primary">Request Field Engineering</button>
+      <button class="btn btn-primary" onclick="show('contact')">Request Field Engineering</button>
       <button class="btn btn-ghost" onclick="show('comm')">All Comm Services</button>
     </div>
   </div>
