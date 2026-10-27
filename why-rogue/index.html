@@ -148,11 +148,12 @@ nav.main-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:300;backgr
 .c-dot-fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue);width:0%}
 .c-dot.active .c-dot-fill{animation:dotFill 9s linear}
 .carousel-dots{align-items:center}
-.c-pause{width:30px;height:30px;margin-left:6px;display:flex;align-items:center;justify-content:center;background:rgba(8,14,24,.7);border:1px solid var(--border);color:var(--mid);cursor:pointer;padding:0;transition:background .2s,color .2s,border-color .2s}
-.c-pause:hover,.c-pause:focus-visible{background:var(--blue-dim);color:var(--hi);border-color:var(--blue)}
-.c-pause svg{width:11px;height:11px;fill:currentColor}
-.c-pause .i-play,.carousel-wrap.user-paused .c-pause .i-pause{display:none}
-.carousel-wrap.user-paused .c-pause .i-play{display:block}
+@media(max-width:640px){.carousel-dots{gap:7px;bottom:20px}.c-dot{width:18px}.c-dot.active{width:30px}.c-pause{margin-left:8px}}
+.c-pause{height:36px;margin-left:12px;padding:0 14px;display:flex;align-items:center;gap:8px;background:rgba(8,14,24,.8);border:1px solid var(--blue);color:var(--hi);font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 12px rgba(74,171,245,.35);transition:background .2s,box-shadow .2s}
+.c-pause:hover,.c-pause:focus-visible{background:var(--blue-dim);box-shadow:0 0 18px rgba(74,171,245,.6)}
+.c-pause svg{width:11px;height:11px;fill:var(--blue)}
+.c-pause .i-play,.c-pause .t-play,.carousel-wrap.user-paused .c-pause .i-pause,.carousel-wrap.user-paused .c-pause .t-pause{display:none}
+.carousel-wrap.user-paused .c-pause .i-play{display:block}.carousel-wrap.user-paused .c-pause .t-play{display:inline}
 .carousel-wrap.is-paused .c-dot-fill{animation-play-state:paused}
 @keyframes dotFill{from{width:0%}to{width:100%}}
 
@@ -580,7 +581,7 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
     <h1 class="ph-hed">Independent.<br><em>Accountable.</em><br>Built for the Field.</h1>
     <p class="ph-body">There are a lot of options for E&amp;I services — here's why owners and contractors keep calling us back.</p>
     <div class="ph-btns">
-      <button class="btn btn-primary" onclick="show('contact')">Request a Quote</button>
+      <button class="btn btn-primary" onclick="show('contact')">Request More Info</button>
       <button class="btn btn-ghost" onclick="show('comm')">Our Services</button>
     </div>
   </div>
@@ -646,8 +647,8 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
   </div>
 </div>
 <div class="cta-strip">
-  <div class="cta-text"><h3>Ready to Talk About <em>Your Project?</em></h3><p>We respond to quote requests within 24 hours — usually the same day.</p></div>
-  <div class="cta-btns"><button class="btn btn-primary" onclick="show('contact')">Request a Quote</button><button class="btn btn-ghost" onclick="show('safety')">Our Safety Program</button></div>
+  <div class="cta-text"><h3>Ready to Talk About <em>Your Project?</em></h3><p>We respond to every request within 24 hours — usually the same day.</p></div>
+  <div class="cta-btns"><button class="btn btn-primary" onclick="show('contact')">Request More Info</button><button class="btn btn-ghost" onclick="show('safety')">Our Safety Program</button></div>
 </div>
 <footer><div class="footer-grid"><div><a class="footer-logo" href="/" onclick="show('home');return false" aria-label="Rogue Technical Services, home"><img src="/logo-rogue.png" alt="Rogue Technical Services LLC" width="260" height="165" loading="lazy"></a><p class="footer-brand-p">Full-service E&amp;I electrical contractor. Licensed Texas Electrical Contractor, TECL# 41990. Nationwide mobilization.</p><div class="footer-phone">281-200-7623</div><div class="footer-hrs">Mon–Fri · 7am–6pm Central</div></div><div class="footer-col"><h4>Services</h4><a href="/installation/" onclick="show('install');return false">E&amp;I Installation</a><a href="/commissioning/" onclick="show('comm');return false">Commissioning &amp; Start-up</a><a href="/design-review/" onclick="show('design');return false">Design Review</a><a href="/bluebeam/" onclick="show('bluebeam');return false">Bluebeam Services</a><a href="/field-engineering/" onclick="show('fe');return false">Field Engineering</a><a href="/reliability/" onclick="show('reliability');return false">Reliability Services</a></div><div class="footer-col"><h4>Company</h4><a style="color:var(--blue)">Why Rogue?</a><a href="/safety/" onclick="show('safety');return false">Safety</a><a href="/recent-work/" onclick="show('work');return false">Recent Work</a></div><div class="footer-col"><h4>Contact</h4><a href="tel:2812007623">281-200-7623</a><a href="mailto:info@rts-hq.com">info@rts-hq.com</a><a href="/contact/" onclick="show('contact');return false">Request More Info</a></div></div><div class="footer-bottom"><span>&copy; 2026 Rogue Technical Services LLC &mdash; Houston, TX &mdash; TECL# 41990</span><span>rts-hq.com</span></div><p class="tdlr">Regulated by The Texas Department of Licensing and Regulation, P.O. Box 12157, Austin, Texas 78711, 1-800-803-9202, 512-539-5600, <a href="https://www.tdlr.texas.gov" target="_blank" rel="noopener">www.tdlr.texas.gov</a></p></footer>
 </div><!-- /whyrogue -->
@@ -662,7 +663,7 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
 const pages={home:'page-home',comm:'page-comm',install:'page-install',design:'page-design',bluebeam:'page-bluebeam',fe:'page-fe',reliability:'page-reliability',work:'page-work',whyrogue:'page-whyrogue',safety:'page-safety',contact:'page-contact'};
 const actives={comm:'ni-svc',install:'ni-install',design:'ni-svc',bluebeam:'ni-svc',fe:'ni-svc',reliability:'ni-svc',work:'ni-about',whyrogue:'ni-about',safety:'ni-about',contact:''};
 const slugs={home:'',comm:'commissioning',install:'installation',design:'design-review',bluebeam:'bluebeam',fe:'field-engineering',reliability:'reliability',work:'recent-work',whyrogue:'why-rogue',safety:'safety',contact:'contact'};
-const titles={"home": "Rogue Technical Services LLC | Licensed E&I Electrical Contractor — Houston, TX", "install": "E&I Installation & Wire Termination in Texas | Rogue Technical Services", "comm": "E&I Commissioning, Start-up & Loop Checks | Rogue Technical Services", "design": "E&I Design Review & P&ID Review | Rogue Technical Services", "bluebeam": "Bluebeam Revu Services for E&I Projects | Rogue Technical Services", "fe": "E&I Field Engineering Support | Rogue Technical Services", "reliability": "E&I Reliability & Preventive Maintenance | Rogue Technical Services", "work": "Recent E&I Projects | Rogue Technical Services", "whyrogue": "Why Rogue? Field-First E&I Contractor in Houston | Rogue Technical Services", "safety": "Safety Program | Rogue Technical Services", "contact": "Request a Quote | Rogue Technical Services, Houston, TX"};
+const titles={"home": "Rogue Technical Services LLC | Licensed E&I Electrical Contractor — Houston, TX", "install": "E&I Installation & Wire Termination in Texas | Rogue Technical Services", "comm": "E&I Commissioning, Start-up & Loop Checks | Rogue Technical Services", "design": "E&I Design Review & P&ID Review | Rogue Technical Services", "bluebeam": "Bluebeam Revu Services for E&I Projects | Rogue Technical Services", "fe": "E&I Field Engineering Support | Rogue Technical Services", "reliability": "E&I Reliability & Preventive Maintenance | Rogue Technical Services", "work": "Recent E&I Projects | Rogue Technical Services", "whyrogue": "Why Rogue? Field-First E&I Contractor in Houston | Rogue Technical Services", "safety": "Safety Program | Rogue Technical Services", "contact": "Request More Info | Rogue Technical Services, Houston, TX"};
 let current=((document.querySelector('.page.active')||{}).id||'page-home').slice(5);
 function pathFor(k){return '/'+(slugs[k]?slugs[k]+'/':'')}
 function goServe(){if(!document.getElementById('who-we-serve')){location.href='/#who-we-serve';return}show('home');setTimeout(()=>document.getElementById('who-we-serve').scrollIntoView({behavior:'smooth'}),50)}
@@ -740,7 +741,7 @@ for(let i=0;i<TOTAL;i++){
 }
 const pauseBtn=document.createElement('button');
 pauseBtn.type='button';pauseBtn.className='c-pause';
-pauseBtn.innerHTML='<svg class="i-pause" viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1" width="3" height="10"/><rect x="7" y="1" width="3" height="10"/></svg><svg class="i-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l8 5-8 5z"/></svg>';
+pauseBtn.innerHTML='<svg class="i-pause" viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1" width="3" height="10"/><rect x="7" y="1" width="3" height="10"/></svg><svg class="i-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l8 5-8 5z"/></svg><span class="t-pause">Pause</span><span class="t-play">Play</span>';
 pauseBtn.addEventListener('click',()=>{carouselPaused=!carouselPaused;startTimer()});
 dotsEl.appendChild(pauseBtn);
 
