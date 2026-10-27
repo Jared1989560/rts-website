@@ -24,6 +24,16 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#080E18">
 <link rel="canonical" href="https://rts-hq.com/recent-work/">
+<script>
+/* Google Analytics 4: paste the Measurement ID (G-XXXXXXXXXX) below to turn it on. Empty = off. */
+window.RTS_GA_ID='';
+(function(id){if(!id||!/^https?:$/.test(location.protocol)||location.hostname!=='rts-hq.com')return;
+var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+id;document.head.appendChild(s);
+window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',id);
+document.addEventListener('submit',function(e){if(e.target.id==='contact-form')gtag('event','generate_lead',{form:'contact'})},true);
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');if(a)gtag('event',a.href.indexOf('tel:')===0?'phone_click':'email_click')},true);
+})(window.RTS_GA_ID);
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Electrician","@id":"https://rts-hq.com/#business","name":"Rogue Technical Services LLC","alternateName":"RTS","description":"Full-service E&I electrical contractor (TECL# 41990): installation, commissioning, design review, Bluebeam, field engineering, and reliability services for natural gas, compression, LNG, and industrial facilities.","url":"https://rts-hq.com","logo":"https://rts-hq.com/logo-rogue.png","image":"https://rts-hq.com/logo-rogue.png","telephone":"+1-281-200-7623","email":"info@rts-hq.com","address":{"@type":"PostalAddress","addressLocality":"Houston","addressRegion":"TX","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":29.7604,"longitude":-95.3698},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"18:00"}],"areaServed":[{"@type":"City","name":"Houston"},{"@type":"State","name":"Texas"},{"@type":"AdministrativeArea","name":"Gulf Coast"},{"@type":"AdministrativeArea","name":"Permian Basin"},{"@type":"Country","name":"United States"}],"hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"Texas Electrical Contractor License TECL# 41990","recognizedBy":{"@type":"GovernmentOrganization","name":"Texas Department of Licensing and Regulation"}},"hasOfferCatalog":{"@type":"OfferCatalog","name":"E&I Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"E&I Installation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Commissioning & Start-up"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Design Review"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Bluebeam Services"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Field Engineering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Reliability Services"}}]}},{"@type":"WebSite","@id":"https://rts-hq.com/#website","url":"https://rts-hq.com","name":"Rogue Technical Services LLC","publisher":{"@id":"https://rts-hq.com/#business"}},{"@type":"WebPage","@id":"https://rts-hq.com/recent-work/#webpage","url":"https://rts-hq.com/recent-work/","name":"Recent E&I Projects | Rogue Technical Services","description":"Recent E&I projects by Rogue Technical Services: compressor station commissioning, installation, design review and reliability work across Texas and the Gulf Coast.","isPartOf":{"@id":"https://rts-hq.com/#website"},"about":{"@id":"https://rts-hq.com/#business"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://rts-hq.com/field-storm-jobsite.jpg"},"inLanguage":"en-US","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://rts-hq.com/"},{"@type":"ListItem","position":2,"name":"Recent Work","item":"https://rts-hq.com/recent-work/"}]}}]}
 </script>
@@ -237,7 +247,7 @@ nav.main-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:300;backgr
 
 /* ── FOOTER ── */
 footer{background:var(--night);border-top:1px solid var(--grid);padding:56px max(52px,env(safe-area-inset-left,0px))}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
 .footer-logo{display:inline-block}.footer-logo img{width:260px;height:auto;display:block}
 .footer-brand-p{font-size:13.5px;font-weight:300;color:var(--lo);line-height:1.75;margin-top:14px;max-width:26ch}
 .footer-phone{font-family:'Oswald',sans-serif;font-size:21px;color:var(--blue);font-weight:600;margin-top:16px;text-shadow:var(--glow)}
@@ -315,6 +325,17 @@ footer{background:var(--night);border-top:1px solid var(--grid);padding:56px max
 .scope-item-text h4{font-family:'Oswald',sans-serif;font-size:13.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;margin-bottom:4px}
 .scope-item-text p{font-size:13px;font-weight:300;color:var(--lo);line-height:1.5}
 .diff-cards{display:flex;flex-direction:column;gap:16px;padding-top:6px}
+.area-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.area-cards{grid-template-columns:1fr}}
+.comm-hero-short{min-height:auto;padding-bottom:64px}
+.faq-list{max-width:860px;display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--panel);border:1px solid var(--border);border-left:3px solid rgba(74,171,245,.3)}
+.faq-item[open]{border-left-color:var(--blue)}
+.faq-item summary{cursor:pointer;list-style:none;padding:18px 48px 18px 22px;position:relative;font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--hi)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--blue);font-weight:400}
+.faq-item[open] summary::after{content:'\2212'}
+.faq-item p{padding:0 22px 20px;font-size:15px;font-weight:300;color:var(--mid);line-height:1.7}
 .diff-card{background:var(--panel);border-left:3px solid rgba(138,155,173,.3);padding:20px 22px 20px 24px;transition:border-color .2s,transform .2s,box-shadow .2s}
 .diff-card:hover{border-left-color:var(--blue);transform:translateX(4px);box-shadow:0 4px 24px rgba(0,0,0,.3)}
 .diff-card h4{font-family:'Oswald',sans-serif;font-size:13.5px;font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:6px;letter-spacing:.05em}
@@ -535,9 +556,14 @@ footer{background:var(--night);border-top:1px solid var(--grid);padding:56px max
         <a href="/why-rogue/" onclick="show('whyrogue');closeAll();return false">Why Rogue?</a>
         <a href="/recent-work/" onclick="show('work');closeAll();return false">Recent Work</a>
         <a href="/safety/" onclick="show('safety');closeAll();return false">Safety</a>
+        <a href="/faq/" onclick="show('faq');closeAll();return false">FAQ</a>
+        <span class="dd-lbl">Service Areas</span>
+        <a href="/houston-gulf-coast/" onclick="show('gulfcoast');closeAll();return false">Houston &amp; Gulf Coast</a>
+        <a href="/permian-basin/" onclick="show('permian');closeAll();return false">Permian Basin</a>
+        <a href="/south-texas-eagle-ford/" onclick="show('southtexas');closeAll();return false">South Texas &amp; Eagle Ford</a>
       </div>
     </li>
-    <li class="ni"><a onclick="closeAll();show('home');setTimeout(()=>document.getElementById('who-we-serve').scrollIntoView({behavior:'smooth'}),50)">Who We Serve</a></li>
+    <li class="ni"><a href="/#who-we-serve" onclick="closeAll();goServe();return false">Who We Serve</a></li>
   </ul>
   <div class="nav-r">
     <a class="nav-phone" href="tel:2812007623">281-200-7623</a>
@@ -562,7 +588,12 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
   <a href="/why-rogue/" onclick="show('whyrogue');return false">Why Rogue?</a>
   <a href="/recent-work/" onclick="show('work');return false">Recent Work</a>
   <a href="/safety/" onclick="show('safety');return false">Safety</a>
+  <a href="/faq/" onclick="show('faq');return false">FAQ</a>
   <a href="/#who-we-serve" onclick="goServe();return false">Who We Serve</a>
+  <span class="mob-lbl">Service Areas</span>
+  <a href="/houston-gulf-coast/" onclick="show('gulfcoast');return false">Houston &amp; Gulf Coast</a>
+  <a href="/permian-basin/" onclick="show('permian');return false">Permian Basin</a>
+  <a href="/south-texas-eagle-ford/" onclick="show('southtexas');return false">South Texas &amp; Eagle Ford</a>
   <div class="mob-cta">
     <a class="mob-phone" href="tel:2812007623">Call 281-200-7623</a>
     <button class="btn btn-primary" onclick="show('contact')">Request More Info</button>
@@ -676,7 +707,7 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
   </div>
 </div>
 
-<footer><div class="footer-grid"><div><a class="footer-logo" href="/" onclick="show('home');return false" aria-label="Rogue Technical Services, home"><img src="/logo-rogue.png" alt="Rogue Technical Services LLC" width="260" height="165" loading="lazy"></a><p class="footer-brand-p">Full-service E&amp;I electrical contractor. Licensed Texas Electrical Contractor, TECL# 41990. Nationwide mobilization.</p><div class="footer-phone"><a href="tel:2812007623" style="color:inherit;text-decoration:none">281-200-7623</a></div><div class="footer-hrs">Mon–Fri · 7am–6pm Central</div></div><div class="footer-col"><h4>Services</h4><a href="/installation/" onclick="show('install');return false">E&amp;I Installation</a><a href="/commissioning/" onclick="show('comm');return false">Commissioning &amp; Start-up</a><a href="/design-review/" onclick="show('design');return false">Design Review</a><a href="/bluebeam/" onclick="show('bluebeam');return false">Bluebeam Services</a><a href="/field-engineering/" onclick="show('fe');return false">Field Engineering</a><a href="/reliability/" onclick="show('reliability');return false">Reliability Services</a></div><div class="footer-col"><h4>Company</h4><a href="/why-rogue/" onclick="show('whyrogue');return false">Why Rogue?</a><a href="/safety/" onclick="show('safety');return false">Safety</a><a style="color:var(--blue)">Recent Work</a></div><div class="footer-col"><h4>Contact</h4><a href="tel:2812007623">281-200-7623</a><a href="mailto:info@rts-hq.com">info@rts-hq.com</a><a href="/contact/" onclick="show('contact');return false">Request More Info</a></div></div><div class="footer-bottom"><span>&copy; 2026 Rogue Technical Services LLC &mdash; Houston, TX &mdash; TECL# 41990</span><span>rts-hq.com</span></div><p class="tdlr">Regulated by The Texas Department of Licensing and Regulation, P.O. Box 12157, Austin, Texas 78711, 1-800-803-9202, 512-539-5600, <a href="https://www.tdlr.texas.gov" target="_blank" rel="noopener">www.tdlr.texas.gov</a></p></footer>
+<footer><div class="footer-grid"><div><a class="footer-logo" href="/" onclick="show('home');return false" aria-label="Rogue Technical Services, home"><img src="/logo-rogue.png" alt="Rogue Technical Services LLC" width="260" height="165" loading="lazy"></a><p class="footer-brand-p">Full-service E&amp;I electrical contractor. Licensed Texas Electrical Contractor, TECL# 41990. Nationwide mobilization.</p><div class="footer-phone"><a href="tel:2812007623" style="color:inherit;text-decoration:none">281-200-7623</a></div><div class="footer-hrs">Mon–Fri · 7am–6pm Central</div></div><div class="footer-col"><h4>Services</h4><a href="/installation/" onclick="show('install');return false">E&amp;I Installation</a><a href="/commissioning/" onclick="show('comm');return false">Commissioning &amp; Start-up</a><a href="/design-review/" onclick="show('design');return false">Design Review</a><a href="/bluebeam/" onclick="show('bluebeam');return false">Bluebeam Services</a><a href="/field-engineering/" onclick="show('fe');return false">Field Engineering</a><a href="/reliability/" onclick="show('reliability');return false">Reliability Services</a></div><div class="footer-col"><h4>Company</h4><a href="/why-rogue/" onclick="show('whyrogue');return false">Why Rogue?</a><a href="/safety/" onclick="show('safety');return false">Safety</a><a style="color:var(--blue)">Recent Work</a><a href="/faq/" onclick="show('faq');return false">FAQ</a></div><div class="footer-col"><h4>Service Areas</h4><a href="/houston-gulf-coast/" onclick="show('gulfcoast');return false">Houston &amp; Gulf Coast</a><a href="/permian-basin/" onclick="show('permian');return false">Permian Basin</a><a href="/south-texas-eagle-ford/" onclick="show('southtexas');return false">South Texas &amp; Eagle Ford</a></div><div class="footer-col"><h4>Contact</h4><a href="tel:2812007623">281-200-7623</a><a href="mailto:info@rts-hq.com">info@rts-hq.com</a><a href="/contact/" onclick="show('contact');return false">Request More Info</a></div></div><div class="footer-bottom"><span>&copy; 2026 Rogue Technical Services LLC &mdash; Houston, TX &mdash; TECL# 41990</span><span>rts-hq.com</span></div><p class="tdlr">Regulated by The Texas Department of Licensing and Regulation, P.O. Box 12157, Austin, Texas 78711, 1-800-803-9202, 512-539-5600, <a href="https://www.tdlr.texas.gov" target="_blank" rel="noopener">www.tdlr.texas.gov</a></p></footer>
 </div><!-- /work -->
 
 <!-- ══════ INSTALLATION ══════ -->
@@ -685,10 +716,10 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
 
 <script>
 /* ── PAGE ROUTING ── */
-const pages={home:'page-home',comm:'page-comm',install:'page-install',design:'page-design',bluebeam:'page-bluebeam',fe:'page-fe',reliability:'page-reliability',work:'page-work',whyrogue:'page-whyrogue',safety:'page-safety',contact:'page-contact'};
-const actives={comm:'ni-svc',install:'ni-install',design:'ni-svc',bluebeam:'ni-svc',fe:'ni-svc',reliability:'ni-svc',work:'ni-about',whyrogue:'ni-about',safety:'ni-about',contact:''};
-const slugs={home:'',comm:'commissioning',install:'installation',design:'design-review',bluebeam:'bluebeam',fe:'field-engineering',reliability:'reliability',work:'recent-work',whyrogue:'why-rogue',safety:'safety',contact:'contact'};
-const titles={"home": "Rogue Technical Services LLC | Licensed E&I Electrical Contractor — Houston, TX", "install": "E&I Installation & Wire Termination in Texas | Rogue Technical Services", "comm": "E&I Commissioning, Start-up & Loop Checks | Rogue Technical Services", "design": "E&I Design Review & P&ID Review | Rogue Technical Services", "bluebeam": "Bluebeam Revu Services for E&I Projects | Rogue Technical Services", "fe": "E&I Field Engineering Support | Rogue Technical Services", "reliability": "E&I Reliability & Preventive Maintenance | Rogue Technical Services", "work": "Recent E&I Projects | Rogue Technical Services", "whyrogue": "Why Rogue? Field-First E&I Contractor in Houston | Rogue Technical Services", "safety": "Safety Program | Rogue Technical Services", "contact": "Request More Info | Rogue Technical Services, Houston, TX"};
+const pages={home:'page-home',gulfcoast:'page-gulfcoast',permian:'page-permian',southtexas:'page-southtexas',faq:'page-faq',comm:'page-comm',install:'page-install',design:'page-design',bluebeam:'page-bluebeam',fe:'page-fe',reliability:'page-reliability',work:'page-work',whyrogue:'page-whyrogue',safety:'page-safety',contact:'page-contact'};
+const actives={gulfcoast:'ni-about',permian:'ni-about',southtexas:'ni-about',faq:'ni-about',comm:'ni-svc',install:'ni-install',design:'ni-svc',bluebeam:'ni-svc',fe:'ni-svc',reliability:'ni-svc',work:'ni-about',whyrogue:'ni-about',safety:'ni-about',contact:''};
+const slugs={home:'',gulfcoast:'houston-gulf-coast',permian:'permian-basin',southtexas:'south-texas-eagle-ford',faq:'faq',comm:'commissioning',install:'installation',design:'design-review',bluebeam:'bluebeam',fe:'field-engineering',reliability:'reliability',work:'recent-work',whyrogue:'why-rogue',safety:'safety',contact:'contact'};
+const titles={"home": "Rogue Technical Services LLC | Licensed E&I Electrical Contractor — Houston, TX", "install": "E&I Installation & Wire Termination in Texas | Rogue Technical Services", "comm": "E&I Commissioning, Start-up & Loop Checks | Rogue Technical Services", "design": "E&I Design Review & P&ID Review | Rogue Technical Services", "bluebeam": "Bluebeam Revu Services for E&I Projects | Rogue Technical Services", "fe": "E&I Field Engineering Support | Rogue Technical Services", "reliability": "E&I Reliability & Preventive Maintenance | Rogue Technical Services", "work": "Recent E&I Projects | Rogue Technical Services", "whyrogue": "Why Rogue? Field-First E&I Contractor in Houston | Rogue Technical Services", "safety": "Safety Program | Rogue Technical Services", "contact": "Request More Info | Rogue Technical Services, Houston, TX", "gulfcoast": "E&I Contractor in Houston & the Gulf Coast | Rogue Technical Services", "permian": "Permian Basin E&I Contractor | Rogue Technical Services", "southtexas": "South Texas & Eagle Ford E&I Contractor | Rogue Technical Services", "faq": "FAQ | Rogue Technical Services"};
 let current=((document.querySelector('.page.active')||{}).id||'page-home').slice(5);
 function pathFor(k){return '/'+(slugs[k]?slugs[k]+'/':'')}
 function goServe(){if(!document.getElementById('who-we-serve')){location.href='/#who-we-serve';return}show('home');setTimeout(()=>document.getElementById('who-we-serve').scrollIntoView({behavior:'smooth'}),50)}
