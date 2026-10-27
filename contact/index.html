@@ -337,26 +337,8 @@ footer{background:var(--night);border-top:1px solid var(--grid);padding:56px max
 .region-card.r-primary{border-left-color:var(--blue);background:rgba(74,171,245,.04)}
 .r-name{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:5px}
 .r-desc{font-size:12.5px;color:var(--lo);line-height:1.5}
-.coverage-visual{width:100%}
-.coverage-visual .map-svg{aspect-ratio:3/2;display:block}
-.map-svg{width:100%;height:100%;overflow:visible}
-.coverage-visual{position:relative}
-.map-st[data-state]{cursor:pointer;transition:fill .25s,stroke .25s,opacity .25s}
-.map-st[data-state]:hover,.map-st.is-hot{fill:rgba(74,171,245,.38);stroke:var(--blue);stroke-width:1}
-.map-svg.is-focus .map-st:not(.is-hot){opacity:.35}
-.map-svg.is-focus .map-st.is-hot{opacity:1;fill:rgba(74,171,245,.38);stroke:var(--blue);stroke-width:1}
-.map-pin{cursor:pointer;outline:none}
-.map-hit{fill:transparent}
-.map-dot{transition:r .2s,fill .2s}
-.map-pin:hover .map-dot,.map-pin:focus-visible .map-dot,.map-pin.is-on .map-dot{r:4.5;fill:#fff;filter:drop-shadow(0 0 4px var(--blue))}
-.map-home:focus-visible circle:last-child{stroke:#fff;stroke-width:1.5}
-.map-tip{position:absolute;left:0;top:0;transform:translate(-50%,calc(-100% - 12px));pointer-events:none;opacity:0;transition:opacity .15s;background:rgba(8,14,24,.95);border:1px solid var(--blue);box-shadow:0 0 14px rgba(74,171,245,.35);padding:8px 12px;white-space:nowrap;z-index:5}
-.map-tip.show{opacity:1}
-.map-tip b{display:block;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--hi)}
-.map-tip span{display:block;font-size:12px;color:var(--mid);margin-top:2px}
-.map-hint{text-align:center;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lo);margin-top:8px}
-.region-card[data-tier]{cursor:pointer}
-.region-card.is-hot{border-left-color:var(--blue);background:rgba(74,171,245,.08)}
+.coverage-visual{width:100%;aspect-ratio:3/2}
+.map-svg{width:100%;height:100%}
 .map-st{fill:rgba(74,171,245,.025);stroke:rgba(74,171,245,.2);stroke-width:.6;stroke-linejoin:round}
 .map-st1{fill:rgba(74,171,245,.2);stroke:rgba(74,171,245,.6)}
 .map-st2{fill:rgba(74,171,245,.1);stroke:rgba(74,171,245,.38)}
@@ -838,51 +820,6 @@ const countersObs=new IntersectionObserver(entries=>{
   });
 },{threshold:0.4});
 document.querySelectorAll('.stats-band').forEach(b=>countersObs.observe(b));
-
-/* ── INTERACTIVE COVERAGE MAP ── */
-(function(){
-  var svg=document.querySelector('.map-svg');if(!svg)return;
-  var box=svg.parentNode,tip=box.querySelector('.map-tip'),cards=[].slice.call(document.querySelectorAll('.region-card[data-tier]'));
-  var states=[].slice.call(svg.querySelectorAll('.map-st')),pins=[].slice.call(svg.querySelectorAll('.map-pin'));
-  function hov(el,fn){el.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')fn(e)})}
-  function out(el,fn){el.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse')fn(e)})}
-  var tierName={1:'Primary service area',2:'Regular service area',3:'Service area'};
-  function tierOf(el){return el.classList.contains('map-st1')?'1':el.classList.contains('map-st2')?'2':el.classList.contains('map-st3')?'3':null}
-  function showTip(x,y,name,sub){
-    var r=svg.getBoundingClientRect(),b=box.getBoundingClientRect(),k=r.width/480;
-    var px=r.left-b.left+x*k,py=r.top-b.top+y*k;
-    tip.innerHTML='<b></b><span></span>';tip.firstChild.textContent=name;tip.lastChild.textContent=sub;
-    var w=tip.offsetWidth/2;px=Math.max(w,Math.min(b.width-w,px));
-    tip.style.left=px+'px';tip.style.top=py+'px';tip.classList.add('show');
-  }
-  function clear(){tip.classList.remove('show');svg.classList.remove('is-focus');
-    states.forEach(function(s){s.classList.remove('is-hot')});cards.forEach(function(c){c.classList.remove('is-hot')});pins.forEach(function(p){p.classList.remove('is-on')})}
-  function lightTier(t){svg.classList.add('is-focus');
-    states.forEach(function(s){s.classList.toggle('is-hot',t==='all'?true:tierOf(s)===t)});
-    cards.forEach(function(c){c.classList.toggle('is-hot',c.dataset.tier===t)})}
-  function pinOn(p){clear();p.classList.add('is-on');var c=p.querySelector('.map-hit'),m=p.getAttribute('transform');
-    var x=+c.getAttribute('cx'),y=+c.getAttribute('cy');if(m){var t=m.match(/translate\(([\d.]+),([\d.]+)/);x+= +t[1];y+= +t[2]}
-    showTip(x,y,p.dataset.name,p.dataset.sub)}
-  function stateOn(s,e){clear();var t=tierOf(s);if(t)lightTier(t);s.classList.add('is-hot');
-    var bb=s.getBBox();showTip(bb.x+bb.width/2,bb.y+bb.height/2,s.dataset.state,tierName[t])}
-  pins.forEach(function(p){
-    hov(p,function(){pinOn(p)});p.addEventListener('focus',function(){pinOn(p)});
-    p.addEventListener('click',function(e){e.stopPropagation();pinOn(p)});
-    p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pinOn(p)}});
-  });
-  states.filter(function(s){return s.dataset.state}).forEach(function(s){
-    hov(s,function(){stateOn(s)});
-    s.addEventListener('click',function(e){e.stopPropagation();stateOn(s)});
-  });
-  cards.forEach(function(c){
-    function on(){clear();lightTier(c.dataset.tier)}
-    hov(c,on);c.addEventListener('focus',on);c.addEventListener('click',on);
-  });
-  out(svg,clear);
-  svg.addEventListener('click',clear);
-  out(document.querySelector('.region-list'),clear);
-  document.addEventListener('click',function(e){if(!e.target.closest('.coverage-layout'))clear()});
-})();
 /* ── CONTACT FORM ── */
 var cf=document.getElementById('contact-form');
 if(cf){cf.addEventListener('submit',function(e){e.preventDefault();var fd=new FormData(cf);fetch(cf.action,{method:'POST',body:fd,headers:{'Accept':'application/json'}}).then(function(r){if(r.ok){cf.style.display='none';var s=document.getElementById('cf-success');if(s)s.style.display='block';}}).catch(function(){});})}
