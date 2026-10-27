@@ -148,11 +148,12 @@ nav.main-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:300;backgr
 .c-dot-fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue);width:0%}
 .c-dot.active .c-dot-fill{animation:dotFill 9s linear}
 .carousel-dots{align-items:center}
-.c-pause{width:30px;height:30px;margin-left:6px;display:flex;align-items:center;justify-content:center;background:rgba(8,14,24,.7);border:1px solid var(--border);color:var(--mid);cursor:pointer;padding:0;transition:background .2s,color .2s,border-color .2s}
-.c-pause:hover,.c-pause:focus-visible{background:var(--blue-dim);color:var(--hi);border-color:var(--blue)}
-.c-pause svg{width:11px;height:11px;fill:currentColor}
-.c-pause .i-play,.carousel-wrap.user-paused .c-pause .i-pause{display:none}
-.carousel-wrap.user-paused .c-pause .i-play{display:block}
+@media(max-width:640px){.carousel-dots{gap:7px;bottom:20px}.c-dot{width:18px}.c-dot.active{width:30px}.c-pause{margin-left:8px}}
+.c-pause{height:36px;margin-left:12px;padding:0 14px;display:flex;align-items:center;gap:8px;background:rgba(8,14,24,.8);border:1px solid var(--blue);color:var(--hi);font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 0 12px rgba(74,171,245,.35);transition:background .2s,box-shadow .2s}
+.c-pause:hover,.c-pause:focus-visible{background:var(--blue-dim);box-shadow:0 0 18px rgba(74,171,245,.6)}
+.c-pause svg{width:11px;height:11px;fill:var(--blue)}
+.c-pause .i-play,.c-pause .t-play,.carousel-wrap.user-paused .c-pause .i-pause,.carousel-wrap.user-paused .c-pause .t-pause{display:none}
+.carousel-wrap.user-paused .c-pause .i-play{display:block}.carousel-wrap.user-paused .c-pause .t-play{display:inline}
 .carousel-wrap.is-paused .c-dot-fill{animation-play-state:paused}
 @keyframes dotFill{from{width:0%}to{width:100%}}
 
@@ -691,7 +692,7 @@ topH();window.addEventListener('resize',topH);window.addEventListener('load',top
 const pages={home:'page-home',comm:'page-comm',install:'page-install',design:'page-design',bluebeam:'page-bluebeam',fe:'page-fe',reliability:'page-reliability',work:'page-work',whyrogue:'page-whyrogue',safety:'page-safety',contact:'page-contact'};
 const actives={comm:'ni-svc',install:'ni-install',design:'ni-svc',bluebeam:'ni-svc',fe:'ni-svc',reliability:'ni-svc',work:'ni-about',whyrogue:'ni-about',safety:'ni-about',contact:''};
 const slugs={home:'',comm:'commissioning',install:'installation',design:'design-review',bluebeam:'bluebeam',fe:'field-engineering',reliability:'reliability',work:'recent-work',whyrogue:'why-rogue',safety:'safety',contact:'contact'};
-const titles={"home": "Rogue Technical Services LLC | Licensed E&I Electrical Contractor — Houston, TX", "install": "E&I Installation & Wire Termination in Texas | Rogue Technical Services", "comm": "E&I Commissioning, Start-up & Loop Checks | Rogue Technical Services", "design": "E&I Design Review & P&ID Review | Rogue Technical Services", "bluebeam": "Bluebeam Revu Services for E&I Projects | Rogue Technical Services", "fe": "E&I Field Engineering Support | Rogue Technical Services", "reliability": "E&I Reliability & Preventive Maintenance | Rogue Technical Services", "work": "Recent E&I Projects | Rogue Technical Services", "whyrogue": "Why Rogue? Field-First E&I Contractor in Houston | Rogue Technical Services", "safety": "Safety Program | Rogue Technical Services", "contact": "Request a Quote | Rogue Technical Services, Houston, TX"};
+const titles={"home": "Rogue Technical Services LLC | Licensed E&I Electrical Contractor — Houston, TX", "install": "E&I Installation & Wire Termination in Texas | Rogue Technical Services", "comm": "E&I Commissioning, Start-up & Loop Checks | Rogue Technical Services", "design": "E&I Design Review & P&ID Review | Rogue Technical Services", "bluebeam": "Bluebeam Revu Services for E&I Projects | Rogue Technical Services", "fe": "E&I Field Engineering Support | Rogue Technical Services", "reliability": "E&I Reliability & Preventive Maintenance | Rogue Technical Services", "work": "Recent E&I Projects | Rogue Technical Services", "whyrogue": "Why Rogue? Field-First E&I Contractor in Houston | Rogue Technical Services", "safety": "Safety Program | Rogue Technical Services", "contact": "Request More Info | Rogue Technical Services, Houston, TX"};
 let current=((document.querySelector('.page.active')||{}).id||'page-home').slice(5);
 function pathFor(k){return '/'+(slugs[k]?slugs[k]+'/':'')}
 function goServe(){if(!document.getElementById('who-we-serve')){location.href='/#who-we-serve';return}show('home');setTimeout(()=>document.getElementById('who-we-serve').scrollIntoView({behavior:'smooth'}),50)}
@@ -769,7 +770,7 @@ for(let i=0;i<TOTAL;i++){
 }
 const pauseBtn=document.createElement('button');
 pauseBtn.type='button';pauseBtn.className='c-pause';
-pauseBtn.innerHTML='<svg class="i-pause" viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1" width="3" height="10"/><rect x="7" y="1" width="3" height="10"/></svg><svg class="i-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l8 5-8 5z"/></svg>';
+pauseBtn.innerHTML='<svg class="i-pause" viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1" width="3" height="10"/><rect x="7" y="1" width="3" height="10"/></svg><svg class="i-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l8 5-8 5z"/></svg><span class="t-pause">Pause</span><span class="t-play">Play</span>';
 pauseBtn.addEventListener('click',()=>{carouselPaused=!carouselPaused;startTimer()});
 dotsEl.appendChild(pauseBtn);
 
