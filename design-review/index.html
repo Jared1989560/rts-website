@@ -19,6 +19,7 @@
 <meta property="og:site_name" content="Rogue Technical Services LLC">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="/field-drawings.jpg" fetchpriority="high">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#080E18">
@@ -146,6 +147,13 @@ nav.main-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:300;backgr
 .c-dot.active{background:rgba(74,171,245,.4);width:44px}
 .c-dot-fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue);width:0%}
 .c-dot.active .c-dot-fill{animation:dotFill 9s linear}
+.carousel-dots{align-items:center}
+.c-pause{width:30px;height:30px;margin-left:6px;display:flex;align-items:center;justify-content:center;background:rgba(8,14,24,.7);border:1px solid var(--border);color:var(--mid);cursor:pointer;padding:0;transition:background .2s,color .2s,border-color .2s}
+.c-pause:hover,.c-pause:focus-visible{background:var(--blue-dim);color:var(--hi);border-color:var(--blue)}
+.c-pause svg{width:11px;height:11px;fill:currentColor}
+.c-pause .i-play,.carousel-wrap.user-paused .c-pause .i-pause{display:none}
+.carousel-wrap.user-paused .c-pause .i-play{display:block}
+.carousel-wrap.is-paused .c-dot-fill{animation-play-state:paused}
 @keyframes dotFill{from{width:0%}to{width:100%}}
 
 /* slide glow accents per service */
@@ -727,7 +735,7 @@ function show(k,fromHistory){
     countersObs.unobserve(b);countersObs.observe(b);
   });
   /* restart carousel if showing home */
-  if(k==='home'&&track){carouselIdx=0;renderCarousel(true)}
+  if(k==='home'&&track){carouselIdx=0;renderCarousel(true);startTimer()}
 }
 function toggle(id){
   const el=document.getElementById(id);
@@ -745,8 +753,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeAll();toggleMo
 const TOTAL=6;
 let carouselIdx=0;
 let carouselTimer=null;
+let carouselPaused=matchMedia('(prefers-reduced-motion: reduce)').matches,carouselHover=false;
 const track=document.getElementById('carousel-track');
 const dotsEl=document.getElementById('cdots');
+const wrap=document.getElementById('carousel');
 
 if(track){
 /* Build dots */
@@ -757,6 +767,11 @@ for(let i=0;i<TOTAL;i++){
   d.addEventListener('click',()=>{goTo(i)});
   dotsEl.appendChild(d);
 }
+const pauseBtn=document.createElement('button');
+pauseBtn.type='button';pauseBtn.className='c-pause';
+pauseBtn.innerHTML='<svg class="i-pause" viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1" width="3" height="10"/><rect x="7" y="1" width="3" height="10"/></svg><svg class="i-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l8 5-8 5z"/></svg>';
+pauseBtn.addEventListener('click',()=>{carouselPaused=!carouselPaused;startTimer()});
+dotsEl.appendChild(pauseBtn);
 
 function renderCarousel(reset){
   if(!track)return;
@@ -765,6 +780,7 @@ function renderCarousel(reset){
   dots.forEach((d,i)=>{
     const wasActive=d.classList.contains('active');
     d.classList.toggle('active',i===carouselIdx);
+    if(i!==carouselIdx)d.querySelector('.c-dot-fill').style.animation='';
     if(i===carouselIdx&&(!wasActive||reset)){
       /* restart fill animation */
       const fill=d.querySelector('.c-dot-fill');
@@ -785,15 +801,19 @@ document.getElementById('cn').addEventListener('click',next);
 document.getElementById('cp').addEventListener('click',prev);
 
 function startTimer(){
+  clearInterval(carouselTimer);carouselTimer=null;
+  const stopped=carouselPaused||carouselHover||document.hidden;
+  wrap.classList.toggle('is-paused',stopped);wrap.classList.toggle('user-paused',carouselPaused);
+  pauseBtn.setAttribute('aria-label',carouselPaused?'Play slideshow':'Pause slideshow');
+  pauseBtn.setAttribute('aria-pressed',carouselPaused);
+  if(stopped)return;
+  renderCarousel(true);
   carouselTimer=setInterval(next,9000);
 }
-function restartTimer(){
-  clearInterval(carouselTimer);
-  startTimer();
-}
-const wrap=document.getElementById('carousel');
-wrap.addEventListener('mouseenter',()=>clearInterval(carouselTimer));
-wrap.addEventListener('mouseleave',startTimer);
+function restartTimer(){startTimer()}
+wrap.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'){carouselHover=true;startTimer()}});
+wrap.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'){carouselHover=false;startTimer()}});
+document.addEventListener('visibilitychange',startTimer);
 
 /* touch swipe */
 let tsX=null;
